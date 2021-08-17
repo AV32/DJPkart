@@ -16,14 +16,6 @@ function Navbar() {
       </div>
       <div className="Navbar__right">
         <SearchBar
-          //   inputProps={{
-          //       style: {
-          //         fontFamily: "Arial",
-          //         color: "white",
-          //         fontSize: "15px",
-          //         padding: "0px",
-          //       },
-          //     }}
           style={{
             maxWidth: 600,
             width: "50%",
