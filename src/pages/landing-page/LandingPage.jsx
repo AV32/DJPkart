@@ -6,6 +6,7 @@ function LandingPage() {
     <div>
       <Navbar />
       {/* <Header /> */}
+      {/* <Navbar /> */}
     </div>
   );
 }
