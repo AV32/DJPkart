@@ -1,8 +1,43 @@
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-cart,
+.mobile-menu,
+.close-mobile-menu {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.display-mobile-nav {
+  height: 100vh;
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+  transition: all 1s ease;
+  z-index: 10;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.mobile-nav-links > * {
+  margin: 1rem;
+}
+
 .Navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 .Navbar__left {
   display: flex;
   flex: 0.25;
