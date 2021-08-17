@@ -1,0 +1,17 @@
+.Navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Navbar__left {
+  display: flex;
+  flex: 0.25;
+  align-items: center;
+  justify-content: space-around;
+}
+.Navbar__right {
+  display: flex;
+  flex: 0.75;
+  align-items: center;
+  justify-content: space-around;
+}
