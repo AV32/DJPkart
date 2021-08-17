@@ -7,7 +7,6 @@ function LandingPage() {
     <div>
       <Navbar />
       {/* <Header /> */}
-      {/* <Navbar /> */}
       <PauseOnHover />
     </div>
   );
