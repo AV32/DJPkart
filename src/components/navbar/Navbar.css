@@ -50,3 +50,9 @@
   align-items: center;
   justify-content: space-around;
 }
+cat:hover{
+  cursor: pointer;
+}
+.alter {
+  background-color: #fcfbfa;
+}
