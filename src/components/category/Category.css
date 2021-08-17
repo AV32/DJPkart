@@ -1,35 +1,34 @@
-.categories{
-    top : 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-    margin-left: 350px;
-    height: 30vh;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 0;
+.categories {
+  top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin-left: 350px;
+  height: 30vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0;
 }
 .category {
-    /* border: 0.5px solid black; */
-    flex: 25%;
-    border: 0.3px dashed #adb2ba;
-    padding: 20px;
-    margin: auto;
-    margin: 0;
-    height: 30vh;
+  /* border: 0.5px solid black; */
+  flex: 25%;
+  /* border: 0.3px dashed #adb2ba; */
+  padding: 20px;
+  margin: auto;
+  margin: 0;
+  height: 30vh;
 }
-.category ui{
-    list-style: none;
+.category ui {
+  list-style: none;
 }
 .category li h3 {
-    margin: 8px;
-    
+  margin: 8px;
 }
-.category li h3:hover{
-    color: #30b0a3;
-    /* background-color: burlywood; */
+.category li h3:hover {
+  color: #30b0a3;
+  /* background-color: burlywood; */
 }
-.category > h2{
-    font-size: 25px;
-    color: red;
+.category > h2 {
+  font-size: 25px;
+  color: red;
 }
