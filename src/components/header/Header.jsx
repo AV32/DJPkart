@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.css";
+import "./Header.css";
 import SearchBar from "material-ui-search-bar";
 function Header() {
   return (
