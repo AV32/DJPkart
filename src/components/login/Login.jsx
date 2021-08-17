@@ -40,41 +40,43 @@ function Login(props) {
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <DialogTitle id="form-dialog-title">Login</DialogTitle>
-        <DialogContent>
-          <TextField
-            margin="dense"
-            id="userEmail"
-            required={true}
-            variant="outlined"
-            name="userEmail"
-            value={userData.userEmail}
-            onChange={handleChange}
-            label="Email Address"
-            type="email"
-            fullWidth
-          />
-          <TextField
-            required={true}
-            margin="dense"
-            id="userPassword"
-            name="userPassword"
-            value={userData.userPassword}
-            variant="outlined"
-            onChange={handleChange}
-            label="Password"
-            type="password"
-            fullWidth
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={collectUserData} color="primary">
-            Login
-          </Button>
-        </DialogActions>
+        <form onSubmit={collectUserData}>
+          <DialogTitle id="form-dialog-title">Login</DialogTitle>
+          <DialogContent>
+            <TextField
+              margin="dense"
+              id="userEmail"
+              required={true}
+              variant="outlined"
+              name="userEmail"
+              value={userData.userEmail}
+              onChange={handleChange}
+              label="Email Address"
+              type="email"
+              fullWidth
+            />
+            <TextField
+              required={true}
+              margin="dense"
+              id="userPassword"
+              name="userPassword"
+              value={userData.userPassword}
+              variant="outlined"
+              onChange={handleChange}
+              label="Password"
+              type="password"
+              fullWidth
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} color="primary">
+              Cancel
+            </Button>
+            <button type="submit" onClick={collectUserData} color="primary">
+              Login
+            </button>
+          </DialogActions>
+        </form>
       </Dialog>
       <p onClick={handleClickOpen}>Login</p>
     </div>
