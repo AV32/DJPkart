@@ -2,12 +2,16 @@
   top: 100px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
   margin-left: 350px;
-  height: 30vh;
+  height: fit-content;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 0;
+  position: absolute;
+  top: 9vh;
+  z-index: 2;
+  background-color: white;
 }
 .category {
   /* border: 0.5px solid black; */
@@ -16,7 +20,8 @@
   padding: 20px;
   margin: auto;
   margin: 0;
-  height: 30vh;
+  height: fit-content;
+  background-color: white;
 }
 .category ui {
   list-style: none;
