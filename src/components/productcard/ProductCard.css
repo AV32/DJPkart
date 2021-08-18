@@ -25,7 +25,9 @@
 .productCard__productImage {
   width: 100px;
   height: 150px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: auto;
 }
 
