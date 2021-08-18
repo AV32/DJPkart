@@ -7,7 +7,7 @@ function App() {
   function signIn() {
     setIsSignedIn(!isSignedIn);
   }
-  console.log(isSignedIn);
+  console.log("IsSignedIn ", isSignedIn);
   return (
     <div className="App">
       <LandingPage isSignedIn={isSignedIn} signIn={signIn} />
