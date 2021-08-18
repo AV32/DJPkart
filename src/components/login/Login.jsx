@@ -72,9 +72,9 @@ function Login(props) {
             <Button onClick={handleClose} color="primary">
               Cancel
             </Button>
-            <button type="submit" onClick={collectUserData} color="primary">
+            <Button type="submit" onClick={collectUserData} color="primary">
               Login
-            </button>
+            </Button>
           </DialogActions>
         </form>
       </Dialog>
