@@ -32,6 +32,7 @@ function Navbar(props) {
       </div>
     );
   }
+
   function handleMobileMenu() {
     setNavOpen(!isNavOpen);
   }
