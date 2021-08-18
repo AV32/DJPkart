@@ -72,7 +72,7 @@ function Navbar(props) {
               style={{
                 maxWidth: 600,
                 width: "50%",
-                height: 35,
+                height: "6vh",
               }}
               //   value={this.state.value}
               //   onChange={(newValue) => this.setState({ value: newValue })}
