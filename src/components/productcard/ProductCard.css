@@ -35,3 +35,23 @@
   background-color: red;
   padding: 10px;
 }
+
+@media only screen and (max-width: 400px) {
+  .productCard__title {
+    font-size: 0.8rem;
+  }
+
+  .productCard__priceTag {
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+  .productCard__rating {
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .productCard__productImage {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -36,7 +36,11 @@ function ProductCard(props) {
       /> */}
       <div className="productCard__infoContainer">
         <div className="productCard__infoContainerMiddle">
-          <h2 className="productCard__title">{props.name}</h2>
+          <h2 className="productCard__title">
+            {props.name.length < 30
+              ? props.name
+              : `${props.name.slice(0, 30)} ...`}
+          </h2>
         </div>
         <div className="productCard__infoContainerTop">
           <h2 className="productCard__priceTag">
