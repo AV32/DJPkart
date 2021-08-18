@@ -6,6 +6,7 @@ import data from "./../../products";
 import ProdSlider from "../../components/slider/ProdSlider";
 import PauseOnHover from "../../components/slider";
 import ProductPage from "../../productpage/ProductPage";
+import Footer from "../../components/Footer/Footer";
 function LandingPage({ isSignedIn, signIn }) {
   const smartPhoneDeals = data.map((item, index) => (
     <ProductCard
@@ -36,6 +37,7 @@ function LandingPage({ isSignedIn, signIn }) {
       <ProdSlider
         data={data.filter((item) => item.catogeries == "Beauty and Cosmetics")}
       />
+      <Footer />
     </div>
   );
 }
