@@ -1,9 +1,16 @@
 import "./App.css";
+import { useState } from "react";
 import LandingPage from "./pages/landing-page";
 function App() {
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  function signIn() {
+    setIsSignedIn(!isSignedIn);
+  }
+  console.log("IsSignedIn ", isSignedIn);
   return (
     <div className="App">
-      <LandingPage />
+      <LandingPage isSignedIn={isSignedIn} signIn={signIn} />
     </div>
   );
 }

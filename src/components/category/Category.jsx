@@ -6,7 +6,7 @@ import SubCat from './SubCat'
 const Category = () => {
  
 
-    const fash =[
+    const fash =[   
         {
             category:"Topwear",
             subcategory1:"T-Shirt",
@@ -16,7 +16,7 @@ const Category = () => {
         {
             category:"Indian Wear",
             subcategory1:"Kurtas & Suit",
-            subcategory2:"Leggings,Salwars & Chauridars ",
+            subcategory2:"Leggings & Salwars ",
             subcategory3:"Sarees",
         },
         {
@@ -69,10 +69,10 @@ const Category = () => {
             subcategory3:"Sofa Beds",
         },
         {
-            category:"Indian & Fusion Wear",
-            subcategory1:"Kurtas & Suit",
-            subcategory2:"Leggings,Salwars & Chauridars ",
-            subcategory3:"Sarees",
+            category:"Bedroom",
+            subcategory1:"Bedsheet",
+            subcategory2:"Wardrobes ",
+            subcategory3:"Mattresses",
         },
         {
             category:"Home Decore",
@@ -151,4 +151,4 @@ const Category = () => {
     )
 }
 
-export default Category
+export default Category;

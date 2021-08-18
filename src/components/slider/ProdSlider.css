@@ -1,0 +1,50 @@
+.slider-card {
+  width: 200px;
+  height: 300px;
+}
+
+.slick-arrow {
+  display: block;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+}
+
+.slick-next {
+  right: 10px;
+}
+.slick-prev {
+  left: 10px;
+  z-index: 300;
+}
+
+/* .slick-slide {
+}
+
+.slick-track {
+} */
+
+.slider__conatiner {
+  margin: 30px 0 0px;
+}
+
+@media only screen and (max-width: 400px) {
+  .slider-card {
+    width: 150px;
+    height: 200px;
+  }
+}

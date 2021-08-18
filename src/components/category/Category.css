@@ -1,5 +1,5 @@
 .categories{
-    top : 100px;
+    top : 9vh;
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
@@ -10,7 +10,11 @@
      /* height:19rem; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 0;
-    /* position: relative; */
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    cursor: pointer;
+    /* transition-timing-function: ease-in-out !important; */
 }
 .category {
     /* border: 0.5px solid black; */
@@ -25,12 +29,11 @@
     position:relative ; */
 
 }
-.category ui{
-    list-style: none;
+.category ul {
+  list-style: none;
 }
 .category li h3 {
-    margin: 8px;
-    
+  margin: 8px;
 }
 .category li h3:hover{
     font-weight: 500;
