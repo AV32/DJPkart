@@ -1,0 +1,43 @@
+.slider-card {
+  background: #a61fdb;
+  text-align: center;
+  height: 200px;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+.slick-arrow {
+  display: block;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+}
+
+.slick-next {
+  right: 10px;
+}
+.slick-prev {
+  left: 10px;
+  z-index: 300;
+}
+
+.slick-slide {
+  /* margin: 10px; */
+}
+
+.slick-track {
+  /*Write here*/
+}
