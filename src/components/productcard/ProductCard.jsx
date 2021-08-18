@@ -38,10 +38,11 @@ function ProductCard(props) {
         </div>
         <div className="productCard__infoContainerTop">
           <h2 className="productCard__priceTag">
-            <strong>₹</strong>
-            {props.price}
+            <strong>{props.price}</strong>
           </h2>
-          <h2 className="productCard__rating">{props.rating}⭐</h2>
+          <h2 className="productCard__rating">
+            <strong>{props.rating}</strong>⭐
+          </h2>
         </div>
         {/* <div className="productCard__infoContainerBottom">
           <button className="buyButton">Buy Now</button>
