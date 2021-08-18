@@ -8,7 +8,7 @@ const data = [
     price: "₹119900",
 
     image: [
-      "https://images-na.ssl-images-amazon.com/images/I/71MHTD3uL4L._SL1500_.jpg",
+      "https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/s/9/w/apple-iphone-12-pro-dummyapplefsn-original-imafwgbr37gm57f7.jpeg?q=70",
       "https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/s/9/w/apple-iphone-12-pro-dummyapplefsn-original-imafwgbrnpyygbv9.jpeg?q=70",
       "https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/s/9/w/apple-iphone-12-pro-dummyapplefsn-original-imafwgbrpksqr8zu.jpeg?q=70",
       "https://rukminim1.flixcart.com/image/416/416/kg8avm80/mobile/s/9/w/apple-iphone-12-pro-dummyapplefsn-original-imafwgbrgcctfysm.jpeg?q=70",
@@ -229,48 +229,17 @@ const data = [
 
   {
     catogeries: "phone",
-    name: "OPPO Reno6 Pro 5G (Aurora, 256 GB)",
-    rating: "3.9",
-    discription:
-      "The OPPO Reno6 Pro 5G is not only easy on the eyes but also equipped with innovative features. The X-axis Linear Motor ensures immersive viewing and usage. With an ultra-slim body and lightweight construction, you can easily hold it during extended usage. You can replicate the appeal of some of your favourite images in a single click with the AI Palette feature. And, you can enjoy long-lasting usage with its 4500 mAh battery.",
-    price: "₹39900",
-    image: [
-      "https://rukminim1.flixcart.com/image/416/416/kr2e3680/mobile/l/p/k/reno6-pro-5g-cph2249-oppo-original-imag4xpc6mc62mzq.jpeg?q=70",
-      "https://rukminim1.flixcart.com/image/416/416/kr2e3680/mobile/k/u/u/reno6-pro-5g-cph2249-oppo-original-imag4xpcvxzzyzgz.jpeg?q=70",
-      "https://rukminim1.flixcart.com/image/416/416/kr2e3680/mobile/i/c/l/reno6-pro-5g-cph2249-oppo-original-imag4xpchmrsqdru.jpeg?q=70",
-      "https://rukminim1.flixcart.com/image/416/416/kr2e3680/mobile/r/h/1/reno6-pro-5g-cph2249-oppo-original-imag4xpcbhkmzecp.jpeg?q=70",
-    ],
-    review: [
-      "Performance was blazing quick too. Even with all its bells and whistles, FunTouch OS ran smoothly and was easy to master. I also found the biometrics to be very reliable, be it the fingerprint sensor or face recognition. Videos looked great on the phone's display, especially HDR content. ",
-      "This is a Great phone, nice camera, Good Battery backup, Fast Charging and beautiful design. I Love 😘😘 it",
-      `It's a marvel from Oppo.. Stellar black one is just superb and the device is an all-rounder. Stunning looks and superb performance.
-      Pros:
-      Great looks
-      Stunning curved oled display
-      Great rear cams
-      Super speed and smooth performance
-      Dolby Atmos sound clarity is perfect
-      Superb Call clarity and network reception
-      In hand feel is supercool
-      Ultrafast charging
-      
-      Cons:
-      Selfie cam is good but not great`,
-    ],
-  },
-  {
-    catogeries: "phone",
     name: "SAMSUNG Galaxy A52 (Awesome Blue, 128 GB)",
     rating: "4.3",
     discription:
       "Bring home the Samsung Galaxy A52 smartphone to enjoy viewing sharp visuals, click clear images, record stable videos, and do more. Its rear camera setup, with OIS, helps you capture clear shots. While its 16.40 cm (6.5) FHD+ Super AMOLED display delivers vivid visuals, the Eye Comfort Shield ensures reduced blue light emissions, thereby preventing eye strain.",
     price: "₹27,999",
-    image: URL([
+    image: [
       "https://rukminim1.flixcart.com/image/416/416/kmf7ki80/mobile/s/z/a/galaxy-a52-sm-a525fzbgins-samsung-original-imagfb4xdvtk8zzb.jpeg?q=70",
       "https://rukminim1.flixcart.com/image/416/416/kmf7ki80/mobile/1/r/s/galaxy-a52-sm-a525fzbgins-samsung-original-imagfb4xs5wtfmpm.jpeg?q=70",
       "https://rukminim1.flixcart.com/image/416/416/kmf7ki80/mobile/s/d/i/galaxy-a52-sm-a525fzbgins-samsung-original-imagfb4xyymq9gjw.jpeg?q=70",
       "https://rukminim1.flixcart.com/image/416/416/kmf7ki80/mobile/t/0/n/galaxy-a52-sm-a525fzbgins-samsung-original-imagfb4xczdhwwjn.jpeg?q=70",
-    ]),
+    ],
     review: [
       "Good one. Nice camera. battery will last for a day. Good network reception. Update after 7 days of usage: Absolutely great phone. The camera great.",
       "Loved the design, quality, performance, feels rich while handling, and really appreciate that samsung had improved a lot for the user experience. E.g. performance, battery management has been improved a lot. Feels premium device. Easy and Smooth interface. I loved 😍it and would recommend to my friends and family!",
@@ -296,109 +265,6 @@ const data = [
       "First I would like to thank you Flipkart for fastest delivery and yah the delivery guy is so cooperative and helpful. Samsung phones are always best in performance and this one is also affordable and awesome phone",
     ],
   },
-
-  {
-    catogeries: "fashion",
-    name: "Allen Solly",
-    rating: "4.4",
-    discription:
-      "Care Instructions: Wash with mild detergent, do not bleach, dry in shade Fit Type: regular fit 60% cotton and 40% polyester Regular fit ",
-    price: "₹1900",
-    image: URL(
-      "https://m.media-amazon.com/images/I/81L9f1n4pGL._AC_UL480_FMwebp_QL65_.jpg"
-    ),
-    review:
-      "Simply super and value for money deal. Fits well as well and the cut in the sides look very nice. Loved it. Ordering more in other colors. 5 star rating. ",
-  },
-  {
-    catogeries: "fashion",
-    name: "Classic Polo Men's Regular Fit",
-    rating: "4.4",
-    discription:
-      "Classic Polo Men's Regular Fit Polo T-Shirt (B07YYGMTZM_Purple, Violet_XXXX-Large)Classic Polo Men's Regular Fit Polo T-Shirt (B07YYGMTZM_Purple, Violet_XXXX-Large)",
-    price: "₹1800",
-    image: URL(
-      "https://images-na.ssl-images-amazon.com/images/I/81L9f1n4pGL._UL1500_.jpg"
-    ),
-    review:
-      "Simply super and value for money deal. Fits well as well and the cut in the sides look very nice. Loved it. Ordering more in other colors. 5 star rating. ",
-  },
-  {
-    catogeries: "fashion",
-    name: "Benetton Men's Slim Polo Shirt",
-    rating: "4.2",
-    discription:
-      "United Colors of Benetton Men's Slim Polo Shirt (3081J7107I_RED XL) United Colors of Benetton Men's Slim Polo Shirt",
-    price: "₹1500",
-    image: URL(
-      "https://images-na.ssl-images-amazon.com/images/I/81XSu2qqGvL._UX466_.jpg"
-    ),
-    review:
-      "Simply super and value for money deal. Fits well as well and the cut in the sides look very nice. Loved it. Ordering more in other colors. 5 star rating. ",
-  },
-  {
-    catogeries: "fashion",
-    name: "GODFREY Cotton Polo",
-    rating: "4.1",
-    discription:
-      "GODFREY Cotton Polo Neck Half Sleeve Mens T Shirt Size - Small (S / 36) GODFREY Cotton Polo Neck Half Sleeve Mens T Shirt Size - Small (S / 36)",
-    price: "₹1300",
-    image: URL(
-      "https://images-na.ssl-images-amazon.com/images/I/71WtmkxWXbS._UY741_.jpg"
-    ),
-    review:
-      "Simply super and value for money deal. Fits well as well and the cut in the sides look very nice. Loved it. Ordering more in other colors. 5 star rating. ",
-  },
-  {
-    catogeries: "fashion",
-    name: "Adidas Men's Drogo M Running Shoes",
-    rating: "3.4",
-    discription:
-      "Closure: Lace-Up Shoe Width: Medium Material Type: Mesh Lifestyle: Sports Closure Type: Lace-Up",
-    price: "₹4900",
-    image: URL(
-      "https://m.media-amazon.com/images/I/81foDd-vw0L._AC_UL480_FMwebp_QL65_.jpg"
-    ),
-    review:
-      "Simply super and value for money deal. Fits well as well and the cut in the sides look very nice. Loved it. Ordering more in other colors. 5 star rating. ",
-  },
-  {
-    catogeries: "fashion",
-    name: "Reebok Men's Fast Motion ",
-    rating: "4.1",
-    discription:
-      "Reebok Men's Fast Motion Run Lp Shoe Reebok Men's Fast Motion Run Lp Shoe",
-    price: "₹3900",
-    image: URL(
-      "https://images-na.ssl-images-amazon.com/images/I/71NRk6xv7-S._UL1500_.jpg"
-    ),
-    review:
-      "Simply super and value for money deal. Fits well as well and the cut in the sides look very nice. Loved it. Ordering more in other colors. 5 star rating. ",
-  },
-  {
-    catogeries: "fashion",
-    name: "Navy Running Shoes-6 UK",
-    rating: "4.2",
-    discription:
-      "FURO by Redchief Men Navy Running Shoes-6 UK (40 EU) (R1013 C585_6) FURO by Redchief Men Navy Running Shoes-6 UK (40 EU) (R1013 C585_6)",
-    price: "₹2900",
-    image: URL(
-      "https://images-na.ssl-images-amazon.com/images/I/61TPpkf-qAL._UL1300_.jpg"
-    ),
-    review:
-      "Simply super and value for money deal. Fits well as well and the cut in the sides look very nice. Loved it. Ordering more in other colors. 5 star rating. ",
-  },
-  {
-    catogeries: "fashion",
-    name: "Ray-Ban Men Square Sunglasses",
-    rating: "4.4",
-    discription:
-      "Model Number 601S71 Part Number: 601S71 Frame Color:Black , Lens Color: Green Frame type:Full Rim, Lens type:Non polarized Frame Material: Composite Lens Width : 56 mm Bridge Width : 20 mm Temple Length : 145 mm",
-    price: "₹3000",
-    image: URL(
-      "https://images-na.ssl-images-amazon.com/images/I/61CobOBk6cL._UL1500_.jpg"
-    ),
-    review:
-      "Simply super and value for money deal. Fits well as well and the cut in the sides look very nice. Loved it. Ordering more in other colors. 5 star rating. ",
-  },
 ];
+
+export default data;
