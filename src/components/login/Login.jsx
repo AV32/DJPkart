@@ -4,7 +4,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Login.css";
 
 function Login(props) {
@@ -17,6 +17,10 @@ function Login(props) {
   const [emailError, setEmailError] = useState(false);
   const [nameError, setNameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("userData", JSON.stringify(userData));
+  }, [userData]);
 
   const { signIn } = props;
 
@@ -46,7 +50,6 @@ function Login(props) {
     if (userData.userPassword === "") {
       setPasswordError(true);
     }
-
     signIn();
     handleClose();
   }
