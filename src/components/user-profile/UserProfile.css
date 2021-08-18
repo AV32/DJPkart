@@ -1,0 +1,16 @@
+.user-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 15rem;
+  height: 5rem;
+  border: 1px solid black;
+  background-color: black;
+  position: absolute;
+  color: white;
+  top: 20;
+  left: 0;
+  right: 20;
+}
