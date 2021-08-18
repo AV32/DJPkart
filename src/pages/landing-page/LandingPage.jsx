@@ -6,7 +6,7 @@ import data from "./../../products";
 import ProdSlider from "../../components/slider/ProdSlider";
 import PauseOnHover from "../../components/slider";
 import ProductPage from "../../productpage/ProductPage";
-function LandingPage() {
+function LandingPage({ isSignedIn, signIn }) {
   const smartPhoneDeals = data.map((item, index) => (
     <ProductCard
       key={index}
@@ -19,7 +19,7 @@ function LandingPage() {
 
   return (
     <div>
-      {/* <Navbar isSignedIn={isSignedIn} signIn={signIn} /> */}
+      <Navbar isSignedIn={isSignedIn} signIn={signIn} />
       {/* <Header /> */}
       <PauseOnHover />
       <h1>Mobile</h1>
