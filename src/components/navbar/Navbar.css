@@ -15,6 +15,13 @@
   height: 9vh;
 }
 
+.mobile-right-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  align-items: center;
+}
+
 .mobile-cart,
 .mobile-menu,
 .close-mobile-menu {
