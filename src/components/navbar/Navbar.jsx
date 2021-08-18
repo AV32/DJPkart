@@ -24,7 +24,7 @@ function Navbar(props) {
           <p>My Orders</p>
           <p>Coupons</p>
           <p>Gift Cards</p>
-          <p>My Profile</p>
+          {isSignedIn ? <Avatar /> : <Login signIn={signIn} />}
         </div>
         <div className="close-mobile-menu" onClick={handleMobileMenu}>
           <CloseIcon />
