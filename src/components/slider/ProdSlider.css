@@ -41,3 +41,10 @@
 .slider__conatiner {
   margin: 30px 0 0px;
 }
+
+@media only screen and (max-width: 400px) {
+  .slider-card {
+    width: 150px;
+    height: 200px;
+  }
+}
