@@ -39,7 +39,7 @@ function Navbar(props) {
   return (
     <div>
       {!isNavOpen && (
-        <div className="md:hidden bg-green-400">
+        <div className="md:hidden">
           <div className="mobile-nav">
             <div className="mobile-menu" onClick={handleMobileMenu}>
               <MenuIcon />
