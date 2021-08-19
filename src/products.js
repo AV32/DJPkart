@@ -1,6 +1,7 @@
 const data = [
   {
     catogeries: "phone",
+    id: "1",
     name: "APPLE iPhone 12 Pro (Gold, 128 GB)",
     rating: "4.5",
     discription:
@@ -24,6 +25,7 @@ const data = [
 
   {
     catogeries: "phone",
+    id: "2",
     name: "realme Narzo 30 5G (Racing Blue, 128 GB)",
     rating: "4.5",
     discription:
@@ -61,6 +63,7 @@ const data = [
 
   {
     catogeries: "phone",
+    id: "3",
     name: "POCO M3 (Power Black, 64 GB)",
     rating: "4.5",
     discription:
@@ -103,6 +106,7 @@ const data = [
 
   {
     catogeries: "phone",
+    id: "4",
     name: "MOTOROLA G60 (Dynamic Gray, 128 GB)",
     rating: "4.5",
     discription:
@@ -136,6 +140,7 @@ const data = [
 
   {
     catogeries: "phone",
+    id: "5",
     name: "Mi 11X (Lunar White, 128 GB)",
     rating: "4.2",
     discription:
@@ -156,6 +161,7 @@ const data = [
   {
     catogeries: "phone",
     name: "OPPO Reno6 Pro 5G (Aurora, 256 GB)",
+    id: "6",
     rating: "4.5",
     discription:
       "The OPPO Reno6 Pro 5G is not only easy on the eyes but also equipped with innovative features. The X-axis Linear Motor ensures immersive viewing and usage. With an ultra-slim body and lightweight construction, you can easily hold it during extended usage. You can replicate the appeal of some of your favourite images in a single click with the AI Palette feature. And, you can enjoy long-lasting usage with its 4500 mAh battery.",
@@ -183,6 +189,7 @@ const data = [
   },
   {
     catogeries: "phone",
+    id: "7",
     name: "realme 8 Pro (Infinite Black, 128 GB)",
     rating: "4.2",
     discription:
@@ -202,6 +209,7 @@ const data = [
   },
   {
     catogeries: "phone",
+    id: "8",
     name: "Google Pixel 4a (Just Black, 128 GB)",
     rating: "4.1",
     discription:
@@ -229,6 +237,7 @@ const data = [
 
   {
     catogeries: "phone",
+    id: "9",
     name: "SAMSUNG Galaxy A52 (Awesome Blue, 128 GB)",
     rating: "4.3",
     discription:
@@ -249,6 +258,7 @@ const data = [
 
   {
     catogeries: "phone",
+    id: "10",
     name: "SAMSUNG Galaxy F12 (Celestial Black, 64 GB)",
     rating: "4.5",
     discription:
@@ -267,6 +277,7 @@ const data = [
   },
   {
     catogeries: "Electronics",
+    id: "11",
     name: "HP Chromebook 14a-na0002TU Laptop ",
     rating: "4.5",
     discription:
@@ -289,6 +300,7 @@ const data = [
 
   {
     catogeries: "Electronics",
+    id: "12",
     name: "Canon EOS 3000D DSLR Camera 1 Camera Body, 18 - 55 mm Lens  (Black) ",
     rating: "4.3",
     discription:
@@ -311,6 +323,7 @@ const data = [
 
   {
     catogeries: "Electronics",
+    id: "13",
     name: "HP 27 inch Full HD LED Backlit IPS Panel Monitor (27m)  33000 mAh Power Bank  (Blue, Lithium-ion)",
     rating: "4.2",
     discription:
@@ -333,6 +346,7 @@ const data = [
 
   {
     catogeries: "Electronics",
+    id: "14",
     name: "Worricow Deep Bass Wireless Portable Bluetooth Mp3 Headphone MP3 Player ",
     rating: "4.0",
     discription:
@@ -355,6 +369,7 @@ const data = [
 
   {
     catogeries: "Electronics",
+    id: "15",
     name: "realme Buds Wireless Bluetooth Headset  (Yellow, In the Ear) ",
     rating: "4.9",
     discription: "With Mic:Yes,Bluetooth version: 5 Wireless range: 10 m",
@@ -375,6 +390,7 @@ const data = [
   },
   {
     catogeries: "Electronics",
+    id: "16",
     name: "NLG-428-BLUE-BLU All Blue Boys Series Analog Watch - For Men ",
     rating: "3.9",
     discription:
@@ -396,6 +412,7 @@ const data = [
   },
   {
     catogeries: "Electronics",
+    id: "17",
     name: "AGARO AG50 Movie Projector Video Projector Full HD  ",
     rating: "4.7",
     discription:
@@ -418,6 +435,7 @@ const data = [
 
   {
     catogeries: "Electronics",
+    id: "18",
     name: "Epson L3100 Multi-function Color Printer  (Black, Ink Tank) ",
     rating: "4.6",
     discription:
@@ -439,6 +457,7 @@ const data = [
   },
   {
     catogeries: "fashion",
+    id: "19",
     name: "Allen Solly",
     rating: "4.4",
     discription:
@@ -459,6 +478,7 @@ const data = [
   },
   {
     catogeries: "Sports",
+    id: "20",
     name: "CEAT POPLAR WILLOW CRICKET BAT (No- 6) Poplar Willow Cricket Bat  (0.900 g) ",
     rating: "3.6",
     discription:
@@ -481,6 +501,7 @@ const data = [
 
   {
     catogeries: "Sports",
+    id: "21",
     name: "JetFire Regular Wicket Keeping Gloves Combo With Inner Gloves(Men, Blue) Wicket Keeping Gloves  (Blue) ",
     rating: "4.0",
     discription:
@@ -503,6 +524,7 @@ const data = [
 
   {
     catogeries: "Sports",
+    id: "22",
     name: "NODENS Cricket Bat Grip, (Multicolour Pack of 6) Mesh Grip  (White, Pack of 6) ",
     rating: "4.1",
     discription:
@@ -525,6 +547,7 @@ const data = [
 
   {
     catogeries: "Sports",
+    id: "23",
     name: "Aurion Cricket Bag Shoulder Straps Sports Cricket Kit Bag for 2 Bat Caves with 2 pockets  (Multicolor, Kit Bag)",
     rating: "4.5",
     discription:
@@ -547,6 +570,7 @@ const data = [
 
   {
     catogeries: "Sports",
+    id: "24",
     name: "SBM  Cricket Ball (Pack Of 12) Cricket Ball  (Pack of 12, Green) ",
     rating: "3.7",
     discription: "Cricket Ball Green Pack Of 12",
@@ -567,6 +591,7 @@ const data = [
   },
   {
     catogeries: "Sports",
+    id: "25",
     name: "NIVIA Storm Football - Size: 5",
     rating: "4.4",
     discription:
@@ -588,6 +613,7 @@ const data = [
   },
   {
     catogeries: "Sports",
+    id: "26",
     name: "COSCO HI-GRIP Basketball - Size: 7",
     rating: "4.7",
     discription: "Cricket Ball Green Pack Of 12",
@@ -607,6 +633,7 @@ const data = [
   },
   {
     catogeries: "Sports",
+    id: "27",
     name: "LI-NING Windstorm Nano 73 Professional Badminton Racquet",
     rating: "3.9",
     discription:
@@ -627,6 +654,7 @@ const data = [
   },
   {
     catogeries: "fashion",
+    id: "28",
     name: "Classic Polo Men's Regular Fit",
     rating: "4.4",
     discription:
@@ -647,6 +675,7 @@ const data = [
   },
   {
     catogeries: "fashion",
+    id: "29",
     name: "Benetton Men's Slim Polo Shirt",
     rating: "4.2",
     discription:
@@ -667,6 +696,7 @@ const data = [
   },
   {
     catogeries: "fashion",
+    id: "30",
     name: "GODFREY Cotton Polo",
     rating: "4.1",
     discription:
@@ -687,6 +717,7 @@ const data = [
   },
   {
     catogeries: "fashion",
+    id: "31",
     name: "Adidas Men's Drogo M Running Shoes",
     rating: "3.4",
     discription:
@@ -707,6 +738,7 @@ const data = [
   },
   {
     catogeries: "fashion",
+    id: "32",
     name: "Reebok Men's Fast Motion ",
     rating: "4.1",
     discription:
@@ -727,6 +759,7 @@ const data = [
   },
   {
     catogeries: "fashion",
+    id: "33",
     name: "Navy Running Shoes-6 UK",
     rating: "4.2",
     discription:
@@ -747,6 +780,7 @@ const data = [
   },
   {
     catogeries: "fashion",
+    id: "34",
     name: "Ray-Ban Men Square Sunglasses",
     rating: "4.4",
     discription:
@@ -767,6 +801,7 @@ const data = [
   },
   {
     catogeries: "Beauty and Cosmetics",
+    id: "35",
     name: "NIVEA Soft Moisturizing Cream  (200 ml)",
     rating: "4.5",
     discription:
@@ -788,6 +823,7 @@ const data = [
   },
   {
     catogeries: "Beauty and Cosmetics",
+    id: "36",
     name: "DOVE Intense Repair Conditioner  (175 ml)",
     rating: "4.4",
     discription:
@@ -809,6 +845,7 @@ const data = [
   },
   {
     catogeries: "Beauty and Cosmetics",
+    id: "37",
     name: "Clean & Clear Face Wash  (450 ml)",
     rating: "4.5",
     discription:
@@ -830,6 +867,7 @@ const data = [
   },
   {
     catogeries: "Beauty and Cosmetics",
+    id: "38",
     name: "Kesh King Scalp and Medicinal Ayurvedic Hair Oil  (100 ml)",
     rating: "4.3",
     discription:
@@ -849,6 +887,7 @@ const data = [
   },
   {
     catogeries: "Beauty and Cosmetics",
+    id: "39",
     name: "SET WET Cool, Charm and Swag Avatar Deodorant Spray - For Men  (450 ml, Pack of 3)",
     rating: "4.2",
     discription:
@@ -869,6 +908,7 @@ const data = [
   },
   {
     catogeries: "Beauty and Cosmetics",
+    id: "40",
     name: "BOROPLUS Antiseptic + Moisturising Soap - Neem, Eucalyptus & Honey  (6 x 125 g)",
     rating: "4.4",
     discription:
@@ -889,6 +929,7 @@ const data = [
   },
   {
     catogeries: "Beauty and Cosmetics",
+    id: "41",
     name: "FOGG 1 Royal and 1 Napoleon Deodorant Combo Pack of 2 Deodorant Spray - For Men  (300 ml, Pack of 2)",
     rating: "4.3",
     discription:
@@ -907,6 +948,7 @@ const data = [
   },
   {
     catogeries: "Beauty and Cosmetics",
+    id: "42",
     name: "GARNIER Skin Naturals Bright Complete Brightening Face Wash  (200 g)",
     rating: "4.5",
     discription:

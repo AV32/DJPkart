@@ -2,26 +2,33 @@ import React from "react";
 import "./ProductPage.css";
 // import ReactImageZoom from "react-image-zoom";
 import { useState } from "react";
+import Navbar from "../../components/navbar";
+import data from "../../products";
+import { useEffect } from "react";
 
-function ProductPage({
-  className,
-  price,
-  name,
-  rating,
-  image,
-  review,
-  description,
-  catogeries,
-}) {
+function ProductPage() {
+  let id = window.location.pathname.split("/")[2];
+  const {
+    className,
+    price,
+    name,
+    rating,
+    image,
+    review,
+    description,
+    catogeries,
+  } = data[id - 1];
   const [dispImg, setDispImg] = useState(image[0]);
-
-  console.log(dispImg);
   // const zoomProps = {
   //   width: 300,
   //   height: 450,
   //   zoomWidth: 100,
   //   img: dispImg,
   // };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="productPage__container">
@@ -32,9 +39,7 @@ function ProductPage({
               onClick={() => setDispImg(item)}
               className="sideImage"
               style={{ backgroundImage: `url(${item})` }}
-            >
-              {/* <img src={item} alt="" /> */}
-            </div>
+            ></div>
           ))}
         </div>
         <div className="productPage__displayImageContainer">
@@ -42,7 +47,6 @@ function ProductPage({
             className="productPage__displayImage"
             style={{ backgroundImage: `url(${dispImg})` }}
           ></div>
-          {/* <ReactImageZoom {...zoomProps} /> */}
         </div>
       </div>
       <div className="productPage__right">
