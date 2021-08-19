@@ -4,12 +4,24 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Login.css";
 
 function Login(props) {
   const [open, setOpen] = useState(false);
-  const [userData, setUserData] = useState({ userEmail: "", userPassword: "" });
+  const [userData, setUserData] = useState({
+    userEmail: "",
+    userPassword: "",
+    userName: "",
+  });
+  const [emailError, setEmailError] = useState(false);
+  const [nameError, setNameError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("userData", JSON.stringify(userData));
+  }, [userData]);
+
   const { signIn } = props;
 
   const handleClickOpen = () => {
@@ -27,6 +39,17 @@ function Login(props) {
 
   function collectUserData(event) {
     event.preventDefault();
+    if (userData.userEmail === "") {
+      setEmailError(true);
+    }
+
+    if (userData.userName === "") {
+      setNameError(true);
+    }
+
+    if (userData.userPassword === "") {
+      setPasswordError(true);
+    }
     signIn();
     handleClose();
   }
@@ -40,9 +63,22 @@ function Login(props) {
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
-        <form onSubmit={collectUserData}>
+        <form autoComplete="off" onSubmit={collectUserData}>
           <DialogTitle id="form-dialog-title">Login</DialogTitle>
           <DialogContent>
+            <TextField
+              margin="dense"
+              id="userName"
+              required={true}
+              variant="outlined"
+              name="userName"
+              value={userData.userName}
+              onChange={handleChange}
+              label="User Name"
+              type="text"
+              fullWidth
+              error={nameError}
+            />
             <TextField
               margin="dense"
               id="userEmail"
@@ -54,6 +90,7 @@ function Login(props) {
               label="Email Address"
               type="email"
               fullWidth
+              error={emailError}
             />
             <TextField
               required={true}
@@ -66,15 +103,16 @@ function Login(props) {
               label="Password"
               type="password"
               fullWidth
+              error={passwordError}
             />
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} color="primary">
               Cancel
             </Button>
-            <button type="submit" onClick={collectUserData} color="primary">
+            <Button type="submit" color="primary">
               Login
-            </button>
+            </Button>
           </DialogActions>
         </form>
       </Dialog>

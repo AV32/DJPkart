@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ProdSlider.css";
+import ProductCard from "../productcard/ProductCard";
 
 export default class Responsive extends Component {
   render() {
@@ -10,13 +11,31 @@ export default class Responsive extends Component {
       dots: true,
       infinite: false,
       speed: 500,
-      slidesToShow: 4,
+      slidesToShow: 6,
       slidesToScroll: 2,
       initialSlide: 0,
       arrows: true,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1300,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 850,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -33,18 +52,18 @@ export default class Responsive extends Component {
           },
         },
         {
-          breakpoint: 480,
+          breakpoint: 400,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
           },
         },
       ],
     };
     return (
-      <div>
+      <div className="slider__conatiner">
         <Slider {...settings}>
-          <div className="slider-card">1</div>
+          {/* <div className="slider-card">1</div>
           <div className="slider-card">2</div>
           <div className="slider-card">3</div>
           <div className="slider-card">4</div>
@@ -57,7 +76,16 @@ export default class Responsive extends Component {
           <div className="slider-card">11</div>
           <div className="slider-card">12</div>
           <div className="slider-card">13</div>
-          <div className="slider-card">14</div>
+          <div className="slider-card">14</div> */}
+          {this.props.data.map((item, index) => (
+            <ProductCard
+              key={index}
+              name={item.name}
+              price={item.price}
+              rating={item.rating}
+              url={item.image[0]}
+            />
+          ))}
         </Slider>
       </div>
     );
