@@ -90,14 +90,15 @@ function Navbar(props) {
               //   onRequestSearch={() => doSomethingWith(this.state.value)}
             />
             {/* <h1>Profile</h1> */}
-            {isSignedIn ? (
-              <UserProfile getUserData={getUserData} />
-            ) : (
-              <Login signIn={signIn} />
-            )}
-            {/* <Profile/> */}
-            <h1>Cart</h1>
-            {/* <Cart/> */}
+            <div className="Navbar__right__right">
+              {isSignedIn ? (
+                <UserProfile getUserData={getUserData} />
+              ) : (
+                <Login signIn={signIn} />
+              )}
+
+              <h1>Cart</h1>
+            </div>
           </div>
         </div>
         {isVisible && <Category />}

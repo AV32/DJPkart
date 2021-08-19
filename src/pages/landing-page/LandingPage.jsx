@@ -5,7 +5,7 @@ import data from "./../../products";
 // import Header from "../../components/header";
 import ProdSlider from "../../components/slider/ProdSlider";
 import PauseOnHover from "../../components/slider";
-import ProductPage from "../../productpage/ProductPage";
+import ProductPage from "../productpage/ProductPage";
 import Footer from "../../components/Footer/Footer";
 function LandingPage({ isSignedIn, signIn }) {
   const smartPhoneDeals = data.map((item, index) => (
@@ -22,7 +22,7 @@ function LandingPage({ isSignedIn, signIn }) {
     catogeries: "phone",
     name: "APPLE iPhone 12 Pro (Gold, 128 GB)",
     rating: "4.5",
-    discription:
+    description:
       "A14 Bionic rockets past every other smartphone chip. The Pro camera system takes low-light photography to the next level — with an even bigger jump on iPhone 12 Pro Max. And Ceramic Shield delivers four times better drop performance. Let’s see what this thing can do.",
     price: "₹119900",
 
@@ -47,15 +47,15 @@ function LandingPage({ isSignedIn, signIn }) {
       {/* <Header /> */}
       {/* <PauseOnHover />
       <h1>Mobile</h1>
-      <ProdSlider data={data.filter((item) => item.catogeries == "phone")} />
+      <ProdSlider data={data.filter((item) => item.catogeries === "phone")} />
       <h1>Electronics</h1>
       <ProdSlider
-        data={data.filter((item) => item.catogeries == "Electronics")}
+        data={data.filter((item) => item.catogeries === "Electronics")}
       />
       <h1>Sports</h1>
-      <ProdSlider data={data.filter((item) => item.catogeries == "Sports")} />
+      <ProdSlider data={data.filter((item) => item.catogeries === "Sports")} />
       <h1>Fashion</h1>
-      <ProdSlider data={data.filter((item) => item.catogeries == "fashion")} />
+      <ProdSlider data={data.filter((item) => item.catogeries === "fashion")} />
       <h1>Beauty and Cosmetics</h1>
       <ProdSlider
         data={data.filter((item) => item.catogeries == "Beauty and Cosmetics")}
@@ -66,7 +66,7 @@ function LandingPage({ isSignedIn, signIn }) {
         rating={item.rating}
         image={item.image}
         catogeries={item.catogeries}
-        discription={item.discription}
+        description={item.description}
         review={item.review}
       />
       {/* <Footer /> */}

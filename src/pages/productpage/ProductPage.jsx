@@ -2,6 +2,7 @@ import React from "react";
 import "./ProductPage.css";
 import ReactImageZoom from "react-image-zoom";
 import { useState } from "react";
+import Navbar from "../../components/navbar";
 
 function ProductPage({
   className,
@@ -10,7 +11,7 @@ function ProductPage({
   rating,
   image,
   review,
-  discription,
+  description,
   catogeries,
 }) {
   const [dispImg, setDispImg] = useState(image[0]);
@@ -25,6 +26,7 @@ function ProductPage({
 
   return (
     <div className="productPage__container">
+      <Navbar />
       <div className="productPage__left">
         <div className="productPage__sideImagesContainer">
           {image.map((item, index) => (
@@ -46,17 +48,17 @@ function ProductPage({
         </div>
       </div>
       <div className="productPage__right">
-        <h1>{catogeries.charAt(0).toUpperCase() + catogeries.slice(1)}</h1>
-        <h1>{name}</h1>
-        <h1>{rating}</h1>
-        <h1>{price}</h1>
-        <h1>{discription}</h1>
+        {/* <h1>{catogeries.charAt(0).toUpperCase() + catogeries.slice(1)}</h1> */}
+        <h1 className="productPage__right__name">{name}</h1>
+        <h1 className="productPage__right__rating">{rating}</h1>
+        <h1 className="productPage__right__price">{price}</h1>
+        <h1 className="productPage__right__description">{description}</h1>
         {review.map((item) => (
           <div className="review__container">
             <div className="review__User">
               <img
                 className="review__avatar"
-                src="https://i.pinimg.com/736x/ef/de/78/efde78cc09aeece4b344c689b6e84ead.jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8H1cJiq2N6D8u6lQMkP_-iPVu7d2XZbevhfUNM6obwXcUkeMDvJEsak3kTjvqAr67DDY&usqp=CAU"
                 alt=""
               />{" "}
               <h1>Pratyush K</h1>{" "}
