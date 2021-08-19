@@ -1,4 +1,6 @@
 .categories {
+  position: absolute;
+  z-index: 2000;
   top: 100px;
   display: flex;
   justify-content: space-between;
