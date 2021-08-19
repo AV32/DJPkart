@@ -1,16 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
 .productPage__container {
   position: relative;
   display: flex;
   width: 100vw;
   height: 1000px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .productPage__left {
   background-color: white;
   height: 100vh;
-  position: sticky;
   top: 0px;
-  width: 45%;
+  width: 80vw;
   display: flex;
   padding: 20px;
   border: 1px solid #bbb;
@@ -21,7 +23,7 @@
   width: 55%;
   height: 1000px;
   margin: 10px;
-  margin-top: 9vh;
+  margin-top: 13vh;
 }
 
 .sideImage {
@@ -74,4 +76,20 @@
 
 .review__text {
   margin: 10px 0;
+}
+
+.productPage__right__name {
+  font-weight: bolder;
+}
+
+.productPage__right__rating {
+}
+
+@media only screen and (max-width: 768px) {
+  .productPage__container {
+    display: block;
+  }
+  .productPage__left {
+    width: 100vw;
+  }
 }

@@ -58,7 +58,7 @@ function ProductPage({
             <div className="review__User">
               <img
                 className="review__avatar"
-                src="https://i.pinimg.com/736x/ef/de/78/efde78cc09aeece4b344c689b6e84ead.jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8H1cJiq2N6D8u6lQMkP_-iPVu7d2XZbevhfUNM6obwXcUkeMDvJEsak3kTjvqAr67DDY&usqp=CAU"
                 alt=""
               />{" "}
               <h1>Pratyush K</h1>{" "}
