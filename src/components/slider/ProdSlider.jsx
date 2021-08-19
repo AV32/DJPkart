@@ -84,6 +84,7 @@ export default class Responsive extends Component {
               price={item.price}
               rating={item.rating}
               url={item.image[0]}
+              id={item.id}
             />
           ))}
         </Slider>

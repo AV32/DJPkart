@@ -3,20 +3,22 @@ import "./ProductPage.css";
 import ReactImageZoom from "react-image-zoom";
 import { useState } from "react";
 import Navbar from "../../components/navbar";
+import data from "../../products";
 
-function ProductPage({
-  className,
-  price,
-  name,
-  rating,
-  image,
-  review,
-  description,
-  catogeries,
-}) {
+function ProductPage() {
+  let id = window.location.pathname.split("/")[2];
+  const {
+    className,
+    price,
+    name,
+    rating,
+    image,
+    review,
+    description,
+    catogeries,
+  } = data[id - 1];
+
   const [dispImg, setDispImg] = useState(image[0]);
-
-  console.log(dispImg);
   const zoomProps = {
     width: 300,
     height: 450,
@@ -34,9 +36,7 @@ function ProductPage({
               onClick={() => setDispImg(item)}
               className="sideImage"
               style={{ backgroundImage: `url(${item})` }}
-            >
-              {/* <img src={item} alt="" /> */}
-            </div>
+            ></div>
           ))}
         </div>
         <div className="productPage__displayImageContainer">
@@ -44,7 +44,6 @@ function ProductPage({
             className="productPage__displayImage"
             style={{ backgroundImage: `url(${dispImg})` }}
           ></div>
-          {/* <ReactImageZoom {...zoomProps} /> */}
         </div>
       </div>
       <div className="productPage__right">
@@ -68,16 +67,17 @@ function ProductPage({
         <h1 className="prod-taxes">inclusive of all taxes</h1>
         <div className="prodButtons">
           <button className="prod-addToBag">
-            <i class="fas fa-shopping-bag btnProd-icons"></i> ADD TO BAG
+            <i className="fas fa-shopping-bag btnProd-icons"></i> ADD TO BAG
           </button>
           <button className="prod-wishList">
-            <i class="far fa-heart btnProd-icons"></i> WISHLIST
+            <i className="far fa-heart btnProd-icons"></i> WISHLIST
           </button>
         </div>
         <hr />
         <div className="product-details">
           <h1 className="product-details-heading">
-            PRODUCT DETAILS <i class="fas fa-newspaper prod-detail-icon"></i>
+            PRODUCT DETAILS{" "}
+            <i className="fas fa-newspaper prod-detail-icon"></i>
           </h1>
           <h3 className="productPage__right__description">{description}</h3>
         </div>

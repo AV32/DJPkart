@@ -57,11 +57,11 @@ function Navbar(props) {
             <div className="mobile-logo">
               <h1>Logo</h1>
             </div>
-            <div class="mobile-right-flex">
-              <div class="mobile-avatar">
+            <div className="mobile-right-flex">
+              <div className="mobile-avatar">
                 {isSignedIn ? "" : <Login signIn={signIn} />}
               </div>
-              <div class="mobile-cart">
+              <div className="mobile-cart">
                 <AddShoppingCartIcon />
               </div>
             </div>
