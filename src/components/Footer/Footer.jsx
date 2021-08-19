@@ -72,18 +72,6 @@ export default function Footer() {
                 <li>
                   <a href="#nothing">Homestay Faq</a>
                 </li>
-                {/* <li>
-                  <a href="#nothing">Travel Trade Faq</a>
-                </li>
-                <li>
-                  <a href="#nothing">Place of Interest Faq</a>
-                </li>
-                <li>
-                  <a href="#nothing">Religious Tourism Faq</a>
-                </li>
-                <li>
-                  <a href="#nothing">Trekking Faq</a>
-                </li> */}
               </ul>
             </div>
           </div>

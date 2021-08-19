@@ -24,18 +24,18 @@ function LandingPage({ isSignedIn, signIn }) {
       {/* <Header /> */}
       <PauseOnHover />
       <h1>Mobile</h1>
-      <ProdSlider data={data.filter((item) => item.catogeries == "phone")} />
+      <ProdSlider data={data.filter((item) => item.catogeries === "phone")} />
       <h1>Electronics</h1>
       <ProdSlider
-        data={data.filter((item) => item.catogeries == "Electronics")}
+        data={data.filter((item) => item.catogeries === "Electronics")}
       />
       <h1>Sports</h1>
-      <ProdSlider data={data.filter((item) => item.catogeries == "Sports")} />
+      <ProdSlider data={data.filter((item) => item.catogeries === "Sports")} />
       <h1>Fashion</h1>
-      <ProdSlider data={data.filter((item) => item.catogeries == "fashion")} />
+      <ProdSlider data={data.filter((item) => item.catogeries === "fashion")} />
       <h1>Beauty and Cosmetics</h1>
       <ProdSlider
-        data={data.filter((item) => item.catogeries == "Beauty and Cosmetics")}
+        data={data.filter((item) => item.catogeries === "Beauty and Cosmetics")}
       />
       <Footer />
     </div>
