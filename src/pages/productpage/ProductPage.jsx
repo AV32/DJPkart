@@ -46,14 +46,8 @@ function ProductPage({
           ></div>
           {/* <ReactImageZoom {...zoomProps} /> */}
         </div>
-      </div>
-      <div className="productPage__right">
-        {/* <h1>{catogeries.charAt(0).toUpperCase() + catogeries.slice(1)}</h1> */}
-        <h1 className="productPage__right__name">{name}</h1>
-        <h1 className="productPage__right__rating">{rating}</h1>
-        <h1 className="productPage__right__price">{price}</h1>
-        <h1 className="productPage__right__description">{description}</h1>
-        {review.map((item) => (
+        <div className="reviews">
+      {review.map((item) => (
           <div className="review__container">
             <div className="review__User">
               <img
@@ -66,6 +60,21 @@ function ProductPage({
             <h1 className="review__text">{item}</h1>
           </div>
         ))}
+        
+      </div>
+      </div>
+
+     
+      
+
+      <div className="productPage__right">
+        {/* <h1>{catogeries.charAt(0).toUpperCase() + catogeries.slice(1)}</h1> */}
+        <h1 className="productPage__right__name">{name}</h1>
+        <h1 className="productPage__right__rating">{rating}</h1>
+        <h1 className="productPage__right__price">{price}</h1>
+        <h1 className="productPage__right__description">{description}</h1>
+
+     
       </div>
     </div>
   );

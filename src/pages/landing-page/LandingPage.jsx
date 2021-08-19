@@ -16,7 +16,7 @@ function LandingPage({ isSignedIn, signIn }) {
       rating={item.rating}
       url={item.image[0]}
     />
-  ));
+  )); 
 
   const item = {
     catogeries: "phone",
