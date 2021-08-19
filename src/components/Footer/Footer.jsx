@@ -116,9 +116,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div class="desktop-promises">
-          <div class="desktop-section">
-            <div class="desktop-original">
+        <div className="desktop-promises">
+          <div className="desktop-section">
+            <div className="desktop-original">
               <img
                 src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png"
                 style={{ width: "48px", height: "40px" }}
@@ -130,8 +130,8 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div class="desktop-section">
-            <div class="desktop-return">
+          <div className="desktop-section">
+            <div className="desktop-return">
               <img
                 src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png"
                 style={{ width: "48px", height: "49px" }}

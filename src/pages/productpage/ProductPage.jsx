@@ -1,9 +1,10 @@
 import React from "react";
 import "./ProductPage.css";
-import ReactImageZoom from "react-image-zoom";
+// import ReactImageZoom from "react-image-zoom";
 import { useState } from "react";
 import Navbar from "../../components/navbar";
 import data from "../../products";
+import { useEffect } from "react";
 
 function ProductPage() {
   let id = window.location.pathname.split("/")[2];
@@ -17,18 +18,20 @@ function ProductPage() {
     description,
     catogeries,
   } = data[id - 1];
-
   const [dispImg, setDispImg] = useState(image[0]);
-  const zoomProps = {
-    width: 300,
-    height: 450,
-    zoomWidth: 100,
-    img: dispImg,
-  };
+  // const zoomProps = {
+  //   width: 300,
+  //   height: 450,
+  //   zoomWidth: 100,
+  //   img: dispImg,
+  // };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="productPage__container">
-      <Navbar />
       <div className="productPage__left">
         <div className="productPage__sideImagesContainer">
           {image.map((item, index) => (

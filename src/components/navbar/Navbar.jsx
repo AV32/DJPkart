@@ -15,6 +15,7 @@ function Navbar(props) {
   const { isSignedIn, signIn } = props;
   const [isNavOpen, setNavOpen] = useState(false);
   const [isVisible, setisVisible] = useState(false);
+  console.log("Navbar isSigned In", isSignedIn);
 
   function getUserData(key) {
     if (isSignedIn) {
@@ -33,7 +34,11 @@ function Navbar(props) {
           <p>My Orders</p>
           <p>Coupons</p>
           <p>Gift Cards</p>
-          {isSignedIn ? <UserProfile getUserData={getUserData} /> : ""}
+          {isSignedIn ? (
+            <UserProfile signIn={signIn} getUserData={getUserData} />
+          ) : (
+            ""
+          )}
         </div>
         <div className="close-mobile-menu" onClick={handleMobileMenu}>
           <CloseIcon />
@@ -95,7 +100,7 @@ function Navbar(props) {
             {/* <h1>Profile</h1> */}
             <div className="Navbar__right__right">
               {isSignedIn ? (
-                <UserProfile getUserData={getUserData} />
+                <UserProfile signIn={signIn} getUserData={getUserData} />
               ) : (
                 <Login signIn={signIn} />
               )}
