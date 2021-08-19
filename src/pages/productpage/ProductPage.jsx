@@ -1,30 +1,36 @@
 import React from "react";
 import "./ProductPage.css";
-import ReactImageZoom from "react-image-zoom";
+// import ReactImageZoom from "react-image-zoom";
 import { useState } from "react";
 import Navbar from "../../components/navbar";
 import Truck from "./truck.png"
 import Price from "./price-tag.png"
+import data from "../../products";
+import { useEffect } from "react";
 
-function ProductPage({
-  className,
-  price,
-  name,
-  rating,
-  image,
-  review,
-  description,
-  catogeries,
-}) {
+function ProductPage() {
+  let id = window.location.pathname.split("/")[2];
+  const {
+    className,
+    price,
+    name,
+    rating,
+    image,
+    review,
+    description,
+    catogeries,
+  } = data[id - 1];
   const [dispImg, setDispImg] = useState(image[0]);
+  // const zoomProps = {
+  //   width: 300,
+  //   height: 450,
+  //   zoomWidth: 100,
+  //   img: dispImg,
+  // };
 
-  console.log(dispImg);
-  const zoomProps = {
-    width: 300,
-    height: 450,
-    zoomWidth: 100,
-    img: dispImg,
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

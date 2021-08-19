@@ -22,8 +22,8 @@
   margin-bottom: 0.75rem;
 }
 
-.h5,
-h5 {
+.footer mt-5 .h5,
+.footer mt-5 h5 {
   font-size: 1.25rem;
 }
 .footer mt-5 .h1,
@@ -96,7 +96,7 @@ h5 {
   width: 100%;
 }
 
-a {
+.footer mt-5 a {
   color: white;
 }
 
