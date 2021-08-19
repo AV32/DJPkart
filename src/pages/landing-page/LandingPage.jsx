@@ -43,9 +43,9 @@ function LandingPage({ isSignedIn, signIn }) {
 
   return (
     <div>
-      {/* <Navbar isSignedIn={isSignedIn} signIn={signIn} /> */}
+      <Navbar isSignedIn={isSignedIn} signIn={signIn} />
       {/* <Header /> */}
-      {/* <PauseOnHover />
+      <PauseOnHover />
       <h1>Mobile</h1>
       <ProdSlider data={data.filter((item) => item.catogeries === "phone")} />
       <h1>Electronics</h1>
@@ -58,9 +58,9 @@ function LandingPage({ isSignedIn, signIn }) {
       <ProdSlider data={data.filter((item) => item.catogeries === "fashion")} />
       <h1>Beauty and Cosmetics</h1>
       <ProdSlider
-        data={data.filter((item) => item.catogeries == "Beauty and Cosmetics")}
-      /> */}
-      <ProductPage
+        data={data.filter((item) => item.catogeries === "Beauty and Cosmetics")}
+      />
+      {/* <ProductPage
         name={item.name}
         price={item.price}
         rating={item.rating}
@@ -68,8 +68,8 @@ function LandingPage({ isSignedIn, signIn }) {
         catogeries={item.catogeries}
         description={item.description}
         review={item.review}
-      />
-      {/* <Footer /> */}
+      /> */}
+      <Footer />
     </div>
   );
 }

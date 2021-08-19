@@ -53,7 +53,7 @@ const data = [
       "Really great phone , it's worth for money , good display , good battery backup , really a good phone ❤️👏👍",
       `super camera qulity...i use realme phon first time but i m feel so much happy and satisfaide with product..
 
-      battry life is good and phon work also fast...
+      battery life is good and phon work also fast...
       
       and specily thenks to flipcart..`,
     ],
