@@ -3,7 +3,7 @@ import { Avatar } from "@material-ui/core";
 import "./UserProfile.css";
 
 function UserProfile(props) {
-  const { getUserData } = props;
+  const { signIn, getUserData } = props;
   const userData = getUserData("userData");
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

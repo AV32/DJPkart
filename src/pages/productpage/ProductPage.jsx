@@ -1,8 +1,7 @@
 import React from "react";
 import "./ProductPage.css";
-import ReactImageZoom from "react-image-zoom";
+// import ReactImageZoom from "react-image-zoom";
 import { useState } from "react";
-import Navbar from "../../components/navbar";
 
 function ProductPage({
   className,
@@ -17,16 +16,15 @@ function ProductPage({
   const [dispImg, setDispImg] = useState(image[0]);
 
   console.log(dispImg);
-  const zoomProps = {
-    width: 300,
-    height: 450,
-    zoomWidth: 100,
-    img: dispImg,
-  };
+  // const zoomProps = {
+  //   width: 300,
+  //   height: 450,
+  //   zoomWidth: 100,
+  //   img: dispImg,
+  // };
 
   return (
     <div className="productPage__container">
-      <Navbar />
       <div className="productPage__left">
         <div className="productPage__sideImagesContainer">
           {image.map((item, index) => (
@@ -68,16 +66,17 @@ function ProductPage({
         <h1 className="prod-taxes">inclusive of all taxes</h1>
         <div className="prodButtons">
           <button className="prod-addToBag">
-            <i class="fas fa-shopping-bag btnProd-icons"></i> ADD TO BAG
+            <i className="fas fa-shopping-bag btnProd-icons"></i> ADD TO BAG
           </button>
           <button className="prod-wishList">
-            <i class="far fa-heart btnProd-icons"></i> WISHLIST
+            <i className="far fa-heart btnProd-icons"></i> WISHLIST
           </button>
         </div>
         <hr />
         <div className="product-details">
           <h1 className="product-details-heading">
-            PRODUCT DETAILS <i class="fas fa-newspaper prod-detail-icon"></i>
+            PRODUCT DETAILS{" "}
+            <i className="fas fa-newspaper prod-detail-icon"></i>
           </h1>
           <h3 className="productPage__right__description">{description}</h3>
         </div>
