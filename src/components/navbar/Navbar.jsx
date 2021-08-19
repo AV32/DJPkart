@@ -7,6 +7,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import Category from "../category/Category";
 import Login from "../login";
 import UserProfile from "../user-profile";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 // import Profile from "./Profile/Profile";
 // import Cart from "./Cart/Cart";
 
@@ -70,7 +71,7 @@ function Navbar(props) {
       {isNavOpen && MobileNav()}
 
       <div className="hidden md:block desktop-nav">
-        <div className="Navbar w-full bg-green-400 p-3">
+        <div className="Navbar w-full p-3">
           <div className="Navbar__left">
             <h1>Logo</h1>
             {/* <Logo/> */}
@@ -81,10 +82,12 @@ function Navbar(props) {
           <div className="Navbar__right">
             <SearchBar
               style={{
-                maxWidth: 600,
+                minWidth: 600,
                 width: "50%",
                 height: "6vh",
               }}
+              placeholder="Search for products"
+              className="search-bar"
               //   value={this.state.value}
               //   onChange={(newValue) => this.setState({ value: newValue })}
               //   onRequestSearch={() => doSomethingWith(this.state.value)}
@@ -97,7 +100,7 @@ function Navbar(props) {
                 <Login signIn={signIn} />
               )}
 
-              <h1>Cart</h1>
+              <ShoppingCartIcon />
             </div>
           </div>
         </div>

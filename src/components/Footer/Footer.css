@@ -26,18 +26,18 @@
 h5 {
   font-size: 1.25rem;
 }
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.footer mt-5 .h1,
+.footer mt-5 .h2,
+.footer mt-5 .h3,
+.footer mt-5 .h4,
+.footer mt-5 .h5,
+.footer mt-5 .h6,
+.footer mt-5 h1,
+.footer mt-5 h2,
+.footer mt-5 h3,
+.footer mt-5 h4,
+.footer mt-5 h5,
+.footer mt-5 h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -53,7 +53,7 @@ h6 {
   margin-bottom: 0.5rem;
 }
 
-h5 {
+.footer mt-5 h5 {
   display: block;
   font-size: 0.83em;
   margin-block-start: 1.67em;
