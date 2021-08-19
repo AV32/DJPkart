@@ -2,6 +2,7 @@
   font-family: Assistant;
   margin: auto;
   padding: calc(47px - 1.25rem) 0;
+  font-size: 15px;
 }
 
 .row {
@@ -41,12 +42,13 @@ h6 {
   font-weight: 500;
   line-height: 1.2;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+.footer mt-5 h1,
+.footer mt-5 h2,
+.footer mt-5 h3,
+.footer mt-5 h4,
+.footer mt-5 h5,
+.footer mt-5 h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -71,13 +73,10 @@ h5 {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  /* background-color: #fff; */
   background-clip: border-box;
-  /* border: 1px solid rgba(0, 0, 0, 0.125); */
   border-radius: 0.25rem;
 }
 .footer .row {
-  font-family: Assistant;
   margin: auto;
   padding: calc(47px - 1.25rem) 0;
 }
@@ -90,7 +89,6 @@ h5 {
 
 .card-title {
   font-size: 20px;
-  /* text-align: center; */
 }
 
 .footer {
@@ -112,4 +110,75 @@ ul {
 
 .list-unstyled {
   padding: 2px;
+}
+
+.desktop-downLinkContainer img {
+  width: 40%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.desktop-keepInTouch,
+.desktop-gInfoTitle,
+.promise {
+  color: #fff;
+}
+
+.desktop-appExperience {
+  width: 20%;
+  margin-top: 52px !important;
+  font-family: Assistant;
+}
+
+.desktop-promises {
+  margin-top: 50px !important;
+  margin-left: 10px !important;
+}
+
+.desktop-gInfoTitle {
+  margin-bottom: 10px;
+}
+
+.desktop-keepInTouch {
+  margin-top: 10px;
+}
+
+.desktop-section,
+.desktop-original {
+  display: flex;
+}
+
+.desktop-section {
+  margin-top: 20px;
+}
+
+.desktop-appExperience {
+  margin-left: 30px;
+}
+
+.promise {
+  margin-left: 15px;
+}
+
+.foot_ {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  width: 100%;
+  border-top: 1px solid #454d5e;
+  padding: 40px;
+}
+
+.foot__ {
+  display: flex;
+}
+
+.foot__ img {
+  margin-right: 10px;
+}
+
+#for {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
