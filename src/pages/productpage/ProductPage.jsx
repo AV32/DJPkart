@@ -50,9 +50,37 @@ function ProductPage({
       <div className="productPage__right">
         {/* <h1>{catogeries.charAt(0).toUpperCase() + catogeries.slice(1)}</h1> */}
         <h1 className="productPage__right__name">{name}</h1>
-        <h1 className="productPage__right__rating">{rating}</h1>
-        <h1 className="productPage__right__price">{price}</h1>
-        <h1 className="productPage__right__description">{description}</h1>
+        <h1 className="productPage__right__rating">
+          <img
+            className="star"
+            src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/docomo/205/white-medium-star_2b50.png"
+            alt=""
+          />
+          {rating}
+        </h1>
+        <div className="prod-price">
+          <h1 className="productPage__right__price">{price}</h1>
+          <h1 className="productPage__right__price prod-price-strike">
+            ₹{parseInt(price.slice(1, price.length)) + 1000}
+          </h1>
+          <h1 className="productPage__right__price">( 50% OFF )</h1>
+        </div>
+        <h1 className="prod-taxes">inclusive of all taxes</h1>
+        <div className="prodButtons">
+          <button className="prod-addToBag">
+            <i class="fas fa-shopping-bag btnProd-icons"></i> ADD TO BAG
+          </button>
+          <button className="prod-wishList">
+            <i class="far fa-heart btnProd-icons"></i> WISHLIST
+          </button>
+        </div>
+        <hr />
+        <div className="product-details">
+          <h1 className="product-details-heading">
+            PRODUCT DETAILS <i class="fas fa-newspaper prod-detail-icon"></i>
+          </h1>
+          <h3 className="productPage__right__description">{description}</h3>
+        </div>
         {review.map((item) => (
           <div className="review__container">
             <div className="review__User">
