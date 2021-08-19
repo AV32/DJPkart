@@ -83,6 +83,81 @@
 }
 
 .productPage__right__rating {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 4px;
+  background-color: #388e3c;
+  color: #fff;
+  font-weight: bolder;
+  padding-left: 6px;
+}
+
+.star {
+  width: 20px;
+  float: right;
+}
+
+.prod-price {
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+}
+
+.productPage__right__price {
+  font-weight: bolder;
+}
+
+.prod-price-strike {
+  text-decoration: line-through;
+  font-weight: lighter;
+  color: rgb(68, 65, 65);
+}
+
+.prod-taxes {
+  font-weight: bolder;
+  color: #388e3c;
+  font-size: small;
+}
+
+.prod-addToBag {
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #ff527b;
+  border-radius: 5px;
+  margin-right: 20px;
+  color: #fff;
+}
+
+.prod-wishList {
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.btnProd-icons {
+  font-size: medium;
+  padding-right: 7px;
+}
+
+.prodButtons {
+  margin-bottom: 20px;
+}
+
+.product-details {
+  margin-top: 20px;
+}
+
+.product-details-heading {
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+
+.prod-detail-icon {
+  padding-left: 8px;
 }
 
 @media only screen and (max-width: 768px) {
