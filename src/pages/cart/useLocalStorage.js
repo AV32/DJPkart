@@ -19,7 +19,7 @@ function addItemToCart({
   localStorage.setItem("cartItems", JSON.stringify(cart));
 }
 
-function removeItemFromCart({ id }) {
+function removeItemFromCart(id) {
   const cart = JSON.parse(localStorage.getItem("cartItems"));
   const tempCart = cart.filter((item) => item.id != id);
   localStorage.setItem("cartItems", JSON.stringify(tempCart));
