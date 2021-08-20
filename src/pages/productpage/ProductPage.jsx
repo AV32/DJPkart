@@ -47,10 +47,9 @@ function ProductPage() {
   const handeleOnSubmit = (e) => {
     const { text, rate } = formData;
 
-    localStorage.setItem('text', text);
-    localStorage.setItem('rate ', text ? rate  : '');
+    // localStorage.setItem('text', text);
+    // localStorage.setItem('rate ', text ? rate  : '');
     e.preventDefault();
-
 
     // componentDidMount(){
     //   const text = localStorage.getItem('text') === 'true';
@@ -59,7 +58,7 @@ function ProductPage() {
     // }
 
     if (!text) {
-      setError("Title is required");
+      setError("Review is required");
       return;
     }
 
@@ -72,12 +71,12 @@ function ProductPage() {
 
     setarrData((arrData) => [...arrData, { text, rate }]);
 
+    setformData({ text: "", rate: "" });
+
     console.log(arrData);
     // console.log(setarrData)
     // console.log(formData);
   };
-
-  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -199,7 +198,7 @@ function ProductPage() {
           <div className="product_reviews">
             <h1 className="product-details-heading">Ratings</h1>
 
-            <div>
+            <div className="review_info">
               {rating}{" "}
               <img
                 className="star"
@@ -210,9 +209,9 @@ function ProductPage() {
               {/* <input type="text" onChange={(e) => setPro_review(e.target.value)}/><button>Add</button> */}
             </div>
 
-            <div>
+            <div className="form">
               {/* <h2>{formData}</h2> */}
-
+              <p>Share you valuable Review</p>
               <form>
                 <input
                   type="text"
@@ -224,6 +223,7 @@ function ProductPage() {
                 />
 
                 <input
+                  className="input_num"
                   type="number"
                   min="0"
                   max="5"
@@ -241,26 +241,27 @@ function ProductPage() {
                   type="submit"
                   onClick={handeleOnSubmit}
                 >
-                  Add Item{" "}
+                  Post{" "}
                 </button>
                 <Posts post={arrData} />
               </form>
             </div>
 
-
-            {review.map((item) => (
-              <div className="review__container">
-                <div className="review__rate ">
-                  <img
-                    className="review__avatar"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8H1cJiq2N6D8u6lQMkP_-iPVu7d2XZbevhfUNM6obwXcUkeMDvJEsak3kTjvqAr67DDY&usqp=CAU"
-                    alt=""
-                  />{" "}
-                  <h1>Pratyush K</h1>{" "}
+            <div>
+              {review.map((item) => (
+                <div className="review__container">
+                  <div className="review__rate ">
+                    <img
+                      className="review__avatar"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8H1cJiq2N6D8u6lQMkP_-iPVu7d2XZbevhfUNM6obwXcUkeMDvJEsak3kTjvqAr67DDY&usqp=CAU"
+                      alt=""
+                    />{" "}
+                    <h1>Pratyush K</h1>{" "}
+                  </div>
+                  <h1 className="review__text">{item}</h1>
                 </div>
-                <h1 className="review__text">{item}</h1>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
