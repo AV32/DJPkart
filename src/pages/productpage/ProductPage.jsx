@@ -3,8 +3,8 @@ import "./ProductPage.css";
 // import ReactImageZoom from "react-image-zoom";
 import { useState } from "react";
 import Navbar from "../../components/navbar";
-import Truck from "./truck.png"
-import Price from "./price-tag.png"
+import Truck from "./truck.png";
+import Price from "./price-tag.png";
 import data from "../../products";
 import { useEffect } from "react";
 
@@ -35,7 +35,6 @@ function ProductPage() {
   return (
     <div>
       <div className="productPage__container">
-        <Navbar />
         <div className="productPage__left">
           <div className="productPage__sideImagesContainer">
             {image.map((item, index) => (
@@ -92,11 +91,11 @@ function ProductPage() {
           </div>
           <br /> <br />
           <div>
-          <div className="head">
-            <h1 className="product-details-heading">DELIVERY OPTIONS </h1>
-            <img src={Truck} alt="img"/>
+            <div className="head">
+              <h1 className="product-details-heading">DELIVERY OPTIONS </h1>
+              <img src={Truck} alt="img" />
             </div>
-    
+
             <div className="Address-address-box Address-pincode-input Address-pdp-box">
               <input type="tel" placeholder="Enter a PIN code" value="" />
               <button
@@ -116,11 +115,11 @@ function ProductPage() {
               <li>Try & Buy might be available</li>
             </ul>
             <br />
-            <div  className="head">
-            <h1 className="product-details-heading">BEST OFFERS </h1>
-            <img src={Price} alt="img"/>
+            <div className="head">
+              <h1 className="product-details-heading">BEST OFFERS </h1>
+              <img src={Price} alt="img" />
             </div>
-      
+
             <h2 className="subH"> Best Price rs 1213</h2>
             <ul className="giveBullets">
               <li>
@@ -132,12 +131,16 @@ function ProductPage() {
               </li>
             </ul>
 
-            <h2 className="sub_">View Eligible Products</h2><br/>
+            <h2 className="sub_">View Eligible Products</h2>
+            <br />
             <h1 className="product-details-heading">EMI option available</h1>
             <li>EMI starting from Rs.87/month</li>
-            <h2 className="sub_">View Plan</h2><br/>
+            <h2 className="sub_">View Plan</h2>
+            <br />
             <p>Product Code: 14033232</p>
-            <p >Seller:<span style={{color:"#ff527b"}}>Pankaj</span></p>
+            <p>
+              Seller:<span style={{ color: "#ff527b" }}>Pankaj</span>
+            </p>
             <p className="sub">View Supplier Information</p>
           </div>
         </div>

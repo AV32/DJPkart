@@ -4,7 +4,6 @@
   position: relative;
   display: flex;
   width: 100vw;
-  height: 800px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -12,7 +11,7 @@
   background-color: white;
   height: 100vh;
   top: 0px;
-  width: 80vw;
+  width: 60vw;
   display: flex;
   padding: 20px;
   border: 1px solid #bbb;
@@ -162,22 +161,20 @@
 
 @media only screen and (max-width: 768px) {
   .productPage__container {
-    display: block;
+    flex-direction: column;
   }
   .productPage__left {
     width: 100vw;
   }
 }
 
-
-.product_reviews{
+.product_reviews {
   width: 50%;
 }
 
-
 .Address-pdp-box {
-    width: 300px;
-    border-radius: 5px;
+  width: 300px;
+  border-radius: 5px;
 }
 
 .Address-address-box {
@@ -192,31 +189,30 @@
   margin: 12px 0;
 }
 
-.sub{
+.sub {
   font-size: 12px;
 }
 
-.wePromise{
+.wePromise {
   margin-top: 10px;
 }
 
-.giveBullets{
+.giveBullets {
   list-style: disc;
   /* text-indent: 1rem; */
-  margin-left: 6px !important; 
-  
+  margin-left: 6px !important;
 }
 
-.subH{
+.subH {
   font-weight: 500 !important;
 }
 
-.sub_{
+.sub_ {
   font-size: 12px;
   color: #ff527b;
 }
 
-.head{
+.head {
   display: flex;
 }
 

@@ -17,7 +17,36 @@ export default class PauseOnHover extends Component {
       autoplay: true,
       autoplaySpeed: 2000,
       pauseOnHover: true,
+      // nextArrow: <SampleNextArrow />,
+      // prevArrow: <SamplePrevArrow />,
     };
+    // function SamplePrevArrow(props) {
+    //   const { className, style, onClick } = props;
+    //   return (
+    //     <div
+    //       className={className}
+    //       style={{
+    //         ...style,
+    //         display: "block",
+    //         background: "white",
+    //         width: "2rem",
+    //         height: "2rem",
+    //         padding: "0.5rem",
+    //       }}
+    //       onClick={onClick}
+    //     />
+    //   );
+    // }
+    // function SampleNextArrow(props) {
+    //   const { className, style, onClick } = props;
+    //   return (
+    //     <div
+    //       className={className}
+    //       style={{ ...style, display: "block", background: "green" }}
+    //       onClick={onClick}
+    //     />
+    //   );
+    // }
     return (
       <div className="slide">
         <Slider {...settings}>
