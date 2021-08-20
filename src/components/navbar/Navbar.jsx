@@ -60,8 +60,15 @@ function Navbar(props) {
             <div className="mobile-menu" onClick={handleMobileMenu}>
               <MenuIcon />
             </div>
-            <div className="mobile-logo">
-              <h1>Logo</h1>
+            <div className="mobile-logo flex items-center">
+              {/* <h1>Logo</h1> */}
+              <img
+                src="https://www.devsnest.in/static/media/logo.f1b45387.jpg"
+                alt="logo"
+                srcset=""
+                className="logo ml-14"
+              />
+              <span>DJP</span>
             </div>
             <div className="mobile-right-flex">
               <div className="mobile-avatar">
@@ -81,7 +88,13 @@ function Navbar(props) {
       <div className="hidden md:block desktop-nav">
         <div className="Navbar w-full p-3">
           <div className="Navbar__left">
-            <h1>Logo</h1>
+            {/* <h1>Logo</h1> */}
+            <img
+              src="https://www.devsnest.in/static/media/logo.f1b45387.jpg"
+              alt="logo"
+              srcset=""
+              className="logo"
+            />
             {/* <Logo/> */}
             <h1 className="cat" onClick={() => setisVisible(!isVisible)}>
               Category
@@ -93,6 +106,7 @@ function Navbar(props) {
                 minWidth: 600,
                 width: "50%",
                 height: "6vh",
+                background: "rgb(227, 226, 226)",
               }}
               placeholder="Search for products"
               className="search-bar"

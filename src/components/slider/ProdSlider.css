@@ -31,7 +31,10 @@
   left: 10px;
   z-index: 300;
 }
-
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
 /* .slick-slide {
 }
 
