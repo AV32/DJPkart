@@ -7,6 +7,8 @@ import Truck from "./truck.png";
 import Price from "./price-tag.png";
 import data from "../../products";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { addItemToCart, getCart } from "./../../pages/cart/useLocalStorage";
 
 function ProductPage() {
   let id = window.location.pathname.split("/")[2];
@@ -17,7 +19,7 @@ function ProductPage() {
     rating,
     image,
     review,
-    description,
+    discription,
     catogeries,
   } = data[id - 1];
   const [dispImg, setDispImg] = useState(image[0]);
@@ -28,8 +30,28 @@ function ProductPage() {
   //   img: dispImg,
   // };
 
+  const addItem = () => {
+    addItemToCart({
+      id,
+      name,
+      price,
+      rating,
+      discription,
+      quantity: 1,
+      img: image[0],
+    });
+    setItemInCart(true);
+  };
+
+  const [itemInCart, setItemInCart] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    const cartItems = getCart();
+
+    cartItems.map((item) => {
+      if (item.id == id) setItemInCart(true);
+    });
   }, []);
 
   return (
@@ -75,19 +97,29 @@ function ProductPage() {
           </div>
           <h1 className="prod-taxes">inclusive of all taxes</h1>
           <div className="prodButtons">
-            <button className="prod-addToBag">
-              <i class="fas fa-shopping-bag btnProd-icons"></i> ADD TO BAG
-            </button>
+            {itemInCart ? (
+              <Link to="/cart">
+                <button className="prod-addToBag">
+                  <i className="fas fa-shopping-bag btnProd-icons"></i> GO TO
+                  CART BAG
+                </button>
+              </Link>
+            ) : (
+              <button className="prod-addToBag" onClick={addItem}>
+                <i className="fas fa-shopping-bag btnProd-icons"></i> ADD TO BAG
+              </button>
+            )}
             <button className="prod-wishList">
-              <i class="far fa-heart btnProd-icons"></i> WISHLIST
+              <i className="far fa-heart btnProd-icons"></i> WISHLIST
             </button>
           </div>
           <hr />
           <div className="product-details">
             <h1 className="product-details-heading">
-              PRODUCT DETAILS <i class="fas fa-newspaper prod-detail-icon"></i>
+              PRODUCT DETAILS{" "}
+              <i className="fas fa-newspaper prod-detail-icon"></i>
             </h1>
-            <h3 className="productPage__right__description">{description}</h3>
+            <h3 className="productPage__right__description">{discription}</h3>
           </div>
           <br /> <br />
           <div>
@@ -97,7 +129,7 @@ function ProductPage() {
             </div>
 
             <div className="Address-address-box Address-pincode-input Address-pdp-box">
-              <input type="tel" placeholder="Enter a PIN code" value="" />
+              <input type="tel" placeholder="Enter a PIN code" />
               <button
                 type="submit"
                 className="Address-address-button"
@@ -169,7 +201,6 @@ function ProductPage() {
         <h1 className="productPage__right__price">{price}</h1>
         <h1 className="productPage__right__description">{description}</h1>
 
-     
       </div> */}
     </div>
   );

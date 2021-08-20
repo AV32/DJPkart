@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function ProductCard(props) {
   const [addToCart, setAddToCart] = useState(false);
+
   return (
     <div className="productCard__container slider-card">
       <Link to={`/products/${props.id}`}>

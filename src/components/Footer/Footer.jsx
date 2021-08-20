@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
 
         <div className="desktop-appExperience" data-reactid="87">
-          <p className="desktop-gInfoTitle" data-reactiFd="88">
+          <p className="desktop-gInfoTitle" data-reactiid="88">
             {" "}
             Experience DJP Digital APP on Mobile{" "}
           </p>
