@@ -3,10 +3,11 @@ import "./ProductPage.css";
 // import ReactImageZoom from "react-image-zoom";
 import { useState } from "react";
 import Navbar from "../../components/navbar";
-import Truck from "./truck.png"
-import Price from "./price-tag.png"
+import Truck from "./truck.png";
+import Price from "./price-tag.png";
 import data from "../../products";
 import { useEffect } from "react";
+import Posts from "./Posts.js";
 
 function ProductPage() {
   let id = window.location.pathname.split("/")[2];
@@ -28,6 +29,56 @@ function ProductPage() {
   //   img: dispImg,
   // };
 
+  const [formData, setformData] = useState({
+    text: "",
+    rate: "",
+  });
+
+  const [arrData, setarrData] = useState([]);
+
+  const [error, setError] = useState("");
+
+  const handleOnFormDataChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setformData((currentData) => ({ ...currentData, [name]: value }));
+  };
+
+  const handeleOnSubmit = (e) => {
+    const { text, rate } = formData;
+
+    localStorage.setItem('text', text);
+    localStorage.setItem('rate ', text ? rate  : '');
+    e.preventDefault();
+
+
+    // componentDidMount(){
+    //   const text = localStorage.getItem('text') === 'true';
+    //   const rate  = text ? localStorage.getItem('rate ') : '';
+    //   this.setState({ rate ,text });
+    // }
+
+    if (!text) {
+      setError("Title is required");
+      return;
+    }
+
+    if (!rate) {
+      setError("Rating is required");
+      return;
+    }
+
+    setError("");
+
+    setarrData((arrData) => [...arrData, { text, rate }]);
+
+    console.log(arrData);
+    // console.log(setarrData)
+    // console.log(formData);
+  };
+
+  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -35,7 +86,7 @@ function ProductPage() {
   return (
     <div>
       <div className="productPage__container">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="productPage__left">
           <div className="productPage__sideImagesContainer">
             {image.map((item, index) => (
@@ -92,11 +143,11 @@ function ProductPage() {
           </div>
           <br /> <br />
           <div>
-          <div className="head">
-            <h1 className="product-details-heading">DELIVERY OPTIONS </h1>
-            <img src={Truck} alt="img"/>
+            <div className="head">
+              <h1 className="product-details-heading">DELIVERY OPTIONS </h1>
+              <img src={Truck} alt="img" />
             </div>
-    
+
             <div className="Address-address-box Address-pincode-input Address-pdp-box">
               <input type="tel" placeholder="Enter a PIN code" value="" />
               <button
@@ -116,11 +167,11 @@ function ProductPage() {
               <li>Try & Buy might be available</li>
             </ul>
             <br />
-            <div  className="head">
-            <h1 className="product-details-heading">BEST OFFERS </h1>
-            <img src={Price} alt="img"/>
+            <div className="head">
+              <h1 className="product-details-heading">BEST OFFERS </h1>
+              <img src={Price} alt="img" />
             </div>
-      
+
             <h2 className="subH"> Best Price rs 1213</h2>
             <ul className="giveBullets">
               <li>
@@ -132,31 +183,86 @@ function ProductPage() {
               </li>
             </ul>
 
-            <h2 className="sub_">View Eligible Products</h2><br/>
+            <h2 className="sub_">View Eligible Products</h2>
+            <br />
             <h1 className="product-details-heading">EMI option available</h1>
             <li>EMI starting from Rs.87/month</li>
-            <h2 className="sub_">View Plan</h2><br/>
+            <h2 className="sub_">View Plan</h2>
+            <br />
             <p>Product Code: 14033232</p>
-            <p >Seller:<span style={{color:"#ff527b"}}>Pankaj</span></p>
+            <p>
+              Seller:<span style={{ color: "#ff527b" }}>Pankaj</span>
+            </p>
             <p className="sub">View Supplier Information</p>
           </div>
-        </div>
-      </div>
+          <br />
+          <div className="product_reviews">
+            <h1 className="product-details-heading">Ratings</h1>
 
-      <div className="product_reviews">
-        {review.map((item) => (
-          <div className="review__container">
-            <div className="review__User">
+            <div>
+              {rating}{" "}
               <img
-                className="review__avatar"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8H1cJiq2N6D8u6lQMkP_-iPVu7d2XZbevhfUNM6obwXcUkeMDvJEsak3kTjvqAr67DDY&usqp=CAU"
+                className="star"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/docomo/205/white-medium-star_2b50.png"
                 alt=""
-              />{" "}
-              <h1>Pratyush K</h1>{" "}
+              />
+              <p>58 ratings & 12 reviews</p>
+              {/* <input type="text" onChange={(e) => setPro_review(e.target.value)}/><button>Add</button> */}
             </div>
-            <h1 className="review__text">{item}</h1>
+
+            <div>
+              {/* <h2>{formData}</h2> */}
+
+              <form>
+                <input
+                  type="text"
+                  value={formData.text}
+                  required
+                  name="text"
+                  placeholder="Valuable Review"
+                  onChange={handleOnFormDataChange}
+                />
+
+                <input
+                  type="number"
+                  min="0"
+                  max="5"
+                  value={formData.rate}
+                  required
+                  name="rate"
+                  placeholder="Rating"
+                  onChange={handleOnFormDataChange}
+                />
+
+                <p>{error}</p>
+
+                <button
+                  className="submitBtn"
+                  type="submit"
+                  onClick={handeleOnSubmit}
+                >
+                  Add Item{" "}
+                </button>
+                <Posts post={arrData} />
+              </form>
+            </div>
+
+
+            {review.map((item) => (
+              <div className="review__container">
+                <div className="review__rate ">
+                  <img
+                    className="review__avatar"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8H1cJiq2N6D8u6lQMkP_-iPVu7d2XZbevhfUNM6obwXcUkeMDvJEsak3kTjvqAr67DDY&usqp=CAU"
+                    alt=""
+                  />{" "}
+                  <h1>Pratyush K</h1>{" "}
+                </div>
+                <h1 className="review__text">{item}</h1>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
       {/* <div className="productPage__right">
