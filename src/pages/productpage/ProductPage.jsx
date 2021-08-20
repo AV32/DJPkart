@@ -19,7 +19,7 @@ function ProductPage() {
     rating,
     image,
     review,
-    description,
+    discription,
     catogeries,
   } = data[id - 1];
   const [dispImg, setDispImg] = useState(image[0]);
@@ -31,7 +31,15 @@ function ProductPage() {
   // };
 
   const addItem = () => {
-    addItemToCart({ id, name, price, rating, description, quantity: 1 });
+    addItemToCart({
+      id,
+      name,
+      price,
+      rating,
+      discription,
+      quantity: 1,
+      img: image[0],
+    });
     setItemInCart(true);
   };
 
@@ -111,7 +119,7 @@ function ProductPage() {
               PRODUCT DETAILS{" "}
               <i className="fas fa-newspaper prod-detail-icon"></i>
             </h1>
-            <h3 className="productPage__right__description">{description}</h3>
+            <h3 className="productPage__right__description">{discription}</h3>
           </div>
           <br /> <br />
           <div>

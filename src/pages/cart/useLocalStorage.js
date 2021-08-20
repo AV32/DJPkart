@@ -3,10 +3,18 @@ function getCart() {
     return JSON.parse(localStorage.getItem("cartItems"));
 }
 
-function addItemToCart({ id, name, price, rating, discription, quantity }) {
+function addItemToCart({
+  id,
+  name,
+  price,
+  rating,
+  discription,
+  quantity,
+  img,
+}) {
   const cart = JSON.parse(localStorage.getItem("cartItems"));
   console.log(cart);
-  cart.push({ id, name, price, rating, discription, quantity });
+  cart.push({ id, name, price, rating, discription, quantity, img });
   console.log(cart);
   localStorage.setItem("cartItems", JSON.stringify(cart));
 }
