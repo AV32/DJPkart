@@ -193,7 +193,6 @@ function ProductPage() {
         <h1 className="productPage__right__price">{price}</h1>
         <h1 className="productPage__right__description">{description}</h1>
 
-     
       </div> */}
     </div>
   );
