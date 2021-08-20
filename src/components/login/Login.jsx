@@ -8,12 +8,10 @@ import { useEffect, useState } from "react";
 import "./Login.css";
 
 function Login(props) {
+  const userDataFromStorage =
+    JSON.parse(localStorage.getItem("userData")) || {};
   const [open, setOpen] = useState(false);
-  const [userData, setUserData] = useState({
-    userEmail: "",
-    userPassword: "",
-    userName: "",
-  });
+  const [userData, setUserData] = useState(userDataFromStorage);
   const [emailError, setEmailError] = useState(false);
   const [nameError, setNameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
