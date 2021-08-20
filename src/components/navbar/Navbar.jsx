@@ -8,6 +8,7 @@ import Category from "../category/Category";
 import Login from "../login";
 import UserProfile from "../user-profile";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { Link } from "react-router-dom";
 // import Profile from "./Profile/Profile";
 // import Cart from "./Cart/Cart";
 
@@ -67,7 +68,9 @@ function Navbar(props) {
                 {isSignedIn ? "" : <Login signIn={signIn} />}
               </div>
               <div className="mobile-cart">
-                <AddShoppingCartIcon />
+                <Link to="/cart">
+                  <AddShoppingCartIcon />
+                </Link>
               </div>
             </div>
           </div>
@@ -104,8 +107,9 @@ function Navbar(props) {
               ) : (
                 <Login signIn={signIn} />
               )}
-
-              <ShoppingCartIcon />
+              <Link to="/cart">
+                <ShoppingCartIcon />
+              </Link>
             </div>
           </div>
         </div>
