@@ -1,3 +1,39 @@
 .cart-page {
   margin-top: 9vh;
+  display: flex;
+}
+
+.cart-page > * {
+  margin: 20px;
+}
+
+.cart-page-left {
+  height: 100vh;
+  width: 60%;
+  border: 1px solid #aaa;
+}
+
+.cart-page-right {
+  height: 100vh;
+  width: 40%;
+  position: sticky;
+}
+
+.cart-page-left-header {
+  border: 1px solid #aaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.address-container {
+  display: flex;
+  align-items: center;
+}
+
+.cart-page-left-header-address {
+  border: 1px solid #888;
+  padding: 5px;
+  margin: 5px;
 }
