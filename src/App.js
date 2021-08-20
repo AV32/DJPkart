@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer/Footer";
 import ProductPage from "./pages/productpage/ProductPage";
+import CartPage from "./pages/cart";
 
 function App() {
   const checkSignedIn = localStorage.getItem("isSignedIn");
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route exact path="/products/:id">
           <ProductPage />
+        </Route>
+        <Route exact path="/cart">
+          <CartPage />
         </Route>
       </Switch>
       <Footer />
