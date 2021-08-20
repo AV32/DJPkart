@@ -10,6 +10,10 @@ import CartPage from "./pages/cart";
 function App() {
   const checkSignedIn = localStorage.getItem("isSignedIn");
   const [isSignedIn, setIsSignedIn] = useState(checkSignedIn);
+  useEffect(() => {
+    if (!localStorage.getItem("cartItems"))
+      localStorage.setItem("cartItems", JSON.stringify([]));
+  }, []);
 
   function signIn() {
     setIsSignedIn(!isSignedIn);
