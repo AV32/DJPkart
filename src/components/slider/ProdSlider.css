@@ -44,3 +44,9 @@
     height: 200px;
   }
 }
+@media only screen and (min-width: 1900px) {
+  .slider-card {
+    width: 250px;
+    height: 350px;
+  }
+}
