@@ -8,6 +8,7 @@ import Price from "./price-tag.png";
 import data from "../../products";
 import { useEffect } from "react";
 import Posts from "./Posts.js";
+import Ratings from "./rating.png";
 
 function ProductPage() {
   let id = window.location.pathname.split("/")[2];
@@ -18,7 +19,7 @@ function ProductPage() {
     rating,
     image,
     review,
-    description,
+    discription,
     catogeries,
   } = data[id - 1];
   const [dispImg, setDispImg] = useState(image[0]);
@@ -138,7 +139,8 @@ function ProductPage() {
             <h1 className="product-details-heading">
               PRODUCT DETAILS <i class="fas fa-newspaper prod-detail-icon"></i>
             </h1>
-            <h3 className="productPage__right__description">{description}</h3>
+            <h3 className="productPage__right__description">{discription}</h3>
+            {console.log(discription)}
           </div>
           <br /> <br />
           <div>
@@ -171,12 +173,19 @@ function ProductPage() {
               <img src={Price} alt="img" />
             </div>
 
-            <h2 className="subH"> Best Price rs 1213</h2>
+            <h2 className="subH">
+              <b>
+                {" "}
+                Best Price <span className="offer_price">Rs.213</span>
+              </b>
+            </h2>
             <ul className="giveBullets">
               <li>
                 Applicable on: Orders above Rs. 2499 (only on first purchase)
               </li>
-              <li>Coupon code: DJP400</li>
+              <li>
+                Coupon code: <b>DJP400</b>
+              </li>
               <li>
                 Coupon Discount: Rs. 400 off (check cart for final savings)
               </li>
@@ -190,28 +199,112 @@ function ProductPage() {
             <br />
             <p>Product Code: 14033232</p>
             <p>
-              Seller:<span style={{ color: "#ff527b" }}>Pankaj</span>
+              Seller:
+              <span>
+                <b>Pankaj</b>
+              </span>
             </p>
             <p className="sub">View Supplier Information</p>
           </div>
           <br />
           <div className="product_reviews">
-            <h1 className="product-details-heading">Ratings</h1>
+            <div className="same">
+              <h1 className="product-details-heading">Ratings</h1>
+              <img src={Ratings} alt="img" className="rate___" />
+            </div>
 
             <div className="review_info">
-              {rating}{" "}
-              <img
-                className="star"
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/docomo/205/white-medium-star_2b50.png"
-                alt=""
-              />
-              <p>58 ratings & 12 reviews</p>
+              <div className="allRatings">
+                {rating}{" "}
+                <img
+                  className="star_"
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/docomo/205/white-medium-star_2b50.png"
+                  alt=""
+                />
+                <p>
+                  58 ratings <br />& 12 reviews
+                </p>
+              </div>
+
+              {/* <div>
+                <div className="index-flexRow index-margin22">
+                  <div className="index-separator"></div>
+                  <div>
+                    <div className="index-flexRow index-ratingBarContainer">
+                      <div className="index-rating">
+                        <span className="index-ratingLevel">5</span>
+                        <span className="myntraweb-sprite index-grayStarIcon sprites-productRatingsGrayIcon"></span>
+                      </div>
+                      <progress
+                        min="0"
+                        max="58"
+                        value="49"
+                        data-rating="5"
+                      ></progress>
+                      <div className="index-count">49</div>
+                    </div>
+                    <div className="index-flexRow index-ratingBarContainer">
+                      <div className="index-rating">
+                        <span className="index-ratingLevel">4</span>
+                        <span className="myntraweb-sprite index-grayStarIcon sprites-productRatingsGrayIcon"></span>
+                      </div>
+                      <progress
+                        min="0"
+                        max="58"
+                        value="6"
+                        data-rating="4"
+                      ></progress>
+                      <div className="index-count">6</div>
+                    </div>
+                    <div className="index-flexRow index-ratingBarContainer">
+                      <div className="index-rating">
+                        <span className="index-ratingLevel">3</span>
+                        <span className="myntraweb-sprite index-grayStarIcon sprites-productRatingsGrayIcon"></span>
+                      </div>
+                      <progress
+                        min="0"
+                        max="58"
+                        value="0"
+                        data-rating="3"
+                      ></progress>
+                      <div className="index-count"></div>
+                    </div>
+                    <div className="index-flexRow index-ratingBarContainer">
+                      <div className="index-rating">
+                        <span className="index-ratingLevel">2</span>
+                        <span className="myntraweb-sprite index-grayStarIcon sprites-productRatingsGrayIcon"></span>
+                      </div>
+                      <progress
+                        min="0"
+                        max="58"
+                        value="2"
+                        data-rating="2"
+                      ></progress>
+                      <div className="index-count">2</div>
+                    </div>
+                    <div className="index-flexRow index-ratingBarContainer">
+                      <div className="index-rating">
+                        <span className="index-ratingLevel">1</span>
+                        <span className="myntraweb-sprite index-grayStarIcon sprites-productRatingsGrayIcon"></span>
+                      </div>
+                      <progress
+                        min="0"
+                        max="58"
+                        value="1"
+                        data-rating="1"
+                      ></progress>
+                      <div className="index-count">1</div>
+                    </div>
+                  </div>
+                </div>
+                ;
+              </div> */}
               {/* <input type="text" onChange={(e) => setPro_review(e.target.value)}/><button>Add</button> */}
             </div>
 
             <div className="form">
               {/* <h2>{formData}</h2> */}
-              <p>Share you valuable Review</p>
+              <p>Share you valuable Review :</p>
               <form>
                 <input
                   type="text"
@@ -243,38 +336,29 @@ function ProductPage() {
                 >
                   Post{" "}
                 </button>
-                <Posts post={arrData} />
+                
               </form>
             </div>
 
             <div>
+            <Posts post={arrData} />
               {review.map((item) => (
                 <div className="review__container">
+                  <h1 className="review__text">{item}</h1>
                   <div className="review__rate ">
                     <img
                       className="review__avatar"
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8H1cJiq2N6D8u6lQMkP_-iPVu7d2XZbevhfUNM6obwXcUkeMDvJEsak3kTjvqAr67DDY&usqp=CAU"
                       alt=""
                     />{" "}
-                    <h1>Pratyush K</h1>{" "}
+                    <h1>Pratyush | 7 Aug 2021 </h1>{" "}
                   </div>
-                  <h1 className="review__text">{item}</h1>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
-
-      {/* <div className="productPage__right">
-        <h1>{catogeries.charAt(0).toUpperCase() + catogeries.slice(1)}</h1>
-        <h1 className="productPage__right__name">{name}</h1>
-        <h1 className="productPage__right__rating">{rating}</h1>
-        <h1 className="productPage__right__price">{price}</h1>
-        <h1 className="productPage__right__description">{description}</h1>
-
-     
-      </div> */}
     </div>
   );
 }
