@@ -1,0 +1,36 @@
+.single-cart-product-card {
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid salmon;
+}
+
+.cart-card-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-product-image {
+  width: 10%;
+}
+
+.cart-product-image > img {
+  border: 0.5px solid grey;
+}
+
+.cart-quantity-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.cart-quantity-buttons > button {
+  margin: 1rem;
+  border: 1px solid grey;
+  padding: 0.2rem 0.5rem;
+}
+
+button :disabled {
+  background-color: red;
+}
