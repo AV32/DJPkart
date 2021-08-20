@@ -21,6 +21,8 @@ function CartPage() {
             </h1>
           </div>
         </div>
+
+        {/* Map items here */}
       </div>
       <div className="cart-page-right"></div>
     </div>
