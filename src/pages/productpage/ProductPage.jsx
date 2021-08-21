@@ -11,6 +11,7 @@ import Posts from "./Posts.js";
 import Ratings from "./rating.png";
 import { Link } from "react-router-dom";
 import { addItemToCart, getCart } from "./../../pages/cart/useLocalStorage";
+import Footer from "../../components/Footer/Footer";
 
 function ProductPage() {
   let id = window.location.pathname.split("/")[2];
@@ -47,6 +48,12 @@ function ProductPage() {
     setformData((currentData) => ({ ...currentData, [name]: value }));
   };
 
+  const increasedPrice = (str) => {
+    let res = str.replace(/\D/g, "");
+    // parseInt(str.replace(/\D/g, ""));
+    return parseInt(res) * 1.25;
+  };
+
   const handeleOnSubmit = (e) => {
     const { text, rate } = formData;
 
@@ -80,6 +87,7 @@ function ProductPage() {
     // console.log(setarrData)
     // console.log(formData);
   };
+
   const addItem = () => {
     addItemToCart({
       id,
@@ -100,7 +108,7 @@ function ProductPage() {
     const cartItems = getCart();
 
     cartItems.map((item) => {
-      if (item.id == id) setItemInCart(true);
+      if (item.id === id) setItemInCart(true);
     });
   }, []);
 
@@ -142,9 +150,9 @@ function ProductPage() {
           <div className="prod-price">
             <h1 className="productPage__right__price">{price}</h1>
             <h1 className="productPage__right__price prod-price-strike">
-              ₹{parseInt(price.slice(1, price.length)) + 1000}
+              ₹{increasedPrice(price)}
             </h1>
-            <h1 className="productPage__right__price">( 50% OFF )</h1>
+            <h1 className="productPage__right__price">( 25% OFF )</h1>
           </div>
           <h1 className="prod-taxes">inclusive of all taxes</h1>
           <div className="prodButtons">
@@ -171,7 +179,7 @@ function ProductPage() {
               <i className="fas fa-newspaper prod-detail-icon"></i>
             </h1>
             <h3 className="productPage__right__description">{discription}</h3>
-            {console.log(discription)}
+            {/* {console.log(discription)} */}
           </div>
           <br /> <br />
           <div>
@@ -390,6 +398,8 @@ function ProductPage() {
           </div>
         </div>
       </div>
+      {/* </div> */} 
+      <Footer />
     </div>
   );
 }

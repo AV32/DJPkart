@@ -4,6 +4,7 @@
   position: relative;
   display: flex;
   width: 100vw;
+  /* height:1700px; */
   font-family: "Montserrat", sans-serif;
   
 }
@@ -296,8 +297,9 @@
 }
 
 .allRatings{
-  display: inline-block;
-  border-right: 1px solid #c9bfbf !important;
+  display: inline;
+  /* border-right: 1px solid #c9bfbf !important;
+  padding: 12px; */
 
 
 }

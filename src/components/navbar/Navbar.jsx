@@ -60,15 +60,17 @@ function Navbar(props) {
             <div className="mobile-menu" onClick={handleMobileMenu}>
               <MenuIcon />
             </div>
-            <div className="mobile-logo flex items-center">
+            <div className="mobile-logo flex items-center text-black">
               {/* <h1>Logo</h1> */}
-              <img
-                src="https://www.devsnest.in/static/media/logo.f1b45387.jpg"
-                alt="logo"
-                srcset=""
-                className="logo ml-14"
-              />
-              <span>DJP</span>
+              <Link to="">
+                <img
+                  src="https://www.devsnest.in/static/media/logo.f1b45387.jpg"
+                  alt="logo"
+                  srcset=""
+                  className="logo ml-14"
+                />{" "}
+                {/* <h1>DJP</h1> */}
+              </Link>
             </div>
             <div className="mobile-right-flex">
               <div className="mobile-avatar">
@@ -89,12 +91,15 @@ function Navbar(props) {
         <div className="Navbar w-full p-3">
           <div className="Navbar__left">
             {/* <h1>Logo</h1> */}
-            <img
-              src="https://www.devsnest.in/static/media/logo.f1b45387.jpg"
-              alt="logo"
-              srcset=""
-              className="logo"
-            />
+            <Link to="">
+              <img
+                src="https://www.devsnest.in/static/media/logo.f1b45387.jpg"
+                alt="logo"
+                srcset=""
+                className="logo"
+              />
+            </Link>
+
             {/* <Logo/> */}
             <h1 className="cat" onClick={() => setisVisible(!isVisible)}>
               Category

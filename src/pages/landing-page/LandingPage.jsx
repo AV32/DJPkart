@@ -4,7 +4,7 @@ import data from "./../../products";
 import ProdSlider from "../../components/slider/ProdSlider";
 import PauseOnHover from "../../components/slider";
 import "./LandingPage.css";
-
+import Footer from "../../components/Footer/Footer";
 function LandingPage() {
   return (
     <div>
@@ -46,6 +46,7 @@ function LandingPage() {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
