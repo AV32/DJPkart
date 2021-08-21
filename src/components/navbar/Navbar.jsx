@@ -16,7 +16,7 @@ function Navbar(props) {
   const { isSignedIn, signIn } = props;
   const [isNavOpen, setNavOpen] = useState(false);
   const [isVisible, setisVisible] = useState(false);
-  console.log("Navbar isSigned In", isSignedIn);
+  // console.log("Navbar isSigned In", isSignedIn);
 
   function getUserData(key) {
     if (isSignedIn) {

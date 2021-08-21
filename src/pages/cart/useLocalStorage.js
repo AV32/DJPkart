@@ -13,9 +13,9 @@ function addItemToCart({
   img,
 }) {
   const cart = JSON.parse(localStorage.getItem("cartItems"));
-  console.log(cart);
+  // console.log(cart);
   cart.push({ id, name, price, rating, discription, quantity, img });
-  console.log(cart);
+  // console.log(cart);
   localStorage.setItem("cartItems", JSON.stringify(cart));
 }
 

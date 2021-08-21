@@ -3,22 +3,26 @@ import { useEffect, useState } from "react";
 import { Modal } from "@material-ui/core";
 import "./CartPage.css";
 // import data from "../../products";
-import {
-  getCart,
-  addItemToCart,
-  removeItemFromCart,
-  addItemQuantity,
-  reduceItemQuantity,
-} from "./useLocalStorage";
+import { getCart, removeItemFromCart } from "./useLocalStorage";
 
 function CartPage() {
+  const convert = (str) => {
+    let res = str.replace(/\D/g, "");
+    // parseInt(str.replace(/\D/g, ""));
+    return parseInt(res);
+  };
+
   const [cartItems, setCartItems] = useState(getCart() || []);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const [address, setAddress] = useState(
     localStorage.getItem("userAddress") || ""
   );
 
   const [open, setOpen] = useState(false);
+
+  console.log(totalPrice);
+  console.log(cartItems);
 
   const handleOpen = () => {
     setOpen(true);
@@ -33,6 +37,19 @@ function CartPage() {
     removeItemFromCart(id);
     setCartItems(getCart);
   }
+
+  function calculateTotalPrice() {
+    let total = 0;
+    setCartItems(getCart());
+    cartItems.forEach((item) => {
+      total += parseInt(item.quantity) * convert(item.price);
+    });
+    setTotalPrice(total);
+  }
+
+  useEffect(() => {
+    calculateTotalPrice();
+  });
 
   if (cartItems.length === 0) {
     return (
@@ -66,6 +83,9 @@ function CartPage() {
                 </svg>
                 Deliver to
                 <h1 className="cart-page-left-header-address">{address}</h1>
+                <button onClick={handleOpen} className="edit-address">
+                  Edit Address
+                </button>
               </>
             )}
           </div>
@@ -82,11 +102,11 @@ function CartPage() {
             rating={item.rating}
             quantity={item.quantity}
             handleRemove={handleRemove}
+            calculateTotalPrice={calculateTotalPrice}
           />
         ))}
       </div>
-      <div className="cart-page-right">
-        {/* <Modal
+      <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
@@ -100,22 +120,27 @@ function CartPage() {
           />
           <button onClick={handleClose}>Add Address</button>
         </div>
-      </Modal> */}
+      </Modal>
+      <div className="cart-page-right">
         <h1 className="cart-price-details">PRICE DETAILS</h1>
         <hr className="plane-hr" />
         <div className="cart-price">
           <h1>Price ({cartItems.length})</h1>
+          <h1>{totalPrice * 1.25}</h1>
         </div>
         <div className="cart-discount">
           <h1>Discount</h1>
+          <h1 className="disc">25%</h1>
         </div>
         <div className="cart-delivery-charges">
           <h1>Delivery Charges</h1>
+          <h1 className="disc">Free</h1>
         </div>
 
         <hr className="dashed-hr" />
         <div className="cart-total">
           <h1 className="total-amt">Total Amount</h1>
+          <h1>{totalPrice}</h1>
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ function App() {
     localStorage.setItem("isSignedIn", isSignedIn);
   }, [isSignedIn]);
 
-  console.log("IsSignedIn ", isSignedIn);
+  // console.log("IsSignedIn ", isSignedIn);
   return (
     <div className="App">
       <Navbar isSignedIn={isSignedIn} signIn={signIn} />

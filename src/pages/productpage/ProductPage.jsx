@@ -7,6 +7,8 @@ import Truck from "./truck.png";
 import Price from "./price-tag.png";
 import data from "../../products";
 import { useEffect } from "react";
+import Posts from "./Posts.js";
+import Ratings from "./rating.png";
 import { Link } from "react-router-dom";
 import { addItemToCart, getCart } from "./../../pages/cart/useLocalStorage";
 import Footer from "../../components/Footer/Footer";
@@ -31,6 +33,61 @@ function ProductPage() {
   //   img: dispImg,
   // };
 
+  const [formData, setformData] = useState({
+    text: "",
+    rate: "",
+  });
+
+  const [arrData, setarrData] = useState([]);
+
+  const [error, setError] = useState("");
+
+  const handleOnFormDataChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setformData((currentData) => ({ ...currentData, [name]: value }));
+  };
+
+  const increasedPrice = (str) => {
+    let res = str.replace(/\D/g, "");
+    // parseInt(str.replace(/\D/g, ""));
+    return parseInt(res) * 1.25;
+  };
+
+  const handeleOnSubmit = (e) => {
+    const { text, rate } = formData;
+
+    // localStorage.setItem('text', text);
+    // localStorage.setItem('rate ', text ? rate  : '');
+    e.preventDefault();
+
+    // componentDidMount(){
+    //   const text = localStorage.getItem('text') === 'true';
+    //   const rate  = text ? localStorage.getItem('rate ') : '';
+    //   this.setState({ rate ,text });
+    // }
+
+    if (!text) {
+      setError("Review is required");
+      return;
+    }
+
+    if (!rate) {
+      setError("Rating is required");
+      return;
+    }
+
+    setError("");
+
+    setarrData((arrData) => [...arrData, { text, rate }]);
+
+    setformData({ text: "", rate: "" });
+
+    // console.log(arrData);
+    // console.log(setarrData)
+    // console.log(formData);
+  };
+
   const addItem = () => {
     addItemToCart({
       id,
@@ -44,12 +101,6 @@ function ProductPage() {
     setItemInCart(true);
   };
 
-  const increasedPrice = (str) => {
-    let res = str.replace(/\D/g, "");
-    // parseInt(str.replace(/\D/g, ""));
-    return parseInt(res) * 1.25;
-  };
-
   const [itemInCart, setItemInCart] = useState(false);
 
   useEffect(() => {
@@ -57,13 +108,14 @@ function ProductPage() {
     const cartItems = getCart();
 
     cartItems.map((item) => {
-      if (item.id == id) setItemInCart(true);
+      if (item.id === id) setItemInCart(true);
     });
   }, []);
 
   return (
     <div>
       <div className="productPage__container">
+        {/* <Navbar /> */}
         <div className="productPage__left">
           <div className="productPage__sideImagesContainer">
             {image.map((item, index) => (
@@ -127,6 +179,7 @@ function ProductPage() {
               <i className="fas fa-newspaper prod-detail-icon"></i>
             </h1>
             <h3 className="productPage__right__description">{discription}</h3>
+            {/* {console.log(discription)} */}
           </div>
           <br /> <br />
           <div>
@@ -159,12 +212,19 @@ function ProductPage() {
               <img src={Price} alt="img" />
             </div>
 
-            <h2 className="subH"> Best Price rs 1213</h2>
+            <h2 className="subH">
+              <b>
+                {" "}
+                Best Price <span className="offer_price">Rs.213</span>
+              </b>
+            </h2>
             <ul className="giveBullets">
               <li>
                 Applicable on: Orders above Rs. 2499 (only on first purchase)
               </li>
-              <li>Coupon code: DJP400</li>
+              <li>
+                Coupon code: <b>DJP400</b>
+              </li>
               <li>
                 Coupon Discount: Rs. 400 off (check cart for final savings)
               </li>
@@ -178,37 +238,91 @@ function ProductPage() {
             <br />
             <p>Product Code: 14033232</p>
             <p>
-              Seller:<span style={{ color: "#ff527b" }}>Pankaj</span>
+              Seller:
+              <span>
+                <b>Pankaj</b>
+              </span>
             </p>
             <p className="sub">View Supplier Information</p>
           </div>
+          <br />
+          <div className="product_reviews">
+            <div className="same">
+              <h1 className="product-details-heading">Ratings</h1>
+              <img src={Ratings} alt="img" className="rate___" />
+            </div>
+
+            <div className="review_info">
+              <div className="allRatings">
+                {rating}{" "}
+                <img
+                  className="star_"
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/docomo/205/white-medium-star_2b50.png"
+                  alt=""
+                />
+                <p>
+                  58 ratings <br />& 12 reviews
+                </p>
+              </div>
+            </div>
+
+            <div className="form">
+              {/* <h2>{formData}</h2> */}
+              <p>Share you valuable Review :</p>
+              <form>
+                <input
+                  type="text"
+                  value={formData.text}
+                  required
+                  name="text"
+                  placeholder="Valuable Review"
+                  onChange={handleOnFormDataChange}
+                />
+
+                <input
+                  className="input_num"
+                  type="number"
+                  min="0"
+                  max="5"
+                  value={formData.rate}
+                  required
+                  name="rate"
+                  placeholder="Rating"
+                  onChange={handleOnFormDataChange}
+                />
+
+                <p>{error}</p>
+
+                <button
+                  className="submitBtn"
+                  type="submit"
+                  onClick={handeleOnSubmit}
+                >
+                  Post{" "}
+                </button>
+              </form>
+            </div>
+
+            <div>
+              <Posts post={arrData} />
+              {review.map((item) => (
+                <div className="review__container">
+                  <h1 className="review__text">{item}</h1>
+                  <div className="review__rate ">
+                    <img
+                      className="review__avatar"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8H1cJiq2N6D8u6lQMkP_-iPVu7d2XZbevhfUNM6obwXcUkeMDvJEsak3kTjvqAr67DDY&usqp=CAU"
+                      alt=""
+                    />{" "}
+                    <h1>Pratyush | 7 Aug 2021 </h1>{" "}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="product_reviews">
-        {review.map((item) => (
-          <div className="review__container">
-            <div className="review__User">
-              <img
-                className="review__avatar"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8H1cJiq2N6D8u6lQMkP_-iPVu7d2XZbevhfUNM6obwXcUkeMDvJEsak3kTjvqAr67DDY&usqp=CAU"
-                alt=""
-              />{" "}
-              <h1>Pratyush K</h1>{" "}
-            </div>
-            <h1 className="review__text">{item}</h1>
-          </div>
-        ))}
-      </div>
-
-      {/* <div className="productPage__right">
-        <h1>{catogeries.charAt(0).toUpperCase() + catogeries.slice(1)}</h1>
-        <h1 className="productPage__right__name">{name}</h1>
-        <h1 className="productPage__right__rating">{rating}</h1>
-        <h1 className="productPage__right__price">{price}</h1>
-        <h1 className="productPage__right__description">{description}</h1>
-
-      </div> */}
+      {/* </div> */}
       <Footer />
     </div>
   );
