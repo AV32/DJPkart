@@ -45,6 +45,7 @@ function ProductPage() {
 
   const increasedPrice = (str) => {
     let res = str.replace(/\D/g, "");
+    // parseInt(str.replace(/\D/g, ""));
     return parseInt(res) * 1.25;
   };
 
