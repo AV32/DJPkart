@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import LandingPage from "./pages/landing-page";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 import ProductPage from "./pages/productpage/ProductPage";
 import CartPage from "./pages/cart";
 
@@ -27,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <Navbar isSignedIn={isSignedIn} signIn={signIn} />
+
       <Switch>
         <Route exact path="/">
           <LandingPage />
