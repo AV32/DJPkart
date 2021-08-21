@@ -3,7 +3,7 @@ import { Avatar } from "@material-ui/core";
 import "./UserProfile.css";
 
 function UserProfile(props) {
-  const { signIn, getUserData } = props;
+  const { getUserData } = props;
   const userData = getUserData("userData");
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -17,12 +17,14 @@ function UserProfile(props) {
   return (
     <div className="user-profile">
       <Avatar onClick={handleAvatarClick} />
-      {isDropdownOpen && (
+      <p>{userData.userName}</p>
+
+      {/* {isDropdownOpen && (
         <div className="user-avatar">
           <p>{userData.userEmail}</p>
           <p>{userData.userName}</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
