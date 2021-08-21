@@ -43,6 +43,12 @@ function ProductPage() {
     setItemInCart(true);
   };
 
+  const increasedPrice = (str) => {
+    let res = str.replace(/\D/g, "");
+    // parseInt(str.replace(/\D/g, ""));
+    return parseInt(res) * 1.25;
+  };
+
   const [itemInCart, setItemInCart] = useState(false);
 
   useEffect(() => {
@@ -91,9 +97,9 @@ function ProductPage() {
           <div className="prod-price">
             <h1 className="productPage__right__price">{price}</h1>
             <h1 className="productPage__right__price prod-price-strike">
-              ₹{parseInt(price.slice(1, price.length)) + 1000}
+              ₹{increasedPrice(price)}
             </h1>
-            <h1 className="productPage__right__price">( 50% OFF )</h1>
+            <h1 className="productPage__right__price">( 25% OFF )</h1>
           </div>
           <h1 className="prod-taxes">inclusive of all taxes</h1>
           <div className="prodButtons">
