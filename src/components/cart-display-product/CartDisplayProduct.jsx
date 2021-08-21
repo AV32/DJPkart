@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./CartDisplayProduct.css";
 import {
   addItemQuantity,
+  getCart,
   reduceItemQuantity,
 } from "../../pages/cart/useLocalStorage";
 import { Link } from "react-router-dom";
@@ -19,13 +20,15 @@ function CartDisplayProduct(props) {
       setQuantity(quantity - 1);
     }
     reduceItemQuantity(id);
-    calculateTotalPrice();
+    props.setCartItems(getCart());
+    // calculateTotalPrice();
   }
 
   function handleAdd() {
     setQuantity(quantity + 1);
     addItemQuantity(id);
-    calculateTotalPrice();
+    props.setCartItems(getCart());
+    // calculateTotalPrice();
   }
 
   if (quantity === 0) {

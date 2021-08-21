@@ -6,6 +6,7 @@ import Navbar from "./components/navbar";
 // import Footer from "./components/Footer/Footer";
 import ProductPage from "./pages/productpage/ProductPage";
 import CartPage from "./pages/cart";
+import OrderPage from "./pages/orderpage/OrderPage";
 
 function App() {
   const checkSignedIn = localStorage.getItem("isSignedIn");
@@ -13,6 +14,8 @@ function App() {
   useEffect(() => {
     if (!localStorage.getItem("cartItems"))
       localStorage.setItem("cartItems", JSON.stringify([]));
+    if (!localStorage.getItem("orderItems"))
+      localStorage.setItem("orderItems", JSON.stringify([]));
   }, []);
 
   function signIn() {
@@ -37,6 +40,9 @@ function App() {
         </Route>
         <Route exact path="/cart">
           <CartPage />
+        </Route>
+        <Route exact path="/orders">
+          <OrderPage />
         </Route>
       </Switch>
     </div>

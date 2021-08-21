@@ -6,6 +6,8 @@
   width: 100vw;
   /* height:1700px; */
   font-family: "Montserrat", sans-serif;
+  background: #fff;
+  padding-top: 70px;
 }
 
 .productPage__left {
@@ -17,7 +19,7 @@
   padding: 20px;
   border: 1px solid #bbb;
   margin-top: 9vh;
-  position: sticky;
+  /* position: sticky; */
 }
 
 .productPage__right {
