@@ -114,16 +114,16 @@ function CartPage() {
         aria-describedby="simple-modal-description"
       >
         <div className="addressForm">
-          <div className="address-box">
-            <input
-              type="text"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-            />
-            <button onClick={handleClose} className="add-address">
-              Add Address
-            </button>
-          </div>
+          {/* <div className="address-box"> */}
+          <input
+            type="text"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          />
+          <button onClick={handleClose} className="add-address">
+            Add Address
+          </button>
+          {/* </div> */}
         </div>
       </Modal>
       <div className="cart-page-right">
