@@ -14,31 +14,31 @@ function LandingPage() {
       </div>
       <div className="landing-page-categories">
         <div className="landing-page-category">
-          <h1>Mobile</h1>
+          <h1 className="landing-page-heading">Mobile</h1>
           <ProdSlider
             data={data.filter((item) => item.catogeries === "phone")}
           />
         </div>
         <div className="landing-page-category">
-          <h1>Electronics</h1>
+          <h1 className="landing-page-heading">Electronics</h1>
           <ProdSlider
             data={data.filter((item) => item.catogeries === "Electronics")}
           />
         </div>
         <div className="landing-page-category">
-          <h1>Sports</h1>
+          <h1 className="landing-page-heading">Sports</h1>
           <ProdSlider
             data={data.filter((item) => item.catogeries === "Sports")}
           />
         </div>
         <div className="landing-page-category">
-          <h1>Fashion</h1>
+          <h1 className="landing-page-heading">Fashion</h1>
           <ProdSlider
             data={data.filter((item) => item.catogeries === "fashion")}
           />
         </div>
         <div className="landing-page-category">
-          <h1>Beauty and Cosmetics</h1>
+          <h1 className="landing-page-heading">Beauty and Cosmetics</h1>
           <ProdSlider
             data={data.filter(
               (item) => item.catogeries === "Beauty and Cosmetics"
