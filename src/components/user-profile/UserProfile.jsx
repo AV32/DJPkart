@@ -12,7 +12,7 @@ function UserProfile(props) {
     setIsDropdownOpen(!isDropdownOpen);
   }
 
-  console.log("Avatar Dropped", isDropdownOpen);
+  // console.log("Avatar Dropped", isDropdownOpen);
 
   return (
     <div className="user-profile">
