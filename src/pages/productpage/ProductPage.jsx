@@ -48,6 +48,12 @@ function ProductPage() {
     setformData((currentData) => ({ ...currentData, [name]: value }));
   };
 
+  const increasedPrice = (str) => {
+    let res = str.replace(/\D/g, "");
+    // parseInt(str.replace(/\D/g, ""));
+    return parseInt(res) * 1.25;
+  };
+
   const handeleOnSubmit = (e) => {
     const { text, rate } = formData;
 
@@ -95,12 +101,6 @@ function ProductPage() {
     setItemInCart(true);
   };
 
-  const increasedPrice = (str) => {
-    let res = str.replace(/\D/g, "");
-    // parseInt(str.replace(/\D/g, ""));
-    return parseInt(res) * 1.25;
-  };
-
   const [itemInCart, setItemInCart] = useState(false);
 
   useEffect(() => {
@@ -108,7 +108,7 @@ function ProductPage() {
     const cartItems = getCart();
 
     cartItems.map((item) => {
-      if (item.id == id) setItemInCart(true);
+      if (item.id === id) setItemInCart(true);
     });
   }, []);
 
