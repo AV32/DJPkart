@@ -9,6 +9,7 @@ import data from "../../products";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { addItemToCart, getCart } from "./../../pages/cart/useLocalStorage";
+import Footer from "../../components/Footer/Footer";
 
 function ProductPage() {
   let id = window.location.pathname.split("/")[2];
@@ -202,6 +203,7 @@ function ProductPage() {
         <h1 className="productPage__right__description">{description}</h1>
 
       </div> */}
+      <Footer />
     </div>
   );
 }
