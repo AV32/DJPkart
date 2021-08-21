@@ -3,7 +3,16 @@ import { useEffect, useState } from "react";
 import { Modal } from "@material-ui/core";
 import "./CartPage.css";
 // import data from "../../products";
-import { getCart, removeItemFromCart } from "./useLocalStorage";
+import {
+  getCart,
+  addItemToCart,
+  removeItemFromCart,
+  addItemQuantity,
+  reduceItemQuantity,
+  getOrders,
+  addOrderItem,
+  addOrderArr,
+} from "./useLocalStorage";
 
 function CartPage() {
   const convert = (str) => {
@@ -21,14 +30,12 @@ function CartPage() {
 
   const [open, setOpen] = useState(false);
 
-  console.log(totalPrice);
-  console.log(cartItems);
-
   const handleOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = (e) => {
+    e.preventDefault();
     setOpen(false);
     localStorage.setItem("userAddress", address);
   };
@@ -38,9 +45,16 @@ function CartPage() {
     setCartItems(getCart);
   }
 
+  const handleOrder = () => {
+    console.log(getOrders());
+    addOrderArr(cartItems);
+    console.log(getOrders());
+    localStorage.setItem("cartItems", JSON.stringify([]));
+    setCartItems([]);
+  };
   function calculateTotalPrice() {
     let total = 0;
-    setCartItems(getCart());
+    // setCartItems(getCart());
     cartItems.forEach((item) => {
       total += parseInt(item.quantity) * convert(item.price);
     });
@@ -49,7 +63,7 @@ function CartPage() {
 
   useEffect(() => {
     calculateTotalPrice();
-  });
+  }, [cartItems]);
 
   if (cartItems.length === 0) {
     return (
@@ -103,7 +117,7 @@ function CartPage() {
             rating={item.rating}
             quantity={item.quantity}
             handleRemove={handleRemove}
-            calculateTotalPrice={calculateTotalPrice}
+            setCartItems={setCartItems}
           />
         ))}
       </div>
@@ -114,16 +128,16 @@ function CartPage() {
         aria-describedby="simple-modal-description"
       >
         <div className="addressForm">
-          {/* <div className="address-box"> */}
-          <input
-            type="text"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-          />
-          <button onClick={handleClose} className="add-address">
-            Add Address
-          </button>
-          {/* </div> */}
+          <form action="">
+            <input
+              type="text"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+            <button onClick={handleClose} className="add-address">
+              Add Address
+            </button>
+          </form>
         </div>
       </Modal>
       <div className="cart-page-right">
@@ -147,6 +161,8 @@ function CartPage() {
           <h1 className="total-amt">Total Amount</h1>
           <h1>{totalPrice}</h1>
         </div>
+
+        <button onClick={handleOrder}>Place Order</button>
       </div>
     </div>
   );
