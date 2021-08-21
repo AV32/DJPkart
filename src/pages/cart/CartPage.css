@@ -58,6 +58,8 @@
   width: 100%;
   font-size: 1.05rem;
   padding: 2vh 2vw 2vh 2vw;
+  display: flex;
+  justify-content: space-between;
 }
 .cart-price h1 {
   font-weight: 500;
@@ -68,16 +70,31 @@
   width: 100%;
   font-size: 1.05rem;
   padding: 2vh 2vw 2vh 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+.disc {
+  color: green;
 }
 .cart-delivery-charges {
   height: 20%;
   width: 100%;
   font-size: 1.05rem;
   padding: 2vh 2vw 2vh 2vw;
+  display: flex;
+  justify-content: space-between;
 }
 .cart-total {
   height: 20%;
   width: 100%;
   font-size: 1.05rem;
   padding: 2vh 2vw 2vh 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+.edit-address {
+  border: 1px solid #e3e5e8;
+  background-color: #e3e5e8;
+  padding: 2px;
+  font-size: 0.9rem;
 }
