@@ -700,7 +700,7 @@ const data = [
     name: "GODFREY Cotton Polo",
     rating: "4.1",
     discription:
-      "GODFREY Cotton Polo Neck Half Sleeve Mens T Shirt Size - Small (S / 36) GODFREY Cotton Polo Neck Half Sleeve Mens T Shirt Size - Small (S / 36)",
+      "GODFREY Cotton Polo Neck Half Sleeve Mens T Shirt Size - Small (S / 36)",
     price: "₹1300",
     image: [
       "https://images-na.ssl-images-amazon.com/images/I/71WtmkxWXbS._UY741_.jpg",

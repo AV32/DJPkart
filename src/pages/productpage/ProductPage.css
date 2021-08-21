@@ -4,7 +4,9 @@
   position: relative;
   display: flex;
   width: 100vw;
+  /* height:1700px; */
   font-family: "Montserrat", sans-serif;
+  
 }
 
 .productPage__left {
@@ -16,13 +18,15 @@
   padding: 20px;
   border: 1px solid #bbb;
   margin-top: 9vh;
+  position: sticky;
 }
 
 .productPage__right {
   width: 55%;
-  height: 1000px;
+  /* height: fit-content; */
   margin: 10px;
   margin-top: 13vh;
+  overflow-y: scroll !important;
 }
 
 .sideImage {
@@ -67,8 +71,9 @@
 }
 
 .review__avatar {
-  width: 40px;
-  height: 40px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
   border-radius: 100px;
   margin-right: 10px;
 }
@@ -94,6 +99,11 @@
 .star {
   width: 20px;
   float: right;
+}
+
+.star_{
+  margin-left: 100px;
+  top:40px;
 }
 
 .prod-price {
@@ -122,7 +132,7 @@
   padding: 15px;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: #ff527b;
+  background-color: #ff3f6c;
   border-radius: 5px;
   margin-right: 20px;
   color: #fff;
@@ -153,6 +163,7 @@
 .product-details-heading {
   font-weight: bolder;
   margin-bottom: 15px;
+  margin-top: 8px;
 }
 
 .prod-detail-icon {
@@ -169,7 +180,10 @@
 }
 
 .product_reviews {
-  width: 50%;
+  width: 90%;
+  border-top: 1px solid #c9bfbf;
+  margin-top: 30px;
+  /* width: 50%; */
 }
 
 .Address-pdp-box {
@@ -186,21 +200,24 @@
   border: 1px solid #bfc0c6;
 }
 .Address-pincode-input {
-  margin: 12px 0;
+  margin: 4px 0;
 }
 
 .sub {
   font-size: 12px;
+ color: #ff527b;
 }
 
 .wePromise {
   margin-top: 10px;
 }
 
-.giveBullets {
-  list-style: disc;
+.giveBullets li {
+  list-style:disc !important;
   /* text-indent: 1rem; */
   margin-left: 6px !important;
+  padding: 2px;
+  /* color: black; */
 }
 
 .subH {
@@ -209,15 +226,90 @@
 
 .sub_ {
   font-size: 12px;
-  color: #ff527b;
+  color: #ff3f6c;
 }
 
 .head {
   display: flex;
+  border-top: 1px solid #c9bfbf;
+  padding-top: 30px;
 }
 
 .head img {
   width: 30px;
   height: 30px;
   margin-left: 8px !important;
+}
+
+.review_info {
+  font-size: 60px;
+}
+
+.review_info img {
+  margin-right: 445px;
+  margin-top: -61px;
+  width: 35px;
+  height: 35px;
+}
+
+.review_info p {
+  font-size: 12px;
+  margin-left: 12px;
+  padding: 8px;
+  display: inline-block;
+}
+
+.form {
+  margin-top: 30px;
+  
+}
+
+.input_num {
+  width: 18%;
+  margin-left: 70px;
+}
+.form form {
+  margin-top: 10px;
+  border: 1px solid #c9bfbf;
+  padding: 10px;
+  display: flex;
+}
+
+.review__rate {
+  display: flex;
+  font-size: 12px;
+}
+
+.offer_price {
+  color: #ff905a;
+  font-weight: 500;
+}
+
+.rate___{
+  width: 30px;
+  height: 30px;
+  margin-left: 8px !important;
+}
+
+.same{
+  display: flex;
+  margin-top: 10px;
+}
+
+.allRatings{
+  display: inline;
+  /* border-right: 1px solid #c9bfbf !important;
+  padding: 12px; */
+
+
+}
+
+
+.submitBtn{
+  background-color:  #ff3f6c;
+  padding: 10px;
+  border-radius: 6px;
+  /* height: 17px; */
+  margin-left: 40px;
+  
 }
