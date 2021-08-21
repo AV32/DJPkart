@@ -15,8 +15,6 @@ import {
 } from "./useLocalStorage";
 
 function CartPage() {
-  var x = 0;
-
   const convert = (str) => {
     let res = str.replace(/\D/g, "");
     // parseInt(str.replace(/\D/g, ""));
@@ -24,6 +22,7 @@ function CartPage() {
   };
 
   const [cartItems, setCartItems] = useState(getCart() || []);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const [address, setAddress] = useState(
     localStorage.getItem("userAddress") || ""
@@ -35,7 +34,8 @@ function CartPage() {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = (e) => {
+    e.preventDefault();
     setOpen(false);
     localStorage.setItem("userAddress", address);
   };
@@ -45,32 +45,6 @@ function CartPage() {
     setCartItems(getCart);
   }
 
-  const getDeliveryDate = () => {
-    const monthNames = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    let d = new Date().getDate();
-    let m = new Date().getMonth();
-    let a =
-      d > 0
-        ? ["th", "st", "nd", "rd"][(d > 3 && d < 21) || d % 10 > 3 ? 0 : d % 10]
-        : "";
-    console.log(d);
-    console.log(m);
-    return d + a + " " + monthNames[m];
-  };
-
   const handleOrder = () => {
     console.log(getOrders());
     addOrderArr(cartItems);
@@ -78,6 +52,18 @@ function CartPage() {
     localStorage.setItem("cartItems", JSON.stringify([]));
     setCartItems([]);
   };
+  function calculateTotalPrice() {
+    let total = 0;
+    // setCartItems(getCart());
+    cartItems.forEach((item) => {
+      total += parseInt(item.quantity) * convert(item.price);
+    });
+    setTotalPrice(total);
+  }
+
+  useEffect(() => {
+    calculateTotalPrice();
+  }, [cartItems]);
 
   if (cartItems.length === 0) {
     return (
@@ -86,13 +72,7 @@ function CartPage() {
       </div>
     );
   }
-  function Pricing() {
-    cartItems.forEach(function (arrayItem) {
-      x += parseInt(arrayItem.quantity) * convert(arrayItem.price);
-    });
-    return x;
-  }
-  var pricecall = Pricing();
+
   return (
     <div className="cart-page">
       <div className="cart-page-left">
@@ -136,6 +116,7 @@ function CartPage() {
             rating={item.rating}
             quantity={item.quantity}
             handleRemove={handleRemove}
+            setCartItems={setCartItems}
           />
         ))}
       </div>
@@ -146,12 +127,14 @@ function CartPage() {
         aria-describedby="simple-modal-description"
       >
         <div className="addressForm">
-          <input
-            type="text"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-          />
-          <button onClick={handleClose}>Add Address</button>
+          <form action="">
+            <input
+              type="text"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+            <button onClick={handleClose}>Add Address</button>
+          </form>
         </div>
       </Modal>
       <div className="cart-page-right">
@@ -159,7 +142,7 @@ function CartPage() {
         <hr className="plane-hr" />
         <div className="cart-price">
           <h1>Price ({cartItems.length})</h1>
-          <h1>{pricecall * 1.25}</h1>
+          <h1>{totalPrice * 1.25}</h1>
         </div>
         <div className="cart-discount">
           <h1>Discount</h1>
@@ -173,7 +156,7 @@ function CartPage() {
         <hr className="dashed-hr" />
         <div className="cart-total">
           <h1 className="total-amt">Total Amount</h1>
-          <h1>{pricecall}</h1>
+          <h1>{totalPrice}</h1>
         </div>
 
         <button onClick={handleOrder}>Place Order</button>

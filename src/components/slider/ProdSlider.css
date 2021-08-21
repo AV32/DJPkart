@@ -25,21 +25,35 @@
 }
 
 .slick-next {
-  right: 10px;
+  right: -60px;
 }
 .slick-prev {
-  left: 10px;
+  left: -60px;
   z-index: 300;
 }
 .slick-prev:before,
 .slick-next:before {
-  color: black;
+  color: rgba(0, 0, 0, 0);
 }
 /* .slick-slide {
 }
 
 .slick-track {
 } */
+
+.slider-backward-arrow {
+  color: #fff;
+  position: absolute;
+  margin-top: 9rem;
+  left: 10px;
+}
+
+.slider-forward-arrow {
+  color: #fff;
+  position: absolute;
+  margin-top: 9rem;
+  right: 10px;
+}
 
 @media only screen and (max-width: 400px) {
   .slider-card {

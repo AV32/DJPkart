@@ -83,9 +83,34 @@ function ProductPage() {
 
     setformData({ text: "", rate: "" });
 
-    console.log(arrData);
+    // console.log(arrData);
     // console.log(setarrData)
     // console.log(formData);
+  };
+
+  const getDeliveryDate = () => {
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    let d = new Date().getDate();
+    d = parseInt(d) + Math.floor(Math.random() * 4) + 1;
+    let m = new Date().getMonth();
+    let a =
+      d > 0
+        ? ["th", "st", "nd", "rd"][(d > 3 && d < 21) || d % 10 > 3 ? 0 : d % 10]
+        : "";
+    return `${d}${a} ${monthNames[m]}`;
   };
 
   const addItem = () => {
@@ -97,6 +122,7 @@ function ProductPage() {
       discription,
       quantity: 1,
       img: image[0],
+      date: getDeliveryDate(),
     });
     setItemInCart(true);
   };

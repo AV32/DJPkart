@@ -2,10 +2,9 @@ import { useState } from "react";
 
 import "./CartDisplayProduct.css";
 import {
-  removeItemFromCart,
   addItemQuantity,
-  reduceItemQuantity,
   getCart,
+  reduceItemQuantity,
 } from "../../pages/cart/useLocalStorage";
 import { Link } from "react-router-dom";
 
@@ -13,18 +12,23 @@ function CartDisplayProduct(props) {
   const [quantity, setQuantity] = useState(props.quantity);
 
   const seller = "DJP Team";
-  const { id, name, image, price, rating, handleRemove } = props;
+  const { id, name, image, price, rating, handleRemove, calculateTotalPrice } =
+    props;
 
   function handleReduce() {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
     reduceItemQuantity(id);
+    props.setCartItems(getCart());
+    // calculateTotalPrice();
   }
 
   function handleAdd() {
     setQuantity(quantity + 1);
     addItemQuantity(id);
+    props.setCartItems(getCart());
+    // calculateTotalPrice();
   }
 
   if (quantity === 0) {

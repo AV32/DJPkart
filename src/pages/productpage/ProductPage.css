@@ -6,6 +6,8 @@
   width: 100vw;
   /* height:1700px; */
   font-family: "Montserrat", sans-serif;
+  background: #fff;
+  padding-top: 70px;
 }
 
 .productPage__left {
