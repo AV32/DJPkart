@@ -8,11 +8,12 @@
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18); */
-  background-color: rgba(0, 0, 0, 0.678);
+  /* background-color: rgba(0, 0, 0, 0.678); */
+  background-color: white;
   position: fixed;
   top: 0;
-  /* z-index: 10; */
-  color: white;
+  z-index: 10;
+  color: black;
   height: 9vh;
 }
 
@@ -36,7 +37,7 @@
   width: 80vw;
   display: flex;
   justify-content: space-between;
-  background-color: aqua;
+  background-color: rgb(221, 221, 221);
   transition: all 1s ease;
   position: fixed;
   z-index: 100000;
@@ -59,17 +60,14 @@
   justify-content: space-around;
   align-items: center;
   height: 9vh;
-  /* background: rgba(0, 0, 0, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18); */
-  background-color: rgba(0, 0, 0, 0.678);
+  background-color: white;
   backdrop-filter: blur(20px);
   position: fixed;
   top: 0;
   z-index: 10;
-  color: white;
+  color: black;
+  font-family: "Catamaran", cursive;
+  font-weight: 500;
 }
 .Navbar h1,
 .Navbar p {
@@ -97,9 +95,15 @@
   align-items: center;
   justify-content: space-around;
 }
-cat:hover {
+.cat {
+  cursor: pointer;
+}
+.cat:hover {
   cursor: pointer;
 }
 .alter {
   background-color: #fcfbfa;
+}
+.logo {
+  height: 6vh;
 }

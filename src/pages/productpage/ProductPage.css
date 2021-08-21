@@ -13,7 +13,7 @@
   background-color: white;
   height: 100vh;
   top: 0px;
-  width: 80vw;
+  width: 60vw;
   display: flex;
   padding: 20px;
   border: 1px solid #bbb;
@@ -172,7 +172,7 @@
 
 @media only screen and (max-width: 768px) {
   .productPage__container {
-    display: block;
+    flex-direction: column;
   }
   .productPage__left {
     width: 100vw;
@@ -296,8 +296,9 @@
 }
 
 .allRatings{
-  display: inline-block;
-  border-right: 1px solid #c9bfbf !important;
+  display: inline;
+  /* border-right: 1px solid #c9bfbf !important;
+  padding: 12px; */
 
 
 }

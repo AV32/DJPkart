@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function ProductCard(props) {
   const [addToCart, setAddToCart] = useState(false);
+
   return (
     <div className="productCard__container slider-card">
       <Link to={`/products/${props.id}`}>
@@ -48,8 +49,13 @@ function ProductCard(props) {
             <h2 className="productCard__priceTag">
               <strong>{props.price}</strong>
             </h2>
-            <h2 className="productCard__rating">
-              <strong>{props.rating}</strong>⭐
+            <h2 className="productCard__rating ">
+              <strong>{props.rating}</strong>
+              <img
+                className="star"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/docomo/205/white-medium-star_2b50.png"
+                alt=""
+              />
             </h2>
           </div>
           {/* <div className="productCard__infoContainerBottom">

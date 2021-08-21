@@ -31,7 +31,10 @@
   left: 10px;
   z-index: 300;
 }
-
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
 /* .slick-slide {
 }
 
@@ -42,5 +45,11 @@
   .slider-card {
     width: 150px;
     height: 200px;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .slider-card {
+    width: 250px;
+    height: 350px;
   }
 }
