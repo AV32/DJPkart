@@ -282,7 +282,7 @@ const data = [
     rating: "4.5",
     discription:
       "Celeron N4020/4GB/64GB SSD/Chrome OS/Integrated Graphics, Ceremic White, 35.6 cm (14 inch)",
-    price: "₹27,490.00",
+    price: "₹27,490",
 
     image: [
       "https://m.media-amazon.com/images/I/61Gnrgw0mrL._SL1080_.jpg",
@@ -395,7 +395,7 @@ const data = [
     rating: "3.9",
     discription:
       "Celeron N4020/4GB/64GB SSD/Chrome OS/Integrated Graphics, Ceremic White, 35.6 cm (14 inch)",
-    price: "₹27,490.00",
+    price: "₹27,490",
 
     image: [
       "https://rukminim1.flixcart.com/image/880/1056/kpodocw0/watch/p/l/t/anlg-428-blue-blu-analogue-original-imag3uxbhfkyhahf.jpeg?q=50",

@@ -83,7 +83,7 @@ function ProductPage() {
 
     setformData({ text: "", rate: "" });
 
-    console.log(arrData);
+    // console.log(arrData);
     // console.log(setarrData)
     // console.log(formData);
   };
@@ -300,12 +300,11 @@ function ProductPage() {
                 >
                   Post{" "}
                 </button>
-                
               </form>
             </div>
 
             <div>
-            <Posts post={arrData} />
+              <Posts post={arrData} />
               {review.map((item) => (
                 <div className="review__container">
                   <h1 className="review__text">{item}</h1>
@@ -323,7 +322,7 @@ function ProductPage() {
           </div>
         </div>
       </div>
-      {/* </div> */} 
+      {/* </div> */}
       <Footer />
     </div>
   );
