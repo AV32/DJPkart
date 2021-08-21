@@ -108,7 +108,7 @@ function Navbar(props) {
           <div className="Navbar__right">
             <SearchBar
               style={{
-                minWidth: 600,
+                minWidth: 500,
                 width: "50%",
                 height: "6vh",
                 background: "rgb(227, 226, 226)",

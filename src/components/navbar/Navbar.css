@@ -113,3 +113,14 @@
 .logo {
   height: 6vh;
 }
+@media screen and (max-width: 768px) {
+  .cat {
+    display: none;
+  }
+  .Navbar__left {
+    flex: 0.15;
+  }
+  .Navbar__right .search-bar {
+    flex: 0.2;
+  }
+}

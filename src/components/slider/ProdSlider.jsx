@@ -21,9 +21,9 @@ export default class Responsive extends Component {
         {
           breakpoint: 1500,
           settings: {
-            slidesToShow: 6,
+            slidesToShow: 5,
             slidesToScroll: 3,
-            infinite: true,
+            // infinite: true,
             dots: true,
           },
         },
@@ -32,7 +32,7 @@ export default class Responsive extends Component {
           settings: {
             slidesToShow: 5,
             slidesToScroll: 3,
-            infinite: true,
+            // infinite: true,
             dots: true,
           },
         },
@@ -41,7 +41,7 @@ export default class Responsive extends Component {
           settings: {
             slidesToShow: 4,
             slidesToScroll: 3,
-            infinite: true,
+            // infinite: true,
             dots: true,
           },
         },
@@ -50,7 +50,7 @@ export default class Responsive extends Component {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            infinite: true,
+            // infinite: true,
             dots: true,
           },
         },
@@ -67,6 +67,7 @@ export default class Responsive extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
+            initialSlide: 2,
           },
         },
       ],
