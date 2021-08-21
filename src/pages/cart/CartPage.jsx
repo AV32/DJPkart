@@ -9,6 +9,9 @@ import {
   removeItemFromCart,
   addItemQuantity,
   reduceItemQuantity,
+  getOrders,
+  addOrderItem,
+  addOrderArr,
 } from "./useLocalStorage";
 
 function CartPage() {
@@ -41,6 +44,40 @@ function CartPage() {
     removeItemFromCart(id);
     setCartItems(getCart);
   }
+
+  const getDeliveryDate = () => {
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    let d = new Date().getDate();
+    let m = new Date().getMonth();
+    let a =
+      d > 0
+        ? ["th", "st", "nd", "rd"][(d > 3 && d < 21) || d % 10 > 3 ? 0 : d % 10]
+        : "";
+    console.log(d);
+    console.log(m);
+    return d + a + " " + monthNames[m];
+  };
+
+  const handleOrder = () => {
+    console.log(getOrders());
+    addOrderArr(cartItems);
+    console.log(getOrders());
+    localStorage.setItem("cartItems", JSON.stringify([]));
+    setCartItems([]);
+  };
 
   if (cartItems.length === 0) {
     return (
@@ -138,6 +175,8 @@ function CartPage() {
           <h1 className="total-amt">Total Amount</h1>
           <h1>{pricecall}</h1>
         </div>
+
+        <button onClick={handleOrder}>Place Order</button>
       </div>
     </div>
   );

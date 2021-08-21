@@ -105,7 +105,10 @@ function ProductPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    console.log(getCart());
     const cartItems = getCart();
+
+    console.log("ASD", cartItems);
 
     cartItems.map((item) => {
       if (item.id === id) setItemInCart(true);
@@ -300,12 +303,11 @@ function ProductPage() {
                 >
                   Post{" "}
                 </button>
-                
               </form>
             </div>
 
             <div>
-            <Posts post={arrData} />
+              <Posts post={arrData} />
               {review.map((item) => (
                 <div className="review__container">
                   <h1 className="review__text">{item}</h1>
@@ -323,7 +325,7 @@ function ProductPage() {
           </div>
         </div>
       </div>
-      {/* </div> */} 
+      {/* </div> */}
       <Footer />
     </div>
   );

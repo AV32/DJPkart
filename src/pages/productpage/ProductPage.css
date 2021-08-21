@@ -6,7 +6,6 @@
   width: 100vw;
   /* height:1700px; */
   font-family: "Montserrat", sans-serif;
-  
 }
 
 .productPage__left {
@@ -18,7 +17,7 @@
   padding: 20px;
   border: 1px solid #bbb;
   margin-top: 9vh;
-  position: sticky;
+  /* position: sticky; */
 }
 
 .productPage__right {
@@ -101,9 +100,9 @@
   float: right;
 }
 
-.star_{
+.star_ {
   margin-left: 100px;
-  top:40px;
+  top: 40px;
 }
 
 .prod-price {
@@ -205,7 +204,7 @@
 
 .sub {
   font-size: 12px;
- color: #ff527b;
+  color: #ff527b;
 }
 
 .wePromise {
@@ -213,7 +212,7 @@
 }
 
 .giveBullets li {
-  list-style:disc !important;
+  list-style: disc !important;
   /* text-indent: 1rem; */
   margin-left: 6px !important;
   padding: 2px;
@@ -261,7 +260,6 @@
 
 .form {
   margin-top: 30px;
-  
 }
 
 .input_num {
@@ -285,31 +283,27 @@
   font-weight: 500;
 }
 
-.rate___{
+.rate___ {
   width: 30px;
   height: 30px;
   margin-left: 8px !important;
 }
 
-.same{
+.same {
   display: flex;
   margin-top: 10px;
 }
 
-.allRatings{
+.allRatings {
   display: inline;
   /* border-right: 1px solid #c9bfbf !important;
   padding: 12px; */
-
-
 }
 
-
-.submitBtn{
-  background-color:  #ff3f6c;
+.submitBtn {
+  background-color: #ff3f6c;
   padding: 10px;
   border-radius: 6px;
   /* height: 17px; */
   margin-left: 40px;
-  
 }

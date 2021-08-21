@@ -1,6 +1,9 @@
 function getCart() {
   if (localStorage.getItem("cartItems"))
     return JSON.parse(localStorage.getItem("cartItems"));
+
+  localStorage.setItem("cartItems", JSON.stringify([]));
+  return [];
 }
 
 function addItemToCart({
@@ -62,7 +65,7 @@ function addOrderItem({
   img,
   date,
 }) {
-  const orders = JSON.parse(localStorage.getItem("orderItems"));
+  const orders = JSON.parse(localStorage.getItem("orderItems")) || [];
 
   let flag = true;
 
@@ -76,6 +79,12 @@ function addOrderItem({
   }
 }
 
+function addOrderArr(arr) {
+  const orders = JSON.parse(localStorage.getItem("orderItems")) || [];
+  orders.push(...arr);
+  localStorage.setItem("orderItems", JSON.stringify(orders));
+}
+
 export {
   getCart,
   addItemToCart,
@@ -84,4 +93,5 @@ export {
   reduceItemQuantity,
   getOrders,
   addOrderItem,
+  addOrderArr,
 };
