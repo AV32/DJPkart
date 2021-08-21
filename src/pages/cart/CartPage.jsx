@@ -12,6 +12,14 @@ import {
 } from "./useLocalStorage";
 
 function CartPage() {
+  var x = 0;
+
+  const convert = (str) => {
+    let res = str.replace(/\D/g, "");
+    // parseInt(str.replace(/\D/g, ""));
+    return parseInt(res);
+  };
+
   const [cartItems, setCartItems] = useState(getCart() || []);
 
   const [address, setAddress] = useState(
@@ -41,7 +49,13 @@ function CartPage() {
       </div>
     );
   }
-
+  function Pricing() {
+    cartItems.forEach(function (arrayItem) {
+      x += parseInt(arrayItem.quantity) * convert(arrayItem.price);
+    });
+    return x;
+  }
+  var pricecall = Pricing();
   return (
     <div className="cart-page">
       <div className="cart-page-left">
@@ -66,6 +80,9 @@ function CartPage() {
                 </svg>
                 Deliver to
                 <h1 className="cart-page-left-header-address">{address}</h1>
+                <button onClick={handleOpen} className="edit-address">
+                  Edit Address
+                </button>
               </>
             )}
           </div>
@@ -85,8 +102,7 @@ function CartPage() {
           />
         ))}
       </div>
-      <div className="cart-page-right">
-        {/* <Modal
+      <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
@@ -100,22 +116,27 @@ function CartPage() {
           />
           <button onClick={handleClose}>Add Address</button>
         </div>
-      </Modal> */}
+      </Modal>
+      <div className="cart-page-right">
         <h1 className="cart-price-details">PRICE DETAILS</h1>
         <hr className="plane-hr" />
         <div className="cart-price">
           <h1>Price ({cartItems.length})</h1>
+          <h1>{pricecall * 1.25}</h1>
         </div>
         <div className="cart-discount">
           <h1>Discount</h1>
+          <h1 className="disc">25%</h1>
         </div>
         <div className="cart-delivery-charges">
           <h1>Delivery Charges</h1>
+          <h1 className="disc">Free</h1>
         </div>
 
         <hr className="dashed-hr" />
         <div className="cart-total">
           <h1 className="total-amt">Total Amount</h1>
+          <h1>{pricecall}</h1>
         </div>
       </div>
     </div>
