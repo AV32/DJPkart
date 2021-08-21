@@ -64,8 +64,9 @@ function CartPage() {
           <div className="address-container">
             {!address ? (
               <>
-                No address available{" "}
-                <button onClick={handleOpen}>Add Address</button>
+                <button onClick={handleOpen} className="add-address">
+                  Add Address
+                </button>
               </>
             ) : (
               <>
@@ -109,12 +110,16 @@ function CartPage() {
         aria-describedby="simple-modal-description"
       >
         <div className="addressForm">
-          <input
-            type="text"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-          />
-          <button onClick={handleClose}>Add Address</button>
+          <div className="address-box">
+            <input
+              type="text"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+            <button onClick={handleClose} className="add-address">
+              Add Address
+            </button>
+          </div>
         </div>
       </Modal>
       <div className="cart-page-right">
