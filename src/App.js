@@ -44,7 +44,6 @@ function App() {
           <OrderPage />
         </Route>
       </Switch>
-      <Footer />
     </div>
   );
 }

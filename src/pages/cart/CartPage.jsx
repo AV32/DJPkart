@@ -85,8 +85,8 @@ function CartPage() {
           />
         ))}
       </div>
-      <div className="cart-page-right"></div>
-      <Modal
+      <div className="cart-page-right">
+        {/* <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
@@ -100,7 +100,24 @@ function CartPage() {
           />
           <button onClick={handleClose}>Add Address</button>
         </div>
-      </Modal>
+      </Modal> */}
+        <h1 className="cart-price-details">PRICE DETAILS</h1>
+        <hr className="plane-hr" />
+        <div className="cart-price">
+          <h1>Price ({cartItems.length})</h1>
+        </div>
+        <div className="cart-discount">
+          <h1>Discount</h1>
+        </div>
+        <div className="cart-delivery-charges">
+          <h1>Delivery Charges</h1>
+        </div>
+
+        <hr className="dashed-hr" />
+        <div className="cart-total">
+          <h1 className="total-amt">Total Amount</h1>
+        </div>
+      </div>
     </div>
   );
 }
