@@ -67,10 +67,8 @@ function ProductPage(props) {
   const decPrice = (str) => {
     let res = str.replace(/\D/g, "");
     // parseInt(str.replace(/\D/g, ""));
-    return parseInt(res) -40;
+    return parseInt(res) - 40;
   };
-
-  
 
   const handeleOnSubmit = (e) => {
     const { text, rate } = formData;
@@ -143,7 +141,7 @@ function ProductPage(props) {
       date: getDeliveryDate(),
     });
     setItemInCart(true);
-    setCartItemsCount((prevCount) => prevCount + 1);
+    setCartItemsCount(getCart().length);
   };
 
   const [itemInCart, setItemInCart] = useState(false);
@@ -262,8 +260,8 @@ function ProductPage(props) {
               <h2 className="subH">
                 <b>
                   {" "}
-                  Best Price <span className="offer_price">₹{decPrice(price)}</span>
-            
+                  Best Price{" "}
+                  <span className="offer_price">₹{decPrice(price)}</span>
                 </b>
               </h2>
               <ul className="giveBullets">
