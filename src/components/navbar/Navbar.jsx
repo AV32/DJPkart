@@ -18,6 +18,8 @@ function Navbar(props) {
   const [isNavOpen, setNavOpen] = useState(false);
   const [isVisible, setisVisible] = useState(false);
   // console.log("Navbar isSigned In", isSignedIn);
+  console.log("isSignedIn ", isSignedIn);
+  console.log(" Type of isSignedIn", typeof isSignedIn);
 
   function getUserData(key) {
     if (isSignedIn) {
