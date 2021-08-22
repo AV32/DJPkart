@@ -52,7 +52,7 @@ function CartPage(props) {
   function handleRemove(id) {
     removeItemFromCart(id);
     setCartItems(getCart);
-    setCartItemsCount((prevCount) => prevCount - 1);
+    setCartItemsCount(getCart().length);
   }
 
   const handleOrder = () => {
@@ -61,6 +61,7 @@ function CartPage(props) {
     addOrderArr(cartItems);
     localStorage.setItem("cartItems", JSON.stringify([]));
     setCartItems([]);
+    setCartItemsCount(getCart().length);
   };
   function calculateTotalPrice() {
     let total = 0;

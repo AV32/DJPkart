@@ -11,8 +11,8 @@ import { getCart } from "./pages/cart/useLocalStorage";
 import WishlistPage from "./pages/wishlistpage/WishlistPage";
 
 function App() {
-  const checkSignedIn = localStorage.getItem("isSignedIn");
-  const [isSignedIn, setIsSignedIn] = useState(checkSignedIn);
+  const checkIsSignedIn = localStorage.getItem("isSignedIn") || "";
+  const [isSignedIn, setIsSignedIn] = useState(checkIsSignedIn);
   const cartItems = getCart();
 
   const [cartItemsCount, setCartItemsCount] = useState(cartItems.length);

@@ -42,17 +42,21 @@
 } */
 
 .slider-backward-arrow {
-  color: #fff;
+  font-size: xx-large;
+  color: rgb(204, 202, 202);
   position: absolute;
   margin-top: 9rem;
   left: 10px;
+  font-size: 2rem;
 }
 
 .slider-forward-arrow {
-  color: #fff;
+  font-size: xx-large;
+  color: rgb(204, 202, 202);
   position: absolute;
   margin-top: 9rem;
   right: 10px;
+  font-size: 2rem;
 }
 @media only screen and (max-width: 600px) {
   .slider-card {
@@ -60,15 +64,30 @@
     height: 150px;
   }
   .slider-backward-arrow {
-    color: transparent;
+    font-size: x-large;
+    color: rgb(204, 202, 202);
+    margin-top: -35px;
+    left: 80vw;
   }
 
   .slider-forward-arrow {
-    color: transparent;
+    font-size: x-large;
+    color: rgb(204, 202, 202);
+    margin-top: -35px;
+    right: 7vw;
+  }
+  .slick-next {
+    right: 0px;
+    top: -20px;
+  }
+  .slick-prev {
+    left: 72vw;
+    top: -20px;
+    z-index: 300;
   }
   .slick-prev,
   .slick-next {
-    display: none;
+    color: rgba(0, 0, 0, 0);
   }
 }
 @media only screen and (min-width: 1900px) {

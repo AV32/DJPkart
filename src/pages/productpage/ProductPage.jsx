@@ -67,12 +67,10 @@ function ProductPage(props) {
 
   const increasedPrice = (str) => {
     let res = str.replace(/\D/g, "");
-    // parseInt(str.replace(/\D/g, ""));
     return parseInt(res) * 1.25;
   };
   const decPrice = (str) => {
     let res = str.replace(/\D/g, "");
-    // parseInt(str.replace(/\D/g, ""));
     return parseInt(res) - 40;
   };
 
@@ -94,20 +92,16 @@ function ProductPage(props) {
       return;
     }
 
-    // if (!rate) {
-    //   setError("Rating is required");
-    //   return;
-    // }
+    if (!rate) {
+      setError("Rating is required");
+      return;
+    }
 
     setError("");
 
     setarrData((arrData) => [...arrData, { text, rate }]);
 
     setformData({ text: "", rate: "" });
-
-    // console.log(arrData);
-    // console.log(setarrData)
-    // console.log(formData);
   };
 
   const getDeliveryDate = () => {
@@ -147,7 +141,7 @@ function ProductPage(props) {
       date: getDeliveryDate(),
     });
     setItemInCart(true);
-    setCartItemsCount((prevCount) => prevCount + 1);
+    setCartItemsCount(getCart().length);
   };
 
   const [itemInCart, setItemInCart] = useState(false);
@@ -339,11 +333,12 @@ function ProductPage(props) {
                 <p>Share you valuable Review :</p>
                 <form>
                   <input
+                    className="input_text"
                     type="text"
                     value={formData.text}
                     required
                     name="text"
-                    placeholder="Valuable Review"
+                    placeholder="Review"
                     onChange={handleOnFormDataChange}
                   />
                   <input
