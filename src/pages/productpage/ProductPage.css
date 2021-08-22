@@ -6,27 +6,45 @@
   width: 100vw;
   /* height:1700px; */
   font-family: "Montserrat", sans-serif;
+  background-color: #e4e4e4 !important;
+  
   
 }
 
 .productPage__left {
-  background-color: white;
+  /* background-color: white; */
   height: 100vh;
   top: 0px;
   width: 60vw;
   display: flex;
   padding: 20px;
-  border: 1px solid #bbb;
+  /* border: 1px solid #bbb; */
   margin-top: 9vh;
   position: sticky;
+  background-color: #e4e4e4;
+  /* background-color: white; */
+}
+
+.productPage__sideImagesContainer{
+    height: fit-content;
+    background-color: white;
+    border: none;
+
 }
 
 .productPage__right {
   width: 55%;
   /* height: fit-content; */
   margin: 10px;
-  margin-top: 13vh;
+  margin-top: 12vh;
   overflow-y: scroll !important;
+
+  background-color: white;
+  margin-right: 39px;
+}
+
+.productPage__right::-webkit-scrollbar {
+  display: none;
 }
 
 .sideImage {
@@ -37,8 +55,15 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fff;
-  border: 1px solid #bbb;
+  /* background-color: #bbb; */
+  border: 1px solid #e4e4e4;
+}
+
+.sideImage:hover {
+  border:none;
+  box-shadow: 2px 2px 14px -1px rgba(211, 210, 210, 0.66);
+  -webkit-box-shadow: 2px 2px 14px -1px rgba(211, 210, 210, 0.66);
+  -moz-box-shadow: 2px 2px 14px -1px rgba(228, 228, 228, 0.66);
 }
 
 .productPage__displayImageContainer {
@@ -47,8 +72,16 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
-  border: 1px solid #bbb;
+  height: 101.5%;
+  /* border: 1px solid #bbb; */
+  background-color: white;
+  margin-left: 18px;
+  
+ 
+}
+
+.product_page_top{
+  background-color: #e4e4e4;
 }
 
 .productPage__displayImage {
@@ -88,6 +121,14 @@
 
 .productPage__right__name {
   font-weight: bolder;
+  /* margin-top: 9vh; */
+  
+}
+
+.productPage__right__{
+  margin-left: 18px;
+  margin-top: 12px;
+
 }
 
 .productPage__right__rating {
@@ -104,6 +145,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row-reverse;
+  
 }
 .productPage__right__rating_ {
   display: inline-block;
