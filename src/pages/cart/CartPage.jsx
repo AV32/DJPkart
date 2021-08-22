@@ -162,7 +162,9 @@ function CartPage() {
           <h1>{totalPrice}</h1>
         </div>
 
-        <button onClick={handleOrder}>Place Order</button>
+        <button onClick={handleOrder} className="place-order">
+          Place Order
+        </button>
       </div>
     </div>
   );
