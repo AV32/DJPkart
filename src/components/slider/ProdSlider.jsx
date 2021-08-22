@@ -68,14 +68,17 @@ export default class Responsive extends Component {
             slidesToShow: 2,
             slidesToScroll: 1,
             initialSlide: 2,
+            dots: false,
           },
         },
       ],
     };
     return (
       <div className="slider__conatiner">
-        <ArrowBackIosIcon className="slider-backward-arrow" />
-        <ArrowForwardIosIcon className="slider-forward-arrow" />
+        {/* <ArrowBackIosIcon className="slider-backward-arrow" /> */}
+        <i class="fas fa-chevron-left slider-backward-arrow"></i>
+        {/* <ArrowForwardIosIcon className="slider-forward-arrow" /> */}
+        <i class="fas fa-chevron-right slider-forward-arrow"></i>
 
         <Slider {...settings}>
           {/* <div className="slider-card">1</div>
