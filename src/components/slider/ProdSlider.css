@@ -42,14 +42,16 @@
 } */
 
 .slider-backward-arrow {
-  color: #fff;
+  font-size: xx-large;
+  color: rgb(204, 202, 202);
   position: absolute;
   margin-top: 9rem;
   left: 10px;
 }
 
 .slider-forward-arrow {
-  color: #fff;
+  font-size: xx-large;
+  color: rgb(204, 202, 202);
   position: absolute;
   margin-top: 9rem;
   right: 10px;
