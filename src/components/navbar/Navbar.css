@@ -84,7 +84,7 @@
   display: flex;
   flex: 0.25;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .Navbar__right {
   display: flex;
