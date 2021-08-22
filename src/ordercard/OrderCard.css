@@ -5,6 +5,7 @@
   margin: 10px;
   padding: 20px;
   display: flex;
+  background-color: white;
 }
 
 .orderCard__productImg {

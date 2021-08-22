@@ -54,11 +54,21 @@
   margin-top: 9rem;
   right: 10px;
 }
-
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
   .slider-card {
-    width: 150px;
-    height: 200px;
+    width: 100px;
+    height: 150px;
+  }
+  .slider-backward-arrow {
+    color: transparent;
+  }
+
+  .slider-forward-arrow {
+    color: transparent;
+  }
+  .slick-prev,
+  .slick-next {
+    display: none;
   }
 }
 @media only screen and (min-width: 1900px) {

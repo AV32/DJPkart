@@ -2,6 +2,8 @@ import CartDisplayProduct from "../../components/cart-display-product/CartDispla
 import { useEffect, useState } from "react";
 import { Modal } from "@material-ui/core";
 import "./CartPage.css";
+import orderPlacedClip from "./order-placed-clip.mp4";
+import { Link } from "react-router-dom";
 // import data from "../../products";
 import {
   getCart,
@@ -14,7 +16,8 @@ import {
   addOrderArr,
 } from "./useLocalStorage";
 
-function CartPage() {
+function CartPage(props) {
+  const { setCartItemsCount } = props;
   const convert = (str) => {
     let res = str.replace(/\D/g, "");
     // parseInt(str.replace(/\D/g, ""));
@@ -29,6 +32,7 @@ function CartPage() {
   );
 
   const [open, setOpen] = useState(false);
+  const [orderPlaceOpen, setOrderPlaceOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -40,15 +44,24 @@ function CartPage() {
     localStorage.setItem("userAddress", address);
   };
 
+  const handleOrderOpen = () => {
+    setOrderPlaceOpen(true);
+  };
+
+  const handleOrderClose = () => {
+    setOrderPlaceOpen(false);
+  };
+
   function handleRemove(id) {
     removeItemFromCart(id);
     setCartItems(getCart);
+    setCartItemsCount((prevCount) => prevCount - 1);
   }
 
   const handleOrder = () => {
-    console.log(getOrders());
+    handleOrderOpen();
+    handleOpen();
     addOrderArr(cartItems);
-    console.log(getOrders());
     localStorage.setItem("cartItems", JSON.stringify([]));
     setCartItems([]);
   };
@@ -69,6 +82,34 @@ function CartPage() {
     return (
       <div className="cart-page">
         <h1>No Items In Cart</h1>
+        <Modal
+          open={orderPlaceOpen}
+          onClose={handleOrderClose}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+        >
+          <div
+            className="orderPlaced__mastercontainer"
+            onClick={handleOrderClose}
+          >
+            <div
+              className="orderPlacedClip__container"
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+            >
+              <video
+                className="orderPlacedClip__clip"
+                src={orderPlacedClip}
+                autoPlay
+              ></video>
+              <h1>Order Successfully Placed!!</h1>
+              <Link to="/orders">
+                <button className="orderPlacedClip__button">See Orders</button>
+              </Link>
+            </div>
+          </div>
+        </Modal>
       </div>
     );
   }
@@ -81,8 +122,9 @@ function CartPage() {
           <div className="address-container">
             {!address ? (
               <>
-                No address available{" "}
-                <button onClick={handleOpen}>Add Address</button>
+                <button onClick={handleOpen} className="add-address-cart">
+                  Add Address
+                </button>
               </>
             ) : (
               <>
@@ -126,14 +168,36 @@ function CartPage() {
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
-        <div className="addressForm">
-          <form action="">
-            <input
-              type="text"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-            />
-            <button onClick={handleClose}>Add Address</button>
+        <div className="addressForm" onClick={handleClose}>
+          <form
+            action=""
+            onClick={(e) => e.stopPropagation()}
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleClose();
+            }}
+          >
+            <input type="text" placeholder="Address*" required />
+            <div>
+              <input type="text" placeholder="Locality*" required />
+              <input type="text" placeholder="Pincode*" required />
+            </div>
+            <div>
+              <input type="text" placeholder="City*" required />
+              <input type="text" placeholder="State*" required />
+            </div>
+            <input type="text" placeholder="LandMark (Optional)" />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                margin: "5px",
+              }}
+            >
+              <button type="submit" className="add-address">
+                Add Address
+              </button>
+            </div>
           </form>
         </div>
       </Modal>
@@ -159,7 +223,9 @@ function CartPage() {
           <h1>{totalPrice}</h1>
         </div>
 
-        <button onClick={handleOrder}>Place Order</button>
+        <button onClick={handleOrder} className="place-order">
+          Place Order
+        </button>
       </div>
     </div>
   );
