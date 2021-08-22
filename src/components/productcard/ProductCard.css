@@ -8,10 +8,17 @@
   padding: 10px;
   background-color: white;
   margin: 10px;
-  border: 1px solid #aaa;
+  /* border: 1px solid #aaa; */
   text-align: center;
   border-radius: 5px;
   /* position: relative; */
+}
+
+.productCard__container:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 14px -1px rgba(211, 210, 210, 0.66);
+  -webkit-box-shadow: 2px 2px 14px -1px rgba(211, 210, 210, 0.66);
+  -moz-box-shadow: 2px 2px 14px -1px rgba(228, 228, 228, 0.66);
 }
 
 .productCard__addToBasket {
