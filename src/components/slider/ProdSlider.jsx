@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ProdSlider.css";
 import ProductCard from "../productcard/ProductCard";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+// import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+// import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 
 export default class Responsive extends Component {
   render() {
@@ -68,14 +68,17 @@ export default class Responsive extends Component {
             slidesToShow: 2,
             slidesToScroll: 1,
             initialSlide: 2,
+            dots: false,
           },
         },
       ],
     };
     return (
       <div className="slider__conatiner">
-        <ArrowBackIosIcon className="slider-backward-arrow" />
-        <ArrowForwardIosIcon className="slider-forward-arrow" />
+        {/* <ArrowBackIosIcon className="slider-backward-arrow" /> */}
+        <i class="fas fa-chevron-left slider-backward-arrow"></i>
+        {/* <ArrowForwardIosIcon className="slider-forward-arrow" /> */}
+        <i class="fas fa-chevron-right slider-forward-arrow"></i>
 
         <Slider {...settings}>
           {/* <div className="slider-card">1</div>
