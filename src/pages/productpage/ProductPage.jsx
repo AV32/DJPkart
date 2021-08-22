@@ -13,7 +13,8 @@ import { Link } from "react-router-dom";
 import { addItemToCart, getCart } from "./../../pages/cart/useLocalStorage";
 import Footer from "../../components/Footer/Footer";
 
-function ProductPage() {
+function ProductPage(props) {
+  const { setCartItemsCount } = props;
   let id = window.location.pathname.split("/")[2];
   const {
     className,
@@ -125,6 +126,7 @@ function ProductPage() {
       date: getDeliveryDate(),
     });
     setItemInCart(true);
+    setCartItemsCount((prevCount) => prevCount + 1);
   };
 
   const [itemInCart, setItemInCart] = useState(false);

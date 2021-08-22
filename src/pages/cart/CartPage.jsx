@@ -14,7 +14,8 @@ import {
   addOrderArr,
 } from "./useLocalStorage";
 
-function CartPage() {
+function CartPage(props) {
+  const { setCartItemsCount } = props;
   const convert = (str) => {
     let res = str.replace(/\D/g, "");
     // parseInt(str.replace(/\D/g, ""));
@@ -43,6 +44,7 @@ function CartPage() {
   function handleRemove(id) {
     removeItemFromCart(id);
     setCartItems(getCart);
+    setCartItemsCount((prevCount) => prevCount - 1);
   }
 
   const handleOrder = () => {
