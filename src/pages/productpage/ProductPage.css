@@ -18,7 +18,7 @@
   padding: 20px;
   border: 1px solid #bbb;
   margin-top: 9vh;
-  /* position: sticky; */
+  position: sticky;
 }
 
 .productPage__right {
