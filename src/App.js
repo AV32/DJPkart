@@ -8,6 +8,7 @@ import ProductPage from "./pages/productpage/ProductPage";
 import CartPage from "./pages/cart";
 import OrderPage from "./pages/orderpage/OrderPage";
 import { getCart } from "./pages/cart/useLocalStorage";
+import WishlistPage from "./pages/wishlistpage/WishlistPage";
 
 function App() {
   const checkSignedIn = localStorage.getItem("isSignedIn");
@@ -21,6 +22,19 @@ function App() {
       localStorage.setItem("cartItems", JSON.stringify([]));
     if (!localStorage.getItem("orderItems"))
       localStorage.setItem("orderItems", JSON.stringify([]));
+    if (!localStorage.getItem("userAddress"))
+      localStorage.setItem(
+        "userAddress",
+        JSON.stringify({
+          address: "",
+          locality: "",
+          city: "",
+          state: "",
+          pincode: "",
+          landmark: "",
+          isthere: false,
+        })
+      );
   }, []);
 
   function signIn() {
@@ -52,6 +66,9 @@ function App() {
         </Route>
         <Route exact path="/orders">
           <OrderPage />
+        </Route>
+        <Route exact path="/wishlist">
+          <WishlistPage />
         </Route>
       </Switch>
     </div>

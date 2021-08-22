@@ -5,16 +5,7 @@ import "./CartPage.css";
 import orderPlacedClip from "./order-placed-clip.mp4";
 import { Link } from "react-router-dom";
 // import data from "../../products";
-import {
-  getCart,
-  addItemToCart,
-  removeItemFromCart,
-  addItemQuantity,
-  reduceItemQuantity,
-  getOrders,
-  addOrderItem,
-  addOrderArr,
-} from "./useLocalStorage";
+import { getCart, removeItemFromCart, addOrderArr } from "./useLocalStorage";
 
 function CartPage(props) {
   const { setCartItemsCount } = props;
@@ -28,7 +19,15 @@ function CartPage(props) {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const [address, setAddress] = useState(
-    localStorage.getItem("userAddress") || ""
+    JSON.parse(localStorage.getItem("userAddress")) || {
+      address: "",
+      locality: "",
+      city: "",
+      state: "",
+      pincode: "",
+      landmark: "",
+      isthere: false,
+    }
   );
 
   const [open, setOpen] = useState(false);
@@ -38,10 +37,8 @@ function CartPage(props) {
     setOpen(true);
   };
 
-  const handleClose = (e) => {
-    e.preventDefault();
+  const handleClose = () => {
     setOpen(false);
-    localStorage.setItem("userAddress", address);
   };
 
   const handleOrderOpen = () => {
@@ -120,7 +117,7 @@ function CartPage(props) {
         <div className="cart-page-left-header">
           <h1>My Cart({cartItems.length})</h1>
           <div className="address-container">
-            {!address ? (
+            {address.isthere === false ? (
               <>
                 <button onClick={handleOpen} className="add-address-cart">
                   Add Address
@@ -138,7 +135,9 @@ function CartPage(props) {
                   <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
                 </svg>
                 Deliver to
-                <h1 className="cart-page-left-header-address">{address}</h1>
+                <h1 className="cart-page-left-header-address">
+                  {address.address}
+                </h1>
                 <button onClick={handleOpen} className="edit-address">
                   Edit Address
                 </button>
@@ -174,19 +173,96 @@ function CartPage(props) {
             onClick={(e) => e.stopPropagation()}
             onSubmit={(e) => {
               e.preventDefault();
-              handleClose();
+
+              setOpen(false);
+              localStorage.setItem(
+                "userAddress",
+                JSON.stringify({ ...address, isthere: true })
+              );
+              setAddress(JSON.parse(localStorage.getItem("userAddress")));
             }}
           >
-            <input type="text" placeholder="Address*" required />
-            <div>
-              <input type="text" placeholder="Locality*" required />
-              <input type="text" placeholder="Pincode*" required />
+            <input
+              type="text"
+              placeholder="Address*"
+              required
+              name="address"
+              value={address.address}
+              onChange={(e) =>
+                setAddress((s) => ({
+                  ...address,
+                  [e.target.name]: e.target.value,
+                }))
+              }
+            />
+            <div className="input__container">
+              <input
+                type="text"
+                placeholder="Locality*"
+                required
+                name="locality"
+                value={address.locality}
+                onChange={(e) =>
+                  setAddress((s) => ({
+                    ...address,
+                    [e.target.name]: e.target.value,
+                  }))
+                }
+              />
+              <input
+                type="text"
+                placeholder="Pincode*"
+                name="pincode"
+                required
+                value={address.pincode}
+                onChange={(e) =>
+                  setAddress((s) => ({
+                    ...address,
+                    [e.target.name]: e.target.value,
+                  }))
+                }
+              />
             </div>
-            <div>
-              <input type="text" placeholder="City*" required />
-              <input type="text" placeholder="State*" required />
+            <div className="input__container">
+              <input
+                type="text"
+                placeholder="City*"
+                name="city"
+                required
+                value={address.city}
+                onChange={(e) =>
+                  setAddress((s) => ({
+                    ...address,
+                    [e.target.name]: e.target.value,
+                  }))
+                }
+              />
+              <input
+                type="text"
+                placeholder="State*"
+                name="state"
+                required
+                value={address.state}
+                onChange={(e) =>
+                  setAddress((s) => ({
+                    ...address,
+                    [e.target.name]: e.target.value,
+                  }))
+                }
+              />
             </div>
-            <input type="text" placeholder="LandMark (Optional)" />
+            <input
+              type="text"
+              name="landmark"
+              placeholder="LandMark (Optional)"
+              value={address.landmark}
+              onChange={(e) =>
+                setAddress((s) => ({
+                  ...address,
+                  [e.target.name]: e.target.value,
+                }))
+              }
+            />
             <div
               style={{
                 display: "flex",
