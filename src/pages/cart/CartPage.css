@@ -2,6 +2,7 @@
   margin-top: 9vh;
   display: flex;
   background-color: #f1f3f6;
+  color: #29303e;
 }
 
 .cart-page > * {
@@ -97,4 +98,29 @@
   background-color: #e3e5e8;
   padding: 2px;
   font-size: 0.9rem;
+}
+.add-address {
+  border: 1px solid #e3e5e8;
+  background-color: #e3e5e8;
+  padding: 2px;
+  font-size: 0.9rem;
+  color: rgb(78, 78, 78);
+}
+
+.addressForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addressForm input {
+  padding: 2px;
+}
+.place-order {
+  background-color: #e72744;
+  padding: 1vh 1vw 1vh 1vw;
+  margin: 5px 0 10px 2vw;
+  color: white;
+  border-radius: 5px;
 }

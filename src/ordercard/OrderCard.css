@@ -1,0 +1,27 @@
+.orderCard__container {
+  border: 1px solid #aaa;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15), 0 4px 13px 0 rgba(0, 0, 0, 0.15);
+  width: 80%;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  background-color: white;
+}
+
+.orderCard__productImg {
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.orderCard__right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trucksvg {
+  margin: 0 10px;
+}

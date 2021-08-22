@@ -15,7 +15,8 @@ import Footer from "../../components/Footer/Footer";
 import ReactStars from "react-rating-stars-component";
 import { render } from "react-dom";
 
-function ProductPage() {
+function ProductPage(props) {
+  const { setCartItemsCount } = props;
   let id = window.location.pathname.split("/")[2];
   const {
     className,
@@ -100,9 +101,34 @@ function ProductPage() {
 
     setformData({ text: "", rate: "" });
 
-    console.log(arrData);
+    // console.log(arrData);
     // console.log(setarrData)
     // console.log(formData);
+  };
+
+  const getDeliveryDate = () => {
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    let d = new Date().getDate();
+    d = parseInt(d) + Math.floor(Math.random() * 4) + 1;
+    let m = new Date().getMonth();
+    let a =
+      d > 0
+        ? ["th", "st", "nd", "rd"][(d > 3 && d < 21) || d % 10 > 3 ? 0 : d % 10]
+        : "";
+    return `${d}${a} ${monthNames[m]}`;
   };
 
   const addItem = () => {
@@ -114,15 +140,20 @@ function ProductPage() {
       discription,
       quantity: 1,
       img: image[0],
+      date: getDeliveryDate(),
     });
     setItemInCart(true);
+    setCartItemsCount((prevCount) => prevCount + 1);
   };
 
   const [itemInCart, setItemInCart] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    console.log(getCart());
     const cartItems = getCart();
+
+    console.log("ASD", cartItems);
 
     cartItems.map((item) => {
       if (item.id === id) setItemInCart(true);

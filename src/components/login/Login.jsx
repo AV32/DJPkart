@@ -52,7 +52,7 @@ function Login(props) {
     handleClose();
   }
 
-  console.log(userData);
+  // console.log(userData);
 
   return (
     <div className="login-user">

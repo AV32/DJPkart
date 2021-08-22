@@ -84,7 +84,7 @@
   display: flex;
   flex: 0.25;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .Navbar__right {
   display: flex;
@@ -112,4 +112,32 @@
 }
 .logo {
   height: 6vh;
+}
+
+.cart {
+  position: relative;
+}
+/*
+
+.cart::before {
+  position: absolute;
+  content: "10";
+  color: white;
+  padding: 0.1rem;
+  border-radius: 50%;
+  background-color: rgb(189, 153, 189);
+  left: 10px;
+  top: -15px;
+} */
+
+@media screen and (max-width: 768px) {
+  .cat {
+    display: none;
+  }
+  .Navbar__left {
+    flex: 0.15;
+  }
+  .Navbar__right .search-bar {
+    flex: 0.2;
+  }
 }

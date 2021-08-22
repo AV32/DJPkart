@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ProdSlider.css";
 import ProductCard from "../productcard/ProductCard";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 
 export default class Responsive extends Component {
   render() {
@@ -19,9 +21,9 @@ export default class Responsive extends Component {
         {
           breakpoint: 1500,
           settings: {
-            slidesToShow: 6,
+            slidesToShow: 5,
             slidesToScroll: 3,
-            infinite: true,
+            // infinite: true,
             dots: true,
           },
         },
@@ -30,7 +32,7 @@ export default class Responsive extends Component {
           settings: {
             slidesToShow: 5,
             slidesToScroll: 3,
-            infinite: true,
+            // infinite: true,
             dots: true,
           },
         },
@@ -39,7 +41,7 @@ export default class Responsive extends Component {
           settings: {
             slidesToShow: 4,
             slidesToScroll: 3,
-            infinite: true,
+            // infinite: true,
             dots: true,
           },
         },
@@ -48,7 +50,7 @@ export default class Responsive extends Component {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            infinite: true,
+            // infinite: true,
             dots: true,
           },
         },
@@ -65,12 +67,16 @@ export default class Responsive extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
+            initialSlide: 2,
           },
         },
       ],
     };
     return (
       <div className="slider__conatiner">
+        <ArrowBackIosIcon className="slider-backward-arrow" />
+        <ArrowForwardIosIcon className="slider-forward-arrow" />
+
         <Slider {...settings}>
           {/* <div className="slider-card">1</div>
           <div className="slider-card">2</div>
