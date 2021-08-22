@@ -1,0 +1,28 @@
+.wishlist__card {
+  display: flex;
+  width: 80%;
+  border: 1px solid #aaa;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+.wishlist__cardLeft {
+  display: flex;
+}
+
+.wishlist__cardRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.wishlist__img {
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

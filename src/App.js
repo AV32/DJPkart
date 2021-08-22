@@ -22,6 +22,8 @@ function App() {
       localStorage.setItem("cartItems", JSON.stringify([]));
     if (!localStorage.getItem("orderItems"))
       localStorage.setItem("orderItems", JSON.stringify([]));
+    if (!localStorage.getItem("wishlist"))
+      localStorage.setItem("wishlist", JSON.stringify([]));
     if (!localStorage.getItem("userAddress"))
       localStorage.setItem(
         "userAddress",

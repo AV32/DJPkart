@@ -94,20 +94,28 @@ function getWishlist() {
   return [];
 }
 
-function addItemToWishlist({ id, name, price, img }) {
+function addItemToWishlist({ id, name, price, img, rating }) {
   const list = getWishlist();
 
-  const tempList = list.map((item) => {
-    if (item.id == id) {
-      list.push({ id, name, price, img });
+  let flag = true;
+
+  console.log({ id, name, price, img, rating });
+
+  list.map((item) => {
+    if (item?.id == id) {
+      flag = false;
     }
   });
-  localStorage.setItem("wishlist", JSON.stringify(tempList));
+
+  if (flag);
+  list.push({ id, name, price, img, rating });
+
+  localStorage.setItem("wishlist", JSON.stringify(list));
 }
 
 function removeItemFromWishlist(id) {
   const list = getWishlist();
-  const tempList = list.filter((item) => item.id !== id);
+  const tempList = list.filter((item) => item?.id !== id);
   localStorage.setItem("wishlist", JSON.stringify(tempList));
 }
 
@@ -116,8 +124,10 @@ function itemPresentInWishlist(id) {
   let flag = false;
 
   list.map((item) => {
-    if (item.id == id) flag = true;
+    if (item?.id == id) flag = true;
   });
+
+  console.log(flag);
 
   return flag;
 }
