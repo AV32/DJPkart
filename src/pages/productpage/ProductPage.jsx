@@ -61,12 +61,10 @@ function ProductPage(props) {
 
   const increasedPrice = (str) => {
     let res = str.replace(/\D/g, "");
-    // parseInt(str.replace(/\D/g, ""));
     return parseInt(res) * 1.25;
   };
   const decPrice = (str) => {
     let res = str.replace(/\D/g, "");
-    // parseInt(str.replace(/\D/g, ""));
     return parseInt(res) - 40;
   };
 
@@ -88,20 +86,16 @@ function ProductPage(props) {
       return;
     }
 
-    // if (!rate) {
-    //   setError("Rating is required");
-    //   return;
-    // }
+    if (!rate) {
+      setError("Rating is required");
+      return;
+    }
 
     setError("");
 
     setarrData((arrData) => [...arrData, { text, rate }]);
 
-    setformData({ text: "", rate: "" });
-
-    // console.log(arrData);
-    // console.log(setarrData)
-    // console.log(formData);
+    setformData({ text: "", rate: "" })
   };
 
   const getDeliveryDate = () => {
@@ -216,7 +210,6 @@ function ProductPage(props) {
               <button className="prod-wishList">
                 <i className="far fa-heart btnProd-icons"></i> WISHLIST
               </button>
-            
             </div>
             <hr />
             <div className="product-details">

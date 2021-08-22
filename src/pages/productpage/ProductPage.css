@@ -4,37 +4,29 @@
   position: relative;
   display: flex;
   width: 100vw;
-  /* height:1700px; */
   font-family: "Montserrat", sans-serif;
   background-color: #e4e4e4 !important;
-  
-  
 }
 
 .productPage__left {
-  /* background-color: white; */
   height: 100vh;
   top: 0px;
   width: 60vw;
   display: flex;
   padding: 20px;
-  /* border: 1px solid #bbb; */
   margin-top: 9vh;
   position: sticky;
   background-color: #e4e4e4;
-  /* background-color: white; */
 }
 
-.productPage__sideImagesContainer{
-    height: fit-content;
-    background-color: white;
-    border: none;
-
+.productPage__sideImagesContainer {
+  height: fit-content;
+  background-color: white;
+  border: none;
 }
 
 .productPage__right {
   width: 55%;
-  /* height: fit-content; */
   margin: 10px;
   margin-top: 12vh;
   overflow-y: scroll !important;
@@ -54,13 +46,11 @@
   margin: 10px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  /* background-color: #bbb; */
   border: 1px solid #e4e4e4;
 }
 
 .sideImage:hover {
-  border:none;
+  border: none;
   box-shadow: 2px 2px 14px -1px rgba(211, 210, 210, 0.66);
   -webkit-box-shadow: 2px 2px 14px -1px rgba(211, 210, 210, 0.66);
   -moz-box-shadow: 2px 2px 14px -1px rgba(228, 228, 228, 0.66);
@@ -73,14 +63,11 @@
   align-items: center;
   width: 100%;
   height: 101.5%;
-  /* border: 1px solid #bbb; */
   background-color: white;
   margin-left: 18px;
-  
- 
 }
 
-.product_page_top{
+.product_page_top {
   background-color: #e4e4e4;
 }
 
@@ -121,14 +108,11 @@
 
 .productPage__right__name {
   font-weight: bolder;
-  /* margin-top: 9vh; */
-  
 }
 
-.productPage__right__{
+.productPage__right__ {
   margin-left: 18px;
   margin-top: 12px;
-
 }
 
 .productPage__right__rating {
@@ -145,7 +129,6 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row-reverse;
-  
 }
 .productPage__right__rating_ {
   display: inline-block;
@@ -158,8 +141,6 @@
   position: relative;
   left: -41px;
 }
-
-
 
 .star {
   width: 22px;
@@ -251,7 +232,6 @@
   width: 90%;
   border-top: 1px solid #c9bfbf;
   margin-top: 30px;
-  /* width: 50%; */
 }
 
 .Address-pdp-box {
@@ -282,10 +262,8 @@
 
 .giveBullets li {
   list-style: disc !important;
-  /* text-indent: 1rem; */
   margin-left: 6px !important;
   padding: 2px;
-  /* color: black; */
 }
 
 .subH {
@@ -363,106 +341,63 @@
   margin-top: 10px;
 }
 
-.allRatings {
-  display: inline;
-  /* border-right: 1px solid #c9bfbf !important;
-  padding: 12px; */
-}
-
 .submitBtn {
   background-color: #ff3f6c;
   padding: 10px;
-  border-radius: 6px;
-  /* height: 17px; */
   margin-left: 40px;
-  
 }
 
-
-/* .star__{
-  margin-right: 30px !important;
-  border: 3px solid #ff3f6c !important;
-} */
-
-.star_rating{
+.star_rating {
   display: flex;
 }
 
-.review_post{
+.review_post {
   display: flex !important;
 }
 
-
 @media screen and (max-width: 768px) {
-
-
   .productPage__right {
     width: 95%;
-    /* height: fit-content; */
     margin: 10px;
     margin-top: 2vh;
-    /* overflow-y: scroll !important; */
-  
-    /* background-color: white; */
     margin-right: 39px;
   }
 
   .prod-price {
-    /* display: flex; */
     width: 80%;
-    /* justify-content: space-between; */
+  }
+
+  .prod-addToBag {
+    width: 45%;
+    font-size: small;
+    height: 59px;
+    padding: 0;
+  }
+
+  .form input {
+    width: 50%;
+    margin: 10px;
+  }
+
+  .productPage__left {
+    position: relative;
+  }
 }
 
-
-
-.prod-addToBag {
-  width: 45%;
-  font-size: small;
-  /* padding: 11px; */
-  height: 59px;
-  padding: 0;
- 
-
-  
-}
-
-.form input {
-  /* outline: 1px solid #fca600!important; */
-  width: 50%;
-  margin:10px
-}
-
-
-.productPage__left{
-  position:relative;
-}
-
-/* .input_text::placeholder{
-  font-size:22px !important;
-} */
-
-
-}
-
-
-@media screen and (max-width: 360px){
+@media screen and (max-width: 360px) {
   .prod-addToBag {
     width: 42% !important;
     font-size: small !important;
+  }
+
+  .prod-wishList {
+    position: relative;
+    top: 1.4vh;
+  }
 }
 
-.prod-wishList{
-  position: relative;
-  top: 1.4vh;
-}
-
-}
-
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
   .prod-addToBag {
     width: 42%;
+  }
 }
-
-}
-
-
