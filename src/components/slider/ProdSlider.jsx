@@ -68,6 +68,7 @@ export default class Responsive extends Component {
             slidesToShow: 2,
             slidesToScroll: 1,
             initialSlide: 2,
+            dots: false,
           },
         },
       ],
