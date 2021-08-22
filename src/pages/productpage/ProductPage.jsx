@@ -218,6 +218,7 @@ function ProductPage(props) {
               <button className="prod-wishList">
                 <i className="far fa-heart btnProd-icons"></i> WISHLIST
               </button>
+            
             </div>
             <hr />
             <div className="product-details">
@@ -319,11 +320,12 @@ function ProductPage(props) {
                 <p>Share you valuable Review :</p>
                 <form>
                   <input
+                    className="input_text"
                     type="text"
                     value={formData.text}
                     required
                     name="text"
-                    placeholder="Valuable Review"
+                    placeholder="Review"
                     onChange={handleOnFormDataChange}
                   />
                   <input
