@@ -14,7 +14,7 @@ import data from "../../products";
 // import Cart from "./Cart/Cart";
 
 function Navbar(props) {
-  const { isSignedIn, signIn } = props;
+  const { cartItemsCount, isSignedIn, signIn } = props;
   const [isNavOpen, setNavOpen] = useState(false);
   const [isVisible, setisVisible] = useState(false);
   // console.log("Navbar isSigned In", isSignedIn);
@@ -149,9 +149,25 @@ function Navbar(props) {
               ) : (
                 <Login signIn={signIn} />
               )}
-              <Link to="/cart">
-                <ShoppingCartIcon />
-              </Link>
+              <div className="cart">
+                <div
+                  style={{
+                    position: "absolute",
+                    color: "white",
+                    fontSize: "0.8rem",
+                    padding: "0.1rem 0.5rem",
+                    borderRadius: "50%",
+                    backgroundColor: "rgb(189, 153, 189)",
+                    left: "10px",
+                    top: "-15px",
+                  }}
+                >
+                  {cartItemsCount}
+                </div>
+                <Link to="/cart">
+                  <ShoppingCartIcon />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
