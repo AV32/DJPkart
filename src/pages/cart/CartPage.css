@@ -36,9 +36,7 @@
   align-items: center;
   padding: 10px;
 }
-.cart-page-left-header h1 {
-  /* font-size: 0.8rem; */
-}
+
 .address-container {
   display: flex;
   align-items: center;
@@ -123,7 +121,7 @@
 }
 .place-order {
   background-color: #e72744;
-  padding: 1vh 1vw 1vh 1vw;
+  padding: 1vh 1.5vw 1vh 1.5vw;
   margin: 5px 0 10px 2vw;
   color: white;
   border-radius: 5px;
@@ -142,5 +140,13 @@
   .cart-page-left {
     width: 90%;
     margin-left: auto;
+  }
+  .place-order-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .place-order {
+    margin-right: 2vw;
   }
 }

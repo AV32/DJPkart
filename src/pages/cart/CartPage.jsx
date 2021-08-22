@@ -164,10 +164,11 @@ function CartPage(props) {
           <h1 className="total-amt">Total Amount</h1>
           <h1>{totalPrice}</h1>
         </div>
-
-        <button onClick={handleOrder} className="place-order">
-          Place Order
-        </button>
+        <div className="place-order-div">
+          <button onClick={handleOrder} className="place-order">
+            Place Order
+          </button>
+        </div>
       </div>
     </div>
   );

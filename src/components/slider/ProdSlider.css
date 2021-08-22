@@ -43,7 +43,7 @@
 
 .slider-backward-arrow {
   font-size: xx-large;
-  color: rgb(204, 202, 202);
+  color: rgb(168, 167, 167);
   position: absolute;
   margin-top: 9rem;
   left: 10px;
@@ -52,7 +52,7 @@
 
 .slider-forward-arrow {
   font-size: xx-large;
-  color: rgb(204, 202, 202);
+  color: rgb(168, 167, 167);
   position: absolute;
   margin-top: 9rem;
   right: 10px;
