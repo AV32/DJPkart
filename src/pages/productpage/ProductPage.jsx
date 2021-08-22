@@ -12,6 +12,8 @@ import Ratings from "./rating.png";
 import { Link } from "react-router-dom";
 import { addItemToCart, getCart } from "./../../pages/cart/useLocalStorage";
 import Footer from "../../components/Footer/Footer";
+import ReactStars from "react-rating-stars-component";
+import { render } from "react-dom";
 
 function ProductPage() {
   let id = window.location.pathname.split("/")[2];
@@ -33,6 +35,8 @@ function ProductPage() {
   //   img: dispImg,
   // };
 
+  // const [reviewstar , setReviewStar] = useState(ratingChanged);
+
   const [formData, setformData] = useState({
     text: "",
     rate: "",
@@ -41,6 +45,12 @@ function ProductPage() {
   const [arrData, setarrData] = useState([]);
 
   const [error, setError] = useState("");
+  const [starsRating, setRating] = useState(0);
+
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+    setRating(newRating);
+  };
 
   const handleOnFormDataChange = (e) => {
     const name = e.target.name;
@@ -72,10 +82,10 @@ function ProductPage() {
       return;
     }
 
-    if (!rate) {
-      setError("Rating is required");
-      return;
-    }
+    // if (!rate) {
+    //   setError("Rating is required");
+    //   return;
+    // }
 
     setError("");
 
@@ -215,18 +225,18 @@ function ProductPage() {
             <h2 className="subH">
               <b>
                 {" "}
-                Best Price <span className="offer_price">Rs.213</span>
+                Best Price <span className="offer_price">{price - 40}</span>
               </b>
             </h2>
             <ul className="giveBullets">
               <li>
-                Applicable on: Orders above Rs. 2499 (only on first purchase)
+                Applicable on: Orders above Rs. 1499 (only on first purchase)
               </li>
               <li>
-                Coupon code: <b>DJP400</b>
+                Coupon code: <b>DJP40</b>
               </li>
               <li>
-                Coupon Discount: Rs. 400 off (check cart for final savings)
+                Coupon Discount: Rs. 40 off (check cart for final savings)
               </li>
             </ul>
 
@@ -278,7 +288,6 @@ function ProductPage() {
                   placeholder="Valuable Review"
                   onChange={handleOnFormDataChange}
                 />
-
                 <input
                   className="input_num"
                   type="number"
@@ -290,9 +299,17 @@ function ProductPage() {
                   placeholder="Rating"
                   onChange={handleOnFormDataChange}
                 />
-
+                {/* <ReactStars
+                  count={5}
+                  onChange={ratingChanged}
+                  size={24}
+                  isHalf={true}
+                  emptyIcon={<i className="far fa-star"></i>}
+                  halfIcon={<i className="fa fa-star-half-alt"></i>}
+                  fullIcon={<i className="fa fa-star"></i>}
+                  activeColor="#ffd700"
+                /> */}
                 <p>{error}</p>
-
                 <button
                   className="submitBtn"
                   type="submit"
@@ -300,15 +317,23 @@ function ProductPage() {
                 >
                   Post{" "}
                 </button>
-                
               </form>
             </div>
 
             <div>
-            <Posts post={arrData} />
+              <Posts post={arrData} rating={starsRating} />
               {review.map((item) => (
                 <div className="review__container">
+                <div className="review_post"> 
+                  <h1 className="productPage__right__rating">
+                    <img
+                      className="star"
+                      src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/docomo/205/white-medium-star_2b50.png"
+                      alt=""
+                    /><span>{rating}</span>
+                  </h1>
                   <h1 className="review__text">{item}</h1>
+                  </div>
                   <div className="review__rate ">
                     <img
                       className="review__avatar"
@@ -323,7 +348,7 @@ function ProductPage() {
           </div>
         </div>
       </div>
-      {/* </div> */} 
+      {/* </div> */}
       <Footer />
     </div>
   );
