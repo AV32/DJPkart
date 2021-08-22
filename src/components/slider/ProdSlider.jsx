@@ -74,8 +74,14 @@ export default class Responsive extends Component {
     };
     return (
       <div className="slider__conatiner">
-        <ArrowBackIosIcon className="slider-backward-arrow" />
-        <ArrowForwardIosIcon className="slider-forward-arrow" />
+        <ArrowBackIosIcon
+          style={{ fontSize: 40 }}
+          className="slider-backward-arrow"
+        />
+        <ArrowForwardIosIcon
+          style={{ fontSize: 40 }}
+          className="slider-forward-arrow"
+        />
 
         <Slider {...settings}>
           {/* <div className="slider-card">1</div>

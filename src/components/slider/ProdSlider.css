@@ -46,6 +46,7 @@
   position: absolute;
   margin-top: 9rem;
   left: 10px;
+  font-size: 2rem;
 }
 
 .slider-forward-arrow {
@@ -53,6 +54,7 @@
   position: absolute;
   margin-top: 9rem;
   right: 10px;
+  font-size: 2rem;
 }
 @media only screen and (max-width: 600px) {
   .slider-card {
