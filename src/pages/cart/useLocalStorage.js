@@ -86,6 +86,52 @@ function addOrderArr(arr) {
   localStorage.setItem("orderItems", JSON.stringify(orders));
 }
 
+function getWishlist() {
+  if (localStorage.getItem("wishlist"))
+    return JSON.parse(localStorage.getItem("wishlist"));
+
+  localStorage.setItem("wishlist", JSON.stringify([]));
+  return [];
+}
+
+function addItemToWishlist({ id, name, price, img, rating }) {
+  const list = getWishlist();
+
+  let flag = true;
+
+  console.log({ id, name, price, img, rating });
+
+  list.map((item) => {
+    if (item?.id == id) {
+      flag = false;
+    }
+  });
+
+  if (flag);
+  list.push({ id, name, price, img, rating });
+
+  localStorage.setItem("wishlist", JSON.stringify(list));
+}
+
+function removeItemFromWishlist(id) {
+  const list = getWishlist();
+  const tempList = list.filter((item) => item?.id !== id);
+  localStorage.setItem("wishlist", JSON.stringify(tempList));
+}
+
+function itemPresentInWishlist(id) {
+  const list = getWishlist();
+  let flag = false;
+
+  list.map((item) => {
+    if (item?.id == id) flag = true;
+  });
+
+  console.log(flag);
+
+  return flag;
+}
+
 export {
   getCart,
   addItemToCart,
@@ -95,4 +141,8 @@ export {
   getOrders,
   addOrderItem,
   addOrderArr,
+  getWishlist,
+  addItemToWishlist,
+  removeItemFromWishlist,
+  itemPresentInWishlist,
 };

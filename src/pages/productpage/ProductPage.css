@@ -5,7 +5,8 @@
   display: flex;
   width: 100vw;
   font-family: "Montserrat", sans-serif;
-  background-color: #e4e4e4 !important;
+  background: #fff;
+  padding-top: 70px;
 }
 
 .productPage__left {
@@ -15,7 +16,7 @@
   display: flex;
   padding: 20px;
   margin-top: 9vh;
-  position: sticky;
+  position: static;
   background-color: #e4e4e4;
 }
 
@@ -354,6 +355,8 @@
 .review_post {
   display: flex !important;
 }
+<<<<<<< HEAD
+=======
 
 @media screen and (max-width: 768px) {
   .productPage__right {
@@ -401,3 +404,4 @@
     width: 42%;
   }
 }
+>>>>>>> 3995cf162d04665ab8dd94542c62fdd1a44c6c2b
