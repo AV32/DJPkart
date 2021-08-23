@@ -10,7 +10,12 @@ import { useEffect } from "react";
 import Posts from "./Posts.js";
 import Ratings from "./rating.png";
 import { Link } from "react-router-dom";
-import { addItemToCart, getCart } from "./../../pages/cart/useLocalStorage";
+import {
+  addItemToCart,
+  addItemToWishlist,
+  getCart,
+  itemPresentInWishlist,
+} from "./../../pages/cart/useLocalStorage";
 import Footer from "../../components/Footer/Footer";
 import ReactStars from "react-rating-stars-component";
 import { render } from "react-dom";
@@ -44,6 +49,7 @@ function ProductPage(props) {
   });
 
   const [arrData, setarrData] = useState([]);
+  const [inWishList, setInWishList] = useState(itemPresentInWishlist(props.id));
 
   const [error, setError] = useState("");
   const [starsRating, setRating] = useState(0);
@@ -95,7 +101,7 @@ function ProductPage(props) {
 
     setarrData((arrData) => [...arrData, { text, rate }]);
 
-    setformData({ text: "", rate: "" })
+    setformData({ text: "", rate: "" });
   };
 
   const getDeliveryDate = () => {
@@ -207,9 +213,25 @@ function ProductPage(props) {
                   BAG
                 </button>
               )}
-              <button className="prod-wishList">
-                <i className="far fa-heart btnProd-icons"></i> WISHLIST
-              </button>
+
+              {!inWishList ? (
+                <button
+                  onClick={() => {
+                    addItemToWishlist({
+                      id: props.id,
+                      name: props.name,
+                      price: props.price,
+                      rating: props.rating,
+                    });
+                    setInWishList(true);
+                  }}
+                  className="prod-wishList"
+                >
+                  <i className="far fa-heart btnProd-icons"></i> WISHLIST{" "}
+                </button>
+              ) : (
+                <button className="prod-wishList">Already In Wishlist</button>
+              )}
             </div>
             <hr />
             <div className="product-details">
