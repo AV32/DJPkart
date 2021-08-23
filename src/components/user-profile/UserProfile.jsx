@@ -27,8 +27,9 @@ function UserProfile(props) {
           <Link to="/orders">
             <p>Orders</p>
           </Link>
-          <p>Wishlist</p>
-          <p>Order History</p>
+          <Link to="/wishlist">
+            <p>Wishlist</p>
+          </Link>
           <p>Gift Cards</p>
           <p>Contact Us</p>
         </div>
