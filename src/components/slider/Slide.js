@@ -17,6 +17,7 @@ export default class PauseOnHover extends Component {
       autoplay: true,
       autoplaySpeed: 2000,
       pauseOnHover: true,
+      arrows: false,
       // nextArrow: <SampleNextArrow />,
       // prevArrow: <SamplePrevArrow />,
     };

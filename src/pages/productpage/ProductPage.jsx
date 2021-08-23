@@ -19,6 +19,7 @@ import {
 import Footer from "../../components/Footer/Footer";
 import ReactStars from "react-rating-stars-component";
 import { render } from "react-dom";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 
 function ProductPage(props) {
   const { setCartItemsCount } = props;
@@ -230,7 +231,11 @@ function ProductPage(props) {
                   <i className="far fa-heart btnProd-icons"></i> WISHLIST{" "}
                 </button>
               ) : (
-                <button className="prod-wishList">Already In Wishlist</button>
+                <button className="prod-wishList">
+                  {" "}
+                  <i className="far fa-heart btnProd-icons fill-heart"></i>
+                  Already In Wishlist
+                </button>
               )}
             </div>
             <hr />

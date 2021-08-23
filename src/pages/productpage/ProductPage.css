@@ -5,8 +5,8 @@
   display: flex;
   width: 100vw;
   font-family: "Montserrat", sans-serif;
-  background: #fff;
-  padding-top: 70px;
+  background: #e4e4e4;
+  /* padding-top: 70px; */
 }
 
 .productPage__left {
@@ -219,7 +219,9 @@
 .prod-detail-icon {
   padding-left: 8px;
 }
-
+.fill-heart {
+  color: #ff3f6c;
+}
 @media only screen and (max-width: 768px) {
   .productPage__container {
     flex-direction: column;

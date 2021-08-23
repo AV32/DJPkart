@@ -100,6 +100,7 @@ function CartPage(props) {
                 className="orderPlacedClip__clip"
                 src={orderPlacedClip}
                 autoPlay
+                loop
               ></video>
               <h1>Order Successfully Placed!!</h1>
               <Link to="/orders">

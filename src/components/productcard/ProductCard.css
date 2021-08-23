@@ -69,7 +69,9 @@
   left: 2px; */
   padding-top: 30px;
 }
-
+.productCard__title {
+  text-transform: capitalize;
+}
 @media only screen and (max-width: 500px) {
   .productCard__container {
     width: 41vw;
