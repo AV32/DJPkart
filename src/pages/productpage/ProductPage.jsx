@@ -218,10 +218,11 @@ function ProductPage(props) {
                 <button
                   onClick={() => {
                     addItemToWishlist({
-                      id: props.id,
-                      name: props.name,
-                      price: props.price,
-                      rating: props.rating,
+                      id: id,
+                      name: name,
+                      price: price,
+                      rating: rating,
+                      img: image[0],
                     });
                     setInWishList(true);
                   }}
