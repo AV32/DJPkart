@@ -355,8 +355,6 @@
 .review_post {
   display: flex !important;
 }
-<<<<<<< HEAD
-=======
 
 @media screen and (max-width: 768px) {
   .productPage__right {
@@ -404,4 +402,3 @@
     width: 42%;
   }
 }
->>>>>>> 3995cf162d04665ab8dd94542c62fdd1a44c6c2b
