@@ -115,12 +115,15 @@ function Navbar(props) {
           <div className="Navbar__left">
             {/* <h1>Logo</h1> */}
             <Link to="">
-              <img
+              {/* <img
                 src="https://www.devsnest.in/static/media/logo.f1b45387.jpg"
                 alt="logo"
                 srcset=""
                 className="logo"
-              />
+              /> */}
+              <h1 className="Logo">
+                DJP<span>digital</span>
+              </h1>
             </Link>
 
             {/* <Logo/> */}
@@ -137,19 +140,32 @@ function Navbar(props) {
                 onHover={handleOnHover}
                 onSelect={handleOnSelect}
                 onFocus={handleOnFocus}
+                placeholder="Search for product, brands and more"
                 onClear={handleOnClear}
-                width
                 fuseOptions={{ keys: ["name", "description"] }} // Search in the description text as well
-                styling={{ zIndex: 100 }} // To display it on top of the search box below
+                styling={{
+                  zIndex: 100,
+                  borderRadius: "5px",
+                  boxShadow: "none",
+                  border: "1px solid #e5e5e5",
+                  height: "5vh",
+                  placeholderFontSize: "2.5vh",
+                  fontSize: "2.2vh",
+                }}
+                className="search" // To display it on top of the search box below
               />
             </div>
 
             {/* <h1>Profile</h1> */}
             <div className="Navbar__right__right">
               {isSignedIn ? (
-                <UserProfile signIn={signIn} getUserData={getUserData} />
+                <UserProfile
+                  signIn={signIn}
+                  getUserData={getUserData}
+                  className="avatar"
+                />
               ) : (
-                <Login signIn={signIn} />
+                <Login signIn={signIn} className="avatar" />
               )}
               <div className="cart">
                 <div
