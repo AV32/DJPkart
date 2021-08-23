@@ -22,6 +22,31 @@ import { render } from "react-dom";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 
 function ProductPage(props) {
+  const options = ["1", "2", "3", "4", "5"];
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
+
+  const handleClick = () => {
+    console.info(`You clicked ${options[selectedIndex]}`);
+  };
+
+  const handleMenuItemClick = (event, index) => {
+    setSelectedIndex(index);
+    setOpen(false);
+  };
+
+  const handleToggle = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
+
+    setOpen(false);
+  };
   const { setCartItemsCount } = props;
   let id = window.location.pathname.split("/")[2];
   const {
@@ -332,6 +357,27 @@ function ProductPage(props) {
                     58 ratings <br />& 12 reviews
                   </p>
                 </div>
+
+                <div className="component">
+                  <ul className="bargraph">
+                    <li className="nice">
+                      <span>6%</span>
+                    </li>
+                    <li className="top">
+                      <span>10%</span>
+                    </li>
+                    <li className="midtop">
+                      <span>35%</span>
+                    </li>
+                    <li className="neutral">
+                      <span>40%</span>
+                    </li>
+                    <li className="midbottom">
+                      <span>65%</span>
+                    </li>
+                    <li className="bottom">{/* <span>22%</span> */}</li>
+                  </ul>
+                </div>
               </div>
 
               <div className="form">
@@ -358,16 +404,7 @@ function ProductPage(props) {
                     placeholder="Rating"
                     onChange={handleOnFormDataChange}
                   />
-                  {/* <ReactStars
-                  count={5}
-                  onChange={ratingChanged}
-                  size={24}
-                  isHalf={true}
-                  emptyIcon={<i className="far fa-star"></i>}
-                  halfIcon={<i className="fa fa-star-half-alt"></i>}
-                  fullIcon={<i className="fa fa-star"></i>}
-                  activeColor="#ffd700"
-                /> */}
+
                   <p>{error}</p>
                   <button
                     className="submitBtn"
