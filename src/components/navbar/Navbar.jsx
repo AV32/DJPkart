@@ -90,13 +90,9 @@ function Navbar(props) {
             <div className="mobile-logo flex items-center text-black">
               {/* <h1>Logo</h1> */}
               <Link to="">
-                <img
-                  src="https://www.devsnest.in/static/media/logo.f1b45387.jpg"
-                  alt="logo"
-                  srcset=""
-                  className="logo ml-14"
-                />{" "}
-                {/* <h1>DJP</h1> */}
+                <h1 className="Logo mobile-logo">
+                  DJP<span>digital</span>
+                </h1>
               </Link>
             </div>
             <div className="mobile-right-flex">
@@ -104,8 +100,22 @@ function Navbar(props) {
                 {isSignedIn ? "" : <Login signIn={signIn} />}
               </div>
               <div className="mobile-cart">
+                <div
+                  style={{
+                    position: "absolute",
+                    color: "white",
+                    fontSize: "0.8rem",
+                    padding: "0.08rem 0.4rem",
+                    borderRadius: "50%",
+                    backgroundColor: "rgb(189, 153, 189)",
+                    right: "8px",
+                    top: "6px",
+                  }}
+                >
+                  {cartItemsCount}
+                </div>
                 <Link to="/cart">
-                  <AddShoppingCartIcon />
+                  <ShoppingCartIcon />
                 </Link>
               </div>
             </div>
