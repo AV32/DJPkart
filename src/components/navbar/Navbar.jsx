@@ -53,16 +53,20 @@ function Navbar(props) {
     return (
       <div className="display-mobile-nav">
         <div className="mobile-nav-links">
-          <p>Home</p>
-          <p>Categories</p>
-          <p>My Orders</p>
-          <p>Coupons</p>
-          <p>Gift Cards</p>
           {isSignedIn ? (
             <UserProfile signIn={signIn} getUserData={getUserData} />
           ) : (
             ""
           )}
+          <Link to="/">
+            <p>Home</p>
+          </Link>
+          <Link to="/orders">
+            <p>My Orders</p>
+          </Link>
+          <Link to="/wishlist">
+            <p>Wishlist</p>
+          </Link>
         </div>
         <div className="close-mobile-menu" onClick={handleMobileMenu}>
           <CloseIcon />
