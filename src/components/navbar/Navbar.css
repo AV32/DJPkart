@@ -116,17 +116,20 @@
 .alter {
   background-color: #fcfbfa;
 }
-.Navbar .Logo {
+.Logo {
   font-size: 3vh;
   font-weight: 600;
   font-family: "Libre Baskerville", serif;
 }
-.Navbar .Logo span {
+.Logo span {
   font-weight: 300;
 }
 
 .cart {
   position: relative;
+}
+.mobile-logo {
+  margin-left: 9vw;
 }
 
 /*
