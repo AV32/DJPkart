@@ -16,7 +16,7 @@
   display: flex;
   padding: 20px;
   margin-top: 9vh;
-  position: static;
+  position: sticky;
   background-color: #e4e4e4;
 }
 
@@ -292,6 +292,7 @@
 
 .review_info {
   font-size: 60px;
+  height: 40% !important;
 }
 
 .review_info img {
@@ -309,11 +310,26 @@
 }
 
 .form {
-  margin-top: 30px;
+  margin-top: 0px;
+}
+
+.input_text {
+  width: 100%;
+}
+
+/* .form input:focus{
+ border: 10px solid #ff3f6c !important;
+} */
+
+.form input {
+  outline: 1px solid #e4e4e4 !important;
+  box-shadow: 0px 0px 2px 2px #e4e4e4;
+  padding: 4px;
+  border-radius: 2px;
 }
 
 .input_num {
-  width: 18%;
+  width: 20%;
   margin-left: 70px;
 }
 .form form {
@@ -348,6 +364,7 @@
   background-color: #ff3f6c;
   padding: 10px;
   margin-left: 40px;
+  border-radius: 12px;
 }
 
 .star_rating {
@@ -385,9 +402,29 @@
   .productPage__left {
     position: relative;
   }
+
+  .productPage__container {
+    overflow-x: none;
+  }
+
+  /* .bargraph {
+    width: 225%;
+    height: 20% !important;
+    margin-left: -402%;
+    position: relative;
+    top: -77px;
+} */
+
+  .bargraph {
+    display: none;
+  }
+
+  .allRatings {
+    width: 30%;
+  }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 376px) {
   .prod-addToBag {
     width: 42% !important;
     font-size: small !important;
@@ -397,10 +434,121 @@
     position: relative;
     top: 1.4vh;
   }
+
+  .bargraph {
+    width: 954%;
+    height: 29% !important;
+    margin-left: -1736%;
+    position: relative;
+    top: -61px;
+  }
+
+  .allRatings {
+    width: 30%;
+  }
 }
 
 @media screen and (max-width: 850px) {
   .prod-addToBag {
     width: 42%;
   }
+
+  .bargraph {
+    width: 225%;
+    height: 20% !important;
+    margin-left: -402%;
+    position: relative;
+    top: -77px;
+  }
+
+  .allRatings {
+    width: 30%;
+  }
+}
+
+/* @import "compass/css3"; */
+/* @import url(netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css); */
+
+.valor {
+  padding-top: 15px;
+  font-family: FontAwesome;
+  position: relative;
+  float: left;
+  width: 100px;
+  text-align: center;
+  color: #737373;
+}
+.valor .nota {
+  font-size: 0.2em;
+  /* /*      border: 1px solid #f90;  */
+}
+.valor .users {
+  font-size: 0.8em;
+  /* /*      border: 1px solid red;  */
+}
+
+.bargraph span {
+  display: inline-block;
+  font-size: 10px !important;
+  margin-top: 10px !important;
+  position: relative;
+  top: -35px;
+}
+
+.bargraph {
+  width: 1876%;
+  height: 20% !important;
+  margin-left: -1691%;
+  position: relative;
+  top: -61px;
+}
+
+.bargraph .top {
+  background: #a0c15a;
+  width: 6%;
+  height: 20px !important;
+  border-left: 1px solid #a0c15a;
+}
+.bargraph .midtop {
+  background: #add633;
+  width: 10%;
+  height: 20px !important;
+  border-left: 1px solid #add633;
+}
+.bargraph .neutral {
+  width: 35%;
+  height: 20px !important;
+  background: #ffd935;
+  border-left: 1px solid #ffd935;
+}
+.bargraph .midbottom {
+  width: 40%;
+  height: 20px !important;
+  background: #ffb235;
+  border-left: 1px solid #ffb235;
+}
+.bargraph .bottom {
+  height: 20px !important;
+  width: 65%;
+  background: #ff8c5a;
+  border-left: 1px solid #ff8c5a;
+}
+
+.component {
+  height: 50% !important;
+}
+
+.nice {
+  position: relative;
+  top: 69px;
+}
+
+.review_info {
+  display: flex !important;
+}
+
+.allRatings {
+  height: 60%;
+  display: inline-block;
+  /* border-right: 1px solid #c9bfbf; */
 }
