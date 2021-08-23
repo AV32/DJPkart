@@ -127,8 +127,6 @@ function itemPresentInWishlist(id) {
     if (item?.id == id) flag = true;
   });
 
-  console.log(flag);
-
   return flag;
 }
 

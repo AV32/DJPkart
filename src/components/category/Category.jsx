@@ -111,7 +111,7 @@ const Category = () => {
     <div className="categories">
       <div className="category">
         <h2 style={{ color: "#ee5f73" }}>Fashion</h2>
-        <Link to="#fashion">
+        <Link to="/#fashion">
           {fash.map((item, index) => (
             <SubCat
               category={item.category}
@@ -124,7 +124,7 @@ const Category = () => {
       </div>
       <div className="category alter">
         <h2 style={{ color: "#fb56c1" }}>Electronics</h2>
-        <Link to="#elec">
+        <Link to="/#elec">
           {electric.map((item, index) => (
             <SubCat
               category={item.category}
