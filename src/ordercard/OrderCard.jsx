@@ -16,7 +16,7 @@ function OrderCard({ name, price, img, date }) {
           <h2>Seller: DJP Digital </h2>
         </div>
         <div>
-          <h1>{price}</h1>
+          <h1 className="mobile-price">{price}</h1>
         </div>
         <div>
           <h1 style={{ display: "flex" }}>
