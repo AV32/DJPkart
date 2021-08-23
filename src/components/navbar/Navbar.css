@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 .mobile-nav {
   width: 100vw;
   display: flex;
@@ -72,28 +73,32 @@
   top: 0;
   z-index: 10;
   color: black;
-  font-family: "Catamaran", cursive;
+  /* font-family: "Catamaran", cursive; */
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 500;
 }
 .Navbar h1,
 .Navbar p {
-  font-size: 3vh;
+  font-size: 2.5vh;
 }
 
 .Navbar__left {
   display: flex;
   flex: 0.25;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .Navbar__right {
   display: flex;
   flex: 0.75;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  box-sizing: border-box;
+  /* padding-left: 7vw; */
 }
 .Navbar__right .search-bar {
-  flex: 0.7;
+  flex: 0.6;
+  height: 5vh;
 }
 .Navbar__right__right {
   display: flex;
@@ -103,6 +108,7 @@
 }
 .cat {
   cursor: pointer;
+  /* margin-left: 4vh; */
 }
 .cat:hover {
   cursor: pointer;
@@ -110,13 +116,19 @@
 .alter {
   background-color: #fcfbfa;
 }
-.logo {
-  height: 6vh;
+.Navbar .Logo {
+  font-size: 3vh;
+  font-weight: 600;
+  font-family: "Libre Baskerville", serif;
+}
+.Navbar .Logo span {
+  font-weight: 300;
 }
 
 .cart {
   position: relative;
 }
+
 /*
 
 .cart::before {
