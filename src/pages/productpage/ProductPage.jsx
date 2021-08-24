@@ -150,7 +150,9 @@ function ProductPage(props) {
     let m = new Date().getMonth();
     let a =
       d > 0
-        ? ["th", "st", "nd", "rd"][(d > 3 && d < 21) || d % 10 > 3 ? 0 : d % 10]
+        ? ["th", "star_item", "nd", "rd"][
+            (d > 3 && d < 21) || d % 10 > 3 ? 0 : d % 10
+          ]
         : "";
     return `${d}${a} ${monthNames[m]}`;
   };
@@ -281,12 +283,10 @@ function ProductPage(props) {
               </div>
 
               <div className="Address-address-box Address-pincode-input Address-pdp-box">
-                <input type="tel" placeholder="Enter a PIN code" />
-                <button
-                  type="submit"
-                  className="Address-address-button"
-                  style={{ color: "rgb(191, 192, 198)" }}
-                />
+                <form>
+                  {" "}
+                  <input type="number" placeholder="Enter a PIN code" />
+                </form>
               </div>
               <p className="sub">
                 Please enter PIN code to check delivery time & Pay on Delivery
@@ -326,7 +326,7 @@ function ProductPage(props) {
               <h2 className="sub_">View Eligible Products</h2>
               <br />
               <h1 className="product-details-heading">EMI option available</h1>
-              <li>EMI starting from Rs.87/month</li>
+              <li className="bullets">EMI starting from Rs.87/month</li>
               <h2 className="sub_">View Plan</h2>
               <br />
               <p>Product Code: 14033232</p>
@@ -360,22 +360,55 @@ function ProductPage(props) {
 
                 <div className="component">
                   <ul className="bargraph">
-                    <li className="nice">
-                      <span>6%</span>
-                    </li>
-                    <li className="top">
-                      <span>10%</span>
-                    </li>
-                    <li className="midtop">
-                      <span>35%</span>
-                    </li>
-                    <li className="neutral">
-                      <span>40%</span>
-                    </li>
-                    <li className="midbottom">
-                      <span>65%</span>
-                    </li>
-                    <li className="bottom">{/* <span>22%</span> */}</li>
+                    <div className="top_star">
+                      <div class="star_item">
+                        <div class="star_test">5</div>
+                        <div class="star_star___">★</div>
+                        <li className="top"></li>
+                      </div>
+                     
+                      <span>68</span>
+                    </div>
+
+                    <div className="top_star">
+                      <div class="star_item">
+                        <div class="star_test">4</div>
+                        <div class="star_star">★</div>
+                        <li className="midtop"></li>
+                      </div>
+                      
+                      <span>52</span>
+                    </div>
+
+                    <div className="top_star">
+                      <div class="star_item">
+                        <div class="star_test">3</div>
+                        <div class="star__star">★</div>
+                        <li className="neutral"></li>
+                      </div>
+                      
+                      <span>42</span>
+                    </div>
+
+                    <div className="top_star">
+                      <div class="star_item">
+                        <div class="star_test">2</div>
+                        <div class="star_star__">★</div>
+                        <li className="midbottom"></li>
+                      </div>
+                     
+                      <span>22</span>
+                    </div>
+
+                    <div className="top_star">
+                      <div class="star_item">
+                        <div class="star_test">1</div>
+                        <div class="star_star_">★</div>
+                        <li className="bottom"></li>
+                      </div>
+                     
+                      <span>20</span>
+                    </div>
                   </ul>
                 </div>
               </div>

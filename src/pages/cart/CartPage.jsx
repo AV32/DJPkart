@@ -284,7 +284,7 @@ function CartPage(props) {
         <hr className="plane-hr" />
         <div className="cart-price">
           <h1>Price ({cartItems.length})</h1>
-          <h1>{totalPrice * 1.25}</h1>
+          <h1>₹{totalPrice * 1.25}</h1>
         </div>
         <div className="cart-discount">
           <h1>Discount</h1>
@@ -298,7 +298,7 @@ function CartPage(props) {
         <hr className="dashed-hr" />
         <div className="cart-total">
           <h1 className="total-amt">Total Amount</h1>
-          <h1>{totalPrice}</h1>
+          <h1>₹{totalPrice}</h1>
         </div>
         <div className="place-order-div">
           <button onClick={handleOrder} className="place-order">
