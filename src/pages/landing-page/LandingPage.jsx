@@ -7,7 +7,7 @@ import "./LandingPage.css";
 import Footer from "../../components/Footer/Footer";
 function LandingPage() {
   return (
-    <div>
+    <div className="Landing__page">
       {/* <Header /> */}
       <div className="landing-page-hero">
         <PauseOnHover />

@@ -53,16 +53,20 @@ function Navbar(props) {
     return (
       <div className="display-mobile-nav">
         <div className="mobile-nav-links">
-          <p>Home</p>
-          <p>Categories</p>
-          <p>My Orders</p>
-          <p>Coupons</p>
-          <p>Gift Cards</p>
           {isSignedIn ? (
             <UserProfile signIn={signIn} getUserData={getUserData} />
           ) : (
             ""
           )}
+          <Link to="/">
+            <p>Home</p>
+          </Link>
+          <Link to="/orders">
+            <p>My Orders</p>
+          </Link>
+          <Link to="/wishlist">
+            <p>Wishlist</p>
+          </Link>
         </div>
         <div className="close-mobile-menu" onClick={handleMobileMenu}>
           <CloseIcon />
@@ -86,13 +90,9 @@ function Navbar(props) {
             <div className="mobile-logo flex items-center text-black">
               {/* <h1>Logo</h1> */}
               <Link to="">
-                <img
-                  src="https://www.devsnest.in/static/media/logo.f1b45387.jpg"
-                  alt="logo"
-                  srcset=""
-                  className="logo ml-14"
-                />{" "}
-                {/* <h1>DJP</h1> */}
+                <h1 className="Logo mobile-logo">
+                  DJP<span>digital</span>
+                </h1>
               </Link>
             </div>
             <div className="mobile-right-flex">
@@ -100,8 +100,22 @@ function Navbar(props) {
                 {isSignedIn ? "" : <Login signIn={signIn} />}
               </div>
               <div className="mobile-cart">
+                <div
+                  style={{
+                    position: "absolute",
+                    color: "white",
+                    fontSize: "0.8rem",
+                    padding: "0.08rem 0.4rem",
+                    borderRadius: "50%",
+                    backgroundColor: "rgb(189, 153, 189)",
+                    right: "8px",
+                    top: "6px",
+                  }}
+                >
+                  {cartItemsCount}
+                </div>
                 <Link to="/cart">
-                  <AddShoppingCartIcon />
+                  <ShoppingCartIcon />
                 </Link>
               </div>
             </div>
@@ -115,12 +129,15 @@ function Navbar(props) {
           <div className="Navbar__left">
             {/* <h1>Logo</h1> */}
             <Link to="">
-              <img
+              {/* <img
                 src="https://www.devsnest.in/static/media/logo.f1b45387.jpg"
                 alt="logo"
                 srcset=""
                 className="logo"
-              />
+              /> */}
+              <h1 className="Logo">
+                DJP<span>digital</span>
+              </h1>
             </Link>
 
             {/* <Logo/> */}
@@ -137,19 +154,32 @@ function Navbar(props) {
                 onHover={handleOnHover}
                 onSelect={handleOnSelect}
                 onFocus={handleOnFocus}
+                placeholder="Search for product, brands and more"
                 onClear={handleOnClear}
-                width
                 fuseOptions={{ keys: ["name", "description"] }} // Search in the description text as well
-                styling={{ zIndex: 100 }} // To display it on top of the search box below
+                styling={{
+                  zIndex: 100,
+                  borderRadius: "5px",
+                  boxShadow: "none",
+                  border: "1px solid #e5e5e5",
+                  height: "5vh",
+                  placeholderFontSize: "2.5vh",
+                  fontSize: "2.2vh",
+                }}
+                className="search" // To display it on top of the search box below
               />
             </div>
 
             {/* <h1>Profile</h1> */}
             <div className="Navbar__right__right">
               {isSignedIn ? (
-                <UserProfile signIn={signIn} getUserData={getUserData} />
+                <UserProfile
+                  signIn={signIn}
+                  getUserData={getUserData}
+                  className="avatar"
+                />
               ) : (
-                <Login signIn={signIn} />
+                <Login signIn={signIn} className="avatar" />
               )}
               <div className="cart">
                 <div

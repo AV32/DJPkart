@@ -3,7 +3,8 @@
   display: flex;
   background-color: #f1f3f6;
   color: #29303e;
-  min-height: 100vh;
+  min-height: 91vh;
+  padding: 5px 10px;
 }
 
 .cart-page > * {
@@ -36,9 +37,7 @@
   align-items: center;
   padding: 10px;
 }
-.cart-page-left-header h1 {
-  /* font-size: 0.8rem; */
-}
+
 .address-container {
   display: flex;
   align-items: center;
@@ -100,34 +99,102 @@
 .edit-address {
   border: 1px solid #e3e5e8;
   background-color: #e3e5e8;
-  padding: 2px;
-  font-size: 0.9rem;
+  padding: 8px 10px;
+  font-size: 0.95rem;
 }
+
 .add-address {
   border: 1px solid #e3e5e8;
   background-color: #e3e5e8;
   padding: 2px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: rgb(78, 78, 78);
+  padding: 5px 10px;
+}
+
+.add-address-cart {
+  border: 1px solid #e3e5e8;
+  background-color: #e3e5e8;
+  padding: 2px;
+  font-size: 0.95rem;
+  color: rgb(78, 78, 78);
+  padding: 5px 10px;
 }
 
 .addressForm {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addressForm form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px;
+  width: 70%;
+  max-width: 470px;
+}
+
+.input__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input__container > * {
+  flex-grow: 1;
+}
+
+.addressForm input {
+  padding: 5px;
+  margin: 5px;
+  outline: none;
+  border: 1px solid #aaa;
+}
+.place-order {
+  background-color: #e72744;
+  padding: 1vh 1.5vw 1vh 1.5vw;
+  margin: 5px 0 10px 2vw;
+  color: white;
+  border-radius: 5px;
+}
+
+.orderPlaced__mastercontainer {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.addressForm input {
-  padding: 2px;
+
+.orderPlacedClip__container {
+  width: 70%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px 20px;
 }
-.place-order {
-  background-color: #e72744;
-  padding: 1vh 1vw 1vh 1vw;
-  margin: 5px 0 10px 2vw;
+
+.orderPlacedClip__container > * {
+  margin: 2px;
+}
+
+.orderPlacedClip__clip {
+  width: 60%;
+}
+
+.orderPlacedClip__button {
+  font-size: 1.2rem;
+  border: 1px solid #aaa;
+  outline: none;
+  background-color: #fb641b;
   color: white;
-  border-radius: 5px;
+  padding: 3px 11px;
 }
+
 @media screen and (max-width: 600px) {
   .cart-page {
     flex-direction: column;
@@ -142,5 +209,13 @@
   .cart-page-left {
     width: 90%;
     margin-left: auto;
+  }
+  .place-order-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .place-order {
+    margin-right: 2vw;
   }
 }

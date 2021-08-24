@@ -12,7 +12,7 @@
   font-size: 0;
   line-height: 0;
   position: absolute;
-  top: 50%;
+  top: 42%;
   display: block;
   width: 20px;
   height: 20px;
@@ -43,18 +43,18 @@
 
 .slider-backward-arrow {
   font-size: xx-large;
-  color: rgb(204, 202, 202);
+  color: rgb(168, 167, 167);
   position: absolute;
-  margin-top: 9rem;
+  margin-top: 7.3rem;
   left: 10px;
   font-size: 2rem;
 }
 
 .slider-forward-arrow {
   font-size: xx-large;
-  color: rgb(204, 202, 202);
+  color: rgb(168, 167, 167);
   position: absolute;
-  margin-top: 9rem;
+  margin-top: 7.3rem;
   right: 10px;
   font-size: 2rem;
 }
