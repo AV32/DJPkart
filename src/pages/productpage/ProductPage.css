@@ -6,7 +6,6 @@
   width: 100vw;
   font-family: "Montserrat", sans-serif;
   background: #e4e4e4;
-  /* padding-top: 70px; */
 }
 
 .productPage__left {
@@ -29,7 +28,7 @@
 .productPage__right {
   width: 55%;
   margin: 10px;
-  margin-top: 12vh;
+  margin-top: 13vh;
   overflow-y: scroll !important;
 
   background-color: white;
@@ -248,7 +247,6 @@
   padding: 10px;
   height: 44px;
   font-size: 15px;
-  /* border: 1px solid #bfc0c6; */
 }
 .Address-pincode-input {
   margin: 4px 0;
@@ -256,13 +254,12 @@
 
 .Address-address-box input {
   width: 100%;
-  /* height: 100% !important; */
   height: 44px;
   position: relative;
   border: 1px solid #bfc0c6;
   top: -10px;
   border-radius: 5px;
-  padding-left:5px;
+  padding-left: 5px;
 }
 
 .Address-address-box input::-webkit-outer-spin-button,
@@ -286,8 +283,8 @@
   padding: 2px;
 }
 
-.bullets{
-  margin-left:1%;
+.bullets {
+  margin-left: 1%;
 }
 
 .subH {
@@ -337,10 +334,6 @@
 .input_text {
   width: 100%;
 }
-
-/* .form input:focus{
- border: 10px solid #ff3f6c !important;
-} */
 
 .form input {
   outline: 1px solid #e4e4e4 !important;
@@ -400,7 +393,7 @@
   .productPage__right {
     width: 95%;
     margin: 10px;
-    margin-top: 2vh;
+    margin-top: 11vh !important;
     margin-right: 39px;
   }
 
@@ -428,25 +421,18 @@
     overflow-x: none;
   }
 
-  /* .bargraph {
-    width: 225%;
-    height: 20% !important;
-    margin-left: -402%;
-    position: relative;
-    top: -77px;
-} */
-
-  /* .bargraph {
-    display: none;
-  } */
-
   .allRatings {
     width: 30%;
   }
 
   .component {
     width: 50%;
-}
+  }
+
+  .productPage__displayImageContainer{
+    margin-top: 1.2vh;
+  }
+
 }
 
 @media screen and (max-width: 376px) {
@@ -459,14 +445,6 @@
     position: relative;
     top: 1.4vh;
   }
-/* 
-  .bargraph {
-    width: 954%;
-    height: 29% !important;
-    margin-left: -1736%;
-    position: relative;
-    top: -61px;
-  } */
 
   .allRatings {
     width: 30%;
@@ -474,7 +452,7 @@
 
   .component {
     width: 50%;
-}
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -482,111 +460,89 @@
     width: 42%;
   }
 
-  /* .bargraph {
-    width: 225%;
-    height: 20% !important;
-    margin-left: -402%;
-    position: relative;
-    top: -77px;
-  } */
-
   .allRatings {
     width: 30%;
   }
 
   .component {
     width: 50%;
+  }
 }
+
+@media screen and (max-width: 1950px) {
+  .productPage__righ{
+    margin-top: 11vh !important;
+
+  }
+
+  .productPage__displayImageContainer{
+    margin-top: 1.2vh;
+  }
+  .productPage__sideImagesContainer{
+    margin-top: 1.2vh;
+  }
+
+  .productPage__displayImageContainer {
+    height: 99.7%;
+
+  }
 }
-
-
-
-
-
-
-
-
-/* .bargraph span {
-  display: inline-block;
-  font-size: 10px !important;
-  margin-top: 10px !important;
-  position: relative;
-  top: -51px;
-  left: 311px;
-} */
-
- /* .bargraph {
-  width: 1876%;
-  height: 20% !important;
-  margin-left: -1691%;
-  position: relative;
-  top: -61px;
-} */
 
 .bargraph .top {
   background: #a0c15a;
-  width: 357%;
+  width: 68%;
   height: 20px !important;
   border-left: 1px solid #a0c15a;
   border-radius: 10px;
   position: relative;
   top: 5px;
-  margin-right: 247px;
 }
 .bargraph .midtop {
   background: #add633;
-  width: 672%;
+  width: 40%;
   height: 20px !important;
   border-left: 1px solid #add633;
   border-radius: 10px;
   position: relative;
-  margin-right: 129px;
   top: 5px;
 }
 .bargraph .neutral {
-  width: 319%;
+  width: 30%;
   height: 20px !important;
   background: #ffd935;
   border-left: 1px solid #ffd935;
   border-radius: 10px;
   position: relative;
-  margin-right: 254px;
   top: 5px;
 }
 .bargraph .midbottom {
-  width: 222%;
+  width: 20%;
   height: 20px !important;
   background: #ffb235;
   border-left: 1px solid #ffb235;
   border-radius: 10px;
   position: relative;
-  margin-right: 297px;
   top: 5px;
 }
 .bargraph .bottom {
   height: 20px !important;
-  width: 137%;
+  width: 9%;
   background: #ff8c5a;
   border-left: 1px solid #ff8c5a;
   border-radius: 10px;
   position: relative;
-  margin-right: 327px;
   top: 5px;
-} 
+}
 
-
-.bargraph{
+.bargraph {
   font-size: 20px;
   width: 100%;
 }
 
-.top_star{
+.top_star {
   display: flex;
   width: 100%;
 }
-
-
-
 
 .review_info {
   display: flex !important;
@@ -595,39 +551,38 @@
 .allRatings {
   height: 60%;
   display: inline-block;
-  /* border-right: 1px solid #c9bfbf; */
   width: 30%;
 }
 
-.component{
-  /* margin-top: 10px; */
-  width:100%;
+.component {
+  width: 100%;
 }
 
-.top , .midtop , .neutral , .midbottom , .bottom {
+.top,
+.midtop,
+.neutral,
+.midbottom,
+.bottom {
   display: flex;
 }
 
-.star_item{
+.star_item {
   display: flex;
   width: 100%;
 }
 
-.star_star_{
-padding-left:5.3px;
-
+.star_star_ {
+  padding-left: 5.3px;
 }
 
-.star__star{
+.star__star {
   padding-left: 2px;
 }
 
-
-.star_star__{
+.star_star__ {
   padding-left: 1.7px;
-
 }
 
-.star_star___{
+.star_star___ {
   padding-left: 2px;
 }

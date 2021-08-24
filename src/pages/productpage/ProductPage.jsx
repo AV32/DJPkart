@@ -283,8 +283,10 @@ function ProductPage(props) {
               </div>
 
               <div className="Address-address-box Address-pincode-input Address-pdp-box">
-              <form> <input type="number" placeholder="Enter a PIN code" /></form>
-               
+                <form>
+                  {" "}
+                  <input type="number" placeholder="Enter a PIN code" />
+                </form>
               </div>
               <p className="sub">
                 Please enter PIN code to check delivery time & Pay on Delivery
@@ -358,14 +360,13 @@ function ProductPage(props) {
 
                 <div className="component">
                   <ul className="bargraph">
-
                     <div className="top_star">
                       <div class="star_item">
                         <div class="star_test">5</div>
                         <div class="star_star___">★</div>
+                        <li className="top"></li>
                       </div>
-                      <li className="top">
-                      </li>
+                     
                       <span>68</span>
                     </div>
 
@@ -373,19 +374,19 @@ function ProductPage(props) {
                       <div class="star_item">
                         <div class="star_test">4</div>
                         <div class="star_star">★</div>
+                        <li className="midtop"></li>
                       </div>
-                      <li className="midtop">
-                      </li>
-                      <span>92</span>
+                      
+                      <span>52</span>
                     </div>
 
                     <div className="top_star">
                       <div class="star_item">
                         <div class="star_test">3</div>
                         <div class="star__star">★</div>
+                        <li className="neutral"></li>
                       </div>
-                      <li className="neutral">
-                      </li>
+                      
                       <span>42</span>
                     </div>
 
@@ -393,9 +394,9 @@ function ProductPage(props) {
                       <div class="star_item">
                         <div class="star_test">2</div>
                         <div class="star_star__">★</div>
+                        <li className="midbottom"></li>
                       </div>
-                      <li className="midbottom">
-                      </li>
+                     
                       <span>22</span>
                     </div>
 
@@ -403,12 +404,11 @@ function ProductPage(props) {
                       <div class="star_item">
                         <div class="star_test">1</div>
                         <div class="star_star_">★</div>
+                        <li className="bottom"></li>
                       </div>
-                      <li className="bottom">
-                      </li>
+                     
                       <span>20</span>
                     </div>
-
                   </ul>
                 </div>
               </div>
