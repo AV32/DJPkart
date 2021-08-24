@@ -283,12 +283,8 @@ function ProductPage(props) {
               </div>
 
               <div className="Address-address-box Address-pincode-input Address-pdp-box">
-                <input type="tel" placeholder="Enter a PIN code" />
-                <button
-                  type="submit"
-                  className="Address-address-button"
-                  style={{ color: "rgb(191, 192, 198)" }}
-                />
+              <form> <input type="number" placeholder="Enter a PIN code" /></form>
+               
               </div>
               <p className="sub">
                 Please enter PIN code to check delivery time & Pay on Delivery
@@ -412,46 +408,6 @@ function ProductPage(props) {
                       </li>
                       <span>20</span>
                     </div>
-
-
-                    {/* <li className="midtop">
-                      <div class="star_item">
-                        <div class="star_test">4</div>
-                        <div clas="star_star">★</div>
-                      </div>
-                      <div className="star_percentage">
-                        <span>40</span>
-                      </div>
-                    </li>
-                    <li className="neutral">
-                      <div class="star_item">
-                        <div class="star_test">3</div>
-                        <div class="star_star">★</div>
-                      </div>
-                      <div className="star_percentage">
-                        <span>40</span>
-                      </div>
-                    </li>
-                    <li className="midbottom">
-                      <div class="star_item">
-                        <div class="star_test">2</div>
-                        <div class="star_star">★</div>
-                      </div>
-                      <div className="star_percentage">
-                        <span>40</span>
-                      </div>
-                    </li>
-                    <li className="bottom">
-                      <div class="star_item">
-                        <div class="star_test">1</div>
-                        <div class="star_star">★</div>
-                      </div>
-                      <div className="star_percentage">
-                        <span>40</span>
-                      </div>
-                    </li> */}
-
-
 
                   </ul>
                 </div>
