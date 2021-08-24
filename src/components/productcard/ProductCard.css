@@ -12,6 +12,7 @@
   text-align: center;
   border-radius: 5px;
   /* position: relative; */
+  position: relative;
 }
 
 .productCard__container:hover {
@@ -28,9 +29,12 @@
 }
 
 .productCard__infoContainerTop {
+  width: 90%;
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
+  position: absolute;
+  bottom: 10px;
 }
 
 .productCard__productImage {
