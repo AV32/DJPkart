@@ -150,7 +150,9 @@ function ProductPage(props) {
     let m = new Date().getMonth();
     let a =
       d > 0
-        ? ["th", "st", "nd", "rd"][(d > 3 && d < 21) || d % 10 > 3 ? 0 : d % 10]
+        ? ["th", "star_item", "nd", "rd"][
+            (d > 3 && d < 21) || d % 10 > 3 ? 0 : d % 10
+          ]
         : "";
     return `${d}${a} ${monthNames[m]}`;
   };
@@ -326,7 +328,7 @@ function ProductPage(props) {
               <h2 className="sub_">View Eligible Products</h2>
               <br />
               <h1 className="product-details-heading">EMI option available</h1>
-              <li>EMI starting from Rs.87/month</li>
+              <li className="bullets">EMI starting from Rs.87/month</li>
               <h2 className="sub_">View Plan</h2>
               <br />
               <p>Product Code: 14033232</p>
@@ -360,22 +362,97 @@ function ProductPage(props) {
 
                 <div className="component">
                   <ul className="bargraph">
-                    <li className="nice">
-                      <span>6%</span>
-                    </li>
-                    <li className="top">
-                      <span>10%</span>
-                    </li>
-                    <li className="midtop">
-                      <span>35%</span>
+
+                    <div className="top_star">
+                      <div class="star_item">
+                        <div class="star_test">5</div>
+                        <div class="star_star___">★</div>
+                      </div>
+                      <li className="top">
+                      </li>
+                      <span>68</span>
+                    </div>
+
+                    <div className="top_star">
+                      <div class="star_item">
+                        <div class="star_test">4</div>
+                        <div class="star_star">★</div>
+                      </div>
+                      <li className="midtop">
+                      </li>
+                      <span>92</span>
+                    </div>
+
+                    <div className="top_star">
+                      <div class="star_item">
+                        <div class="star_test">3</div>
+                        <div class="star__star">★</div>
+                      </div>
+                      <li className="neutral">
+                      </li>
+                      <span>42</span>
+                    </div>
+
+                    <div className="top_star">
+                      <div class="star_item">
+                        <div class="star_test">2</div>
+                        <div class="star_star__">★</div>
+                      </div>
+                      <li className="midbottom">
+                      </li>
+                      <span>22</span>
+                    </div>
+
+                    <div className="top_star">
+                      <div class="star_item">
+                        <div class="star_test">1</div>
+                        <div class="star_star_">★</div>
+                      </div>
+                      <li className="bottom">
+                      </li>
+                      <span>20</span>
+                    </div>
+
+
+                    {/* <li className="midtop">
+                      <div class="star_item">
+                        <div class="star_test">4</div>
+                        <div clas="star_star">★</div>
+                      </div>
+                      <div className="star_percentage">
+                        <span>40</span>
+                      </div>
                     </li>
                     <li className="neutral">
-                      <span>40%</span>
+                      <div class="star_item">
+                        <div class="star_test">3</div>
+                        <div class="star_star">★</div>
+                      </div>
+                      <div className="star_percentage">
+                        <span>40</span>
+                      </div>
                     </li>
                     <li className="midbottom">
-                      <span>65%</span>
+                      <div class="star_item">
+                        <div class="star_test">2</div>
+                        <div class="star_star">★</div>
+                      </div>
+                      <div className="star_percentage">
+                        <span>40</span>
+                      </div>
                     </li>
-                    <li className="bottom">{/* <span>22%</span> */}</li>
+                    <li className="bottom">
+                      <div class="star_item">
+                        <div class="star_test">1</div>
+                        <div class="star_star">★</div>
+                      </div>
+                      <div className="star_percentage">
+                        <span>40</span>
+                      </div>
+                    </li> */}
+
+
+
                   </ul>
                 </div>
               </div>

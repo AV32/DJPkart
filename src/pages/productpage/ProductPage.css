@@ -265,8 +265,12 @@
 
 .giveBullets li {
   list-style: disc !important;
-  margin-left: 6px !important;
+  margin-left: 3.2%;
   padding: 2px;
+}
+
+.bullets{
+  margin-left:1%;
 }
 
 .subH {
@@ -415,13 +419,17 @@
     top: -77px;
 } */
 
-  .bargraph {
+  /* .bargraph {
     display: none;
-  }
+  } */
 
   .allRatings {
     width: 30%;
   }
+
+  .component {
+    width: 50%;
+}
 }
 
 @media screen and (max-width: 376px) {
@@ -434,18 +442,22 @@
     position: relative;
     top: 1.4vh;
   }
-
+/* 
   .bargraph {
     width: 954%;
     height: 29% !important;
     margin-left: -1736%;
     position: relative;
     top: -61px;
-  }
+  } */
 
   .allRatings {
     width: 30%;
   }
+
+  .component {
+    width: 50%;
+}
 }
 
 @media screen and (max-width: 850px) {
@@ -453,95 +465,111 @@
     width: 42%;
   }
 
-  .bargraph {
+  /* .bargraph {
     width: 225%;
     height: 20% !important;
     margin-left: -402%;
     position: relative;
     top: -77px;
-  }
+  } */
 
   .allRatings {
     width: 30%;
   }
+
+  .component {
+    width: 50%;
+}
 }
 
-/* @import "compass/css3"; */
-/* @import url(netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css); */
 
-.valor {
-  padding-top: 15px;
-  font-family: FontAwesome;
-  position: relative;
-  float: left;
-  width: 100px;
-  text-align: center;
-  color: #737373;
-}
-.valor .nota {
-  font-size: 0.2em;
-  /* /*      border: 1px solid #f90;  */
-}
-.valor .users {
-  font-size: 0.8em;
-  /* /*      border: 1px solid red;  */
-}
 
-.bargraph span {
+
+
+
+
+
+/* .bargraph span {
   display: inline-block;
   font-size: 10px !important;
   margin-top: 10px !important;
   position: relative;
-  top: -35px;
-}
+  top: -51px;
+  left: 311px;
+} */
 
-.bargraph {
+ /* .bargraph {
   width: 1876%;
   height: 20% !important;
   margin-left: -1691%;
   position: relative;
   top: -61px;
-}
+} */
 
 .bargraph .top {
   background: #a0c15a;
-  width: 6%;
+  width: 357%;
   height: 20px !important;
   border-left: 1px solid #a0c15a;
+  border-radius: 10px;
+  position: relative;
+  top: 5px;
+  margin-right: 247px;
 }
 .bargraph .midtop {
   background: #add633;
-  width: 10%;
+  width: 672%;
   height: 20px !important;
   border-left: 1px solid #add633;
+  border-radius: 10px;
+  position: relative;
+  margin-right: 129px;
+  top: 5px;
 }
 .bargraph .neutral {
-  width: 35%;
+  width: 319%;
   height: 20px !important;
   background: #ffd935;
   border-left: 1px solid #ffd935;
+  border-radius: 10px;
+  position: relative;
+  margin-right: 254px;
+  top: 5px;
 }
 .bargraph .midbottom {
-  width: 40%;
+  width: 222%;
   height: 20px !important;
   background: #ffb235;
   border-left: 1px solid #ffb235;
+  border-radius: 10px;
+  position: relative;
+  margin-right: 297px;
+  top: 5px;
 }
 .bargraph .bottom {
   height: 20px !important;
-  width: 65%;
+  width: 137%;
   background: #ff8c5a;
   border-left: 1px solid #ff8c5a;
-}
-
-.component {
-  height: 50% !important;
-}
-
-.nice {
+  border-radius: 10px;
   position: relative;
-  top: 69px;
+  margin-right: 327px;
+  top: 5px;
+} 
+
+
+.bargraph{
+  font-size: 20px;
+  width: 100%;
 }
+
+.top_star{
+  display: flex;
+  width: 100%;
+}
+
+
+
 
 .review_info {
   display: flex !important;
@@ -551,4 +579,38 @@
   height: 60%;
   display: inline-block;
   /* border-right: 1px solid #c9bfbf; */
+  width: 30%;
+}
+
+.component{
+  /* margin-top: 10px; */
+  width:100%;
+}
+
+.top , .midtop , .neutral , .midbottom , .bottom {
+  display: flex;
+}
+
+.star_item{
+  display: flex;
+  width: 100%;
+}
+
+.star_star_{
+padding-left:5.3px;
+
+}
+
+.star__star{
+  padding-left: 2px;
+}
+
+
+.star_star__{
+  padding-left: 1.7px;
+
+}
+
+.star_star___{
+  padding-left: 2px;
 }
